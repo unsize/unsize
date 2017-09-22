@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Unsize",
+  "description":
+    "Unsize filters shopping websites so you can view what fits so you can focus on your style. See http://unsize.me for more information.",
+  "version": "0.1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab"]
+}
