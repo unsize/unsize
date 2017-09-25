@@ -1,3 +1,4 @@
 node_modules/
-
+website/out
 .next
+extension/build

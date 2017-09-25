@@ -4,9 +4,9 @@
   "description":
     "Unsize fixes online shopping using a unified sizing experience",
   "scripts": {
-    "dev": "next ./website",
-    "build": "next build ./website",
-    "start": "next start ./website"
+    "start": "next ./website",
+    "build": "next build ./website && next export ./website",
+    "extension": "webpack --config ./extension/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,12 @@
     "url": "https://github.com/Scout-NU/unsize/issues"
   },
   "dependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
     "next": "^3.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "styled-components": "^2.1.2"
+    "styled-components": "^2.1.2",
+    "webpack": "^3.6.0"
   }
 }
