@@ -1,11 +1,10 @@
 {
   "name": "unsize",
   "version": "0.1.0",
-  "description":
-    "Unsize fixes online shopping using a unified sizing experience",
+  "description": "Unsize fixes online shopping using a unified sizing experience",
   "scripts": {
-    "start": "next ./website",
-    "build": "next build ./website && next export ./website",
+    "start": "next",
+    "build": "next build && next export",
     "extension": "webpack --config ./extension/webpack.config.js --watch"
   },
   "repository": {
@@ -18,6 +17,7 @@
   },
   "dependencies": {
     "babel-loader": "^7.1.2",
+    "babel-plugin-module-alias": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "next": "^3.2.2",
     "react": "^15.6.1",
