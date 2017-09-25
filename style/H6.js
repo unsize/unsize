@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { halisFont } from 'lib/constants';
 
-const H6= styled.h6`font-family: ${halisFont};`;
+const H6 = styled.h6`
+  font-family: ${halisFont};
+  font-weight: bold;
+`;
 
 export default H6;
