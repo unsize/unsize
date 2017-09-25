@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import fontFaces from 'lib/fontFaces';
 
 export default class UnsizeBase extends Document {
   static getInitialProps({ renderPage }) {
@@ -16,10 +17,6 @@ export default class UnsizeBase extends Document {
       <html>
         <Head>
           <title>My page</title>
-          <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans"
-            rel="stylesheet"
-          />
           {this.props.styleTags}
         </Head>
         <body>

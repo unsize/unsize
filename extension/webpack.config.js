@@ -5,6 +5,11 @@ module.exports = {
   output: {
     filename: './extension/build/unsize.js'
   },
+  resolve: {
+    alias: {
+      lib: path.resolve(__dirname, '../components')
+    }
+  },
   module: {
     rules: [
       {
