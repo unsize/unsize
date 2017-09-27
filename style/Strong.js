@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { workSansFont } from 'lib/constants';
+import { workSansFont } from './constants';
 
 const Strong = styled.strong`
   font-family: ${workSansFont};

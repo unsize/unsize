@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { halisFont } from 'lib/constants';
+import { halisFont } from './constants';
 
 const H5 = styled.h5`
   font-family: ${halisFont};

@@ -19,6 +19,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-module-alias": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "immutable": "^3.8.1",
     "next": "^3.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
