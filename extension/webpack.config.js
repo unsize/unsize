@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: path.resolve(__dirname, './index.js'),
+  devtool: 'source-map',
   output: {
     filename: './extension/build/unsize.js'
   },
