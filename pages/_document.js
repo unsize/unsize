@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import fontFaces from 'lib/fontFaces';
+import 'style/fontFaces';
 
 export default class UnsizeBase extends Document {
   static getInitialProps({ renderPage }) {

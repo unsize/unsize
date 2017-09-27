@@ -1,4 +1,4 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["module-alias", [{ "src": "./components", "expose": "lib" }]]]
+  "plugins": [["module-alias", [{ "src": "./style", "expose": "style" }]]]
 }

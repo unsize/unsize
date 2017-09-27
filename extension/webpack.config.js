@@ -8,7 +8,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      lib: path.resolve(__dirname, '../components')
+      style: path.resolve(__dirname, '../style')
     }
   },
   module: {
