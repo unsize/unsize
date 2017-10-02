@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { workSansFont } from './constants';
 
-const TextInput = styled.input.attrs({
+const NumberInput = styled.input.attrs({
   type: 'number',
   placeholder: props => props.placeholder,
 })`
@@ -11,6 +11,10 @@ const TextInput = styled.input.attrs({
   font-size: 1rem;
   padding: 0.5rem 0.75rem;
   width: 33%;
+  outline: none;
+  &:focus {
+    border-color: #0B37F5;
+  }
 `;
 
-export default TextInput;
+export default NumberInput;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ProfilePic = styled.img`
   height: 1.5rem;
   width: 1.5rem;
-  background-color: #fff;
+  background-color: rgb(216, 216, 216);
   {/*background-image: url(${props => props.img})*/}
   background-size: cover;
   background-position: center;

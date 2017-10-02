@@ -1,9 +1,10 @@
 import React from 'react';
 import ProfileArea from '../components/ProfileArea';
-import { Button, H1, TextInput } from 'style';
+import { Button, H1, NumberInput } from 'style';
 import styled from 'styled-components';
 
 const ManualEntryContainer = styled.div`
+  background-color: rgb(246, 246, 246);
   h1 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -24,12 +25,16 @@ const Form = styled.form`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 
   input[type="number"] {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    background-color: rgb(246, 246, 246);
+    &:focus {
+      background-color: #fff;
+    }
   }
 `;
 
@@ -45,7 +50,7 @@ export default class ManualEntry extends React.Component {
         <H1>{this.props.name.toUpperCase()}'s Measurements</H1>
         <Form>
           {measurements.map(function(placeholder, i) {
-            return <TextInput placeholder={placeholder} key={i} />;
+            return <NumberInput placeholder={placeholder} key={i} />;
           })}
           <Button>Unsize Me!</Button>
         </Form>

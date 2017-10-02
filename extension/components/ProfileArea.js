@@ -8,7 +8,7 @@ const Flex = styled.div`
   align-items: center;
   font-family: ${workSansFont};
   font-size: 1rem;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
 `;
 
 export default class ProfileArea extends React.Component {

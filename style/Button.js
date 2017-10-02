@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { halisFont } from './constants';
 
 const Button = styled.button`
-  background: #eee;
+  background: rgb(216, 216, 216);
   border: 2px solid #000;
   border-radius: 10px;
   font-family: ${halisFont};
