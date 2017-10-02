@@ -1,6 +1,6 @@
 import React from 'react';
 import { H2 } from 'style';
-import { goBack } from '../utils/SimpleRouter';
+import { goBack } from 'route-lite';
 
 export default class Person extends React.Component {
   render() {
