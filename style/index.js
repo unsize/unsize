@@ -8,6 +8,8 @@ import H4 from './H4';
 import H5 from './H5';
 import H6 from './H6';
 import Header from './Header';
+import ProfilePic from './ProfilePic';
 import Strong from './Strong';
+import TextInput from './TextInput';
 
-export { Button, Div, Footer, H1, H2, H3, H4, H5, H6, Header, Strong };
+export { Button, Div, Footer, H1, H2, H3, H4, H5, H6, Header, ProfilePic, Strong, TextInput };
