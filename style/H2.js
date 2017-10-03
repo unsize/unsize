@@ -4,6 +4,7 @@ import { halisFont } from './constants';
 const H2 = styled.h2`
   font-family: ${halisFont};
   font-weight: bold;
+  text-align: center;
 `;
 
 export default H2;

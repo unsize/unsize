@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SimpleRouter, { goTo } from './utils/SimpleRouter';
 import Home from './components/Home';
-import 'style/fontFaces';
+import Window from '../style/Window';
 
 goTo(Home, { children: 'Hello, Unsize' });
-ReactDOM.render(<SimpleRouter />, document.querySelector('#root'));
+ReactDOM.render(<Window><SimpleRouter /></Window>, document.querySelector('#root'));
