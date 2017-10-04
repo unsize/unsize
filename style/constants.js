@@ -13,3 +13,4 @@ export const yellow = '#FECF11';
 export const pink = '#ED166C';
 export const black = '#1D1F27';
 export const smoke = '#606060';
+export const background = 'rgb(246, 246, 246)';

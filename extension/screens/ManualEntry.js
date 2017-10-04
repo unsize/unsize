@@ -1,23 +1,9 @@
 import React from 'react';
-import ProfileArea from '../components/ProfileArea';
-import { Button, H1, NumberInput } from 'style';
 import styled from 'styled-components';
-
-const ManualEntryContainer = styled.div`
-  background-color: rgb(246, 246, 246);
-  h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-`;
-
-const Logo = styled.img.attrs({
-  src: '../icon.png'
-})`
-  height: 5rem;
-  margin: -1.5rem auto 0;
-  display: block;
-`;
+import { Button, H1, NumberInput } from 'style';
+import Logo from '../components/Logo';
+import ProfileArea from '../components/ProfileArea';
+import ScreenContainer from '../components/ScreenContainer';
 
 const Form = styled.form`
   display: flex;
@@ -25,36 +11,39 @@ const Form = styled.form`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 
   input[type="number"] {
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-bottom: 1rem;
-    background-color: rgb(246, 246, 246);
-    &:focus {
-      background-color: #fff;
+    width: 28%;
+    &:nth-child(2n + 1) {
+      margin-right: 1.25rem;
     }
+    &:nth-child(2n + 2) {
+      margin-left: 1.25rem;
+    }
+  }
+
+  button {
+    margin-top: 0.25rem;
   }
 `;
 
 export default class ManualEntry extends React.Component {
   render() {
     const measurements = ['waist', 'neck', 'hip', 'chest', 'inseam', 'sleeve'];
-
-    console.log(measurements);
     return (
-      <ManualEntryContainer>
+      <ScreenContainer>
         <ProfileArea {...this.props} />
         <Logo />
-        <H1>{this.props.name.toUpperCase()}'s Measurements</H1>
+        <H1>{this.props.name/*.toUpperCase()*/}'s Measurements</H1>
         <Form>
           {measurements.map(function(placeholder, i) {
             return <NumberInput placeholder={placeholder} key={i} />;
           })}
           <Button>Unsize Me!</Button>
         </Form>
-      </ManualEntryContainer>
+      </ScreenContainer>
     );
   }
 }
