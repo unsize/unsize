@@ -1,6 +1,6 @@
 import React from 'react';
 import { H1 } from 'style';
-import { goTo } from '../utils/SimpleRouter';
+import { goTo } from 'route-lite';
 import Person from './Person';
 
 export default class Home extends React.Component {

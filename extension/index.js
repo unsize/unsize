@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SimpleRouter, { goTo } from './utils/SimpleRouter';
+import Router from 'route-lite';
 import Home from './components/Home';
 import Window from '../style/Window';
 
-goTo(Home, { children: 'Hello, Unsize' });
-ReactDOM.render(<Window><SimpleRouter /></Window>, document.querySelector('#root'));
+ReactDOM.render(
+  <Wrapper>
+    <Router>
+      <Home>Hello, Unsize!</Home>
+    </Router>
+  </Wrapper>,
+  document.querySelector('#root')
+);
+

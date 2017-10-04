@@ -21,8 +21,9 @@
     "babel-preset-react": "^6.24.1",
     "immutable": "^3.8.1",
     "next": "^3.2.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "route-lite": "^0.1.2",
     "styled-components": "^2.1.2",
     "webpack": "^3.6.0"
   }
