@@ -5,7 +5,7 @@ const Logo = styled.img.attrs({
 })`
   display: block;
   height: 5rem;
-  margin: -1.5rem auto 0;
+  margin: -1rem auto 0;
 `;
 
 export default Logo;
