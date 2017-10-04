@@ -1,22 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ProfilePic } from 'style';
-import { workSansFont } from 'style/constants';
+import { pSize, workSansFont } from './constants';
+import Image from './Image';
+import P from './P';
 
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  font-family: ${workSansFont};
-  font-size: 1rem;
-  margin-left: 0.75rem;
+  margin-left: ${pSize};
 `;
 
 export default class ProfileArea extends React.Component {
   render() {
     return (
         <Flex>
-          <ProfilePic img={this.props.img} />
-          <p>{this.props.name}</p>
+          <Image img={this.props.profilePic} rounded={true} />
+          <P>{this.props.name}</P>
         </Flex>
     );
   }

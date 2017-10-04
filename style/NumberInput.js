@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { background, workSansFont } from './constants';
+import { background, blue, border, borderRadius, pSize, white, workSansFont } from './constants';
 
 const NumberInput = styled.input.attrs({
   type: 'number',
@@ -7,15 +7,15 @@ const NumberInput = styled.input.attrs({
   placeholder: props => props.placeholder,
 })`
   background-color: ${background};
-  border: 2px solid #000;
-  border-radius: 10px;
+  border: ${border};
+  border-radius: ${borderRadius};
   font-family: ${workSansFont};
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+  font-size: ${pSize};
+  padding: 8px 12px;
   outline: none;
   &:focus {
-    background-color: #fff;
-    border-color: #0B37F5;
+    background-color: ${white};
+    border-color: ${blue};
   }
 `;
 

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import { background } from 'style/constants';
+import { background, elementSpacing } from 'style/constants';
 
 const ScreenContainer = styled.div`
-  background-color: ${ background };
+  background-color: ${background};
   min-width: 500px;
+  padding-bottom: ${elementSpacing};
   h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: ${elementSpacing};
   }
 `;
 

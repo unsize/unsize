@@ -6,6 +6,5 @@ import ManualEntry from './screens/ManualEntry';
 import SyncComplete from './screens/SyncComplete';
 import 'style/fontFaces';
 
-//goTo(Home, { children: 'Hello, Unsize' });
-goTo(ManualEntry, { name: 'Shuya', img: 'https://quikconsult.com/images/profile.png'});
+goTo(ManualEntry, { name: 'Shuya', profilePic: 'https://quikconsult.com/images/profile.png'});
 ReactDOM.render(<SimpleRouter />, document.querySelector('#root'));

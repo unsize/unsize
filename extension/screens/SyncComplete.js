@@ -1,15 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, H1, NumberInput } from 'style';
-import Logo from '../components/Logo';
-import ProfileArea from '../components/ProfileArea';
+import { Button, Form, H1, Logo, NumberInput, ProfileArea } from 'style';
 import ScreenContainer from '../components/ScreenContainer';
-
-const Form = styled.form`
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2rem;
-`;
 
 export default class SyncComplete extends React.Component {
   render() {

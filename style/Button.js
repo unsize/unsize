@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { halisFont } from './constants';
+import { border, borderRadius, buttonColor, halisFont, pSize } from './constants';
 
 const Button = styled.button`
-  background: rgb(216, 216, 216);
-  border: 2px solid #000;
-  border-radius: 10px;
+  background: ${buttonColor};
+  border: ${border};
+  border-radius: ${borderRadius};
   font-family: ${halisFont};
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
+  font-size: ${pSize};
+  padding: 8px 24px;
 `;
 
 export default Button;

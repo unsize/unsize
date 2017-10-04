@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { pSize } from './constants'
 
 const Logo = styled.img.attrs({
-  src: '../icon.png'
+  src: '/static/images/logo.png'
 })`
   display: block;
-  height: 5rem;
-  margin: -1rem auto 0;
+  height: 80px;
+  margin: -${pSize} auto 0;
 `;
 
 export default Logo;
