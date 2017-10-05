@@ -13,4 +13,4 @@ import Logo from './Logo';
 import Header from './Header';
 import Strong from './Strong';
 
-export { Button, Input Div, Footer, H1, H2, H3, H4, H5, H6, P, Logo, Header, Strong };
+export { Button, Input, Div, Footer, H1, H2, H3, H4, H5, H6, P, Logo, Header, Strong };
