@@ -15,5 +15,6 @@ import NumberInput from './NumberInput';
 import P from './P';
 import ProfileArea from './ProfileArea';
 import Strong from './Strong';
+import TwoColumnForm from './TwoColumnForm';
 
-export { Button, Div, Footer, Form, H1, H2, H3, H4, H5, H6, Header, Image, Logo, NumberInput, ProfileArea, P, Strong };
+export { Button, Div, Footer, Form, H1, H2, H3, H4, H5, H6, Header, Image, Logo, NumberInput, ProfileArea, P, Strong, TwoColumnForm };

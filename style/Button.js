@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { border, borderRadius, buttonColor, halisFont, pSize } from './constants';
+import { borderSolidBlack, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingMd, halisFont, pSize } from './constants';
 
 const Button = styled.button`
   background: ${buttonColor};
-  border: ${border};
-  border-radius: ${borderRadius};
+  border: ${borderSolidBlack};
+  border-radius: ${borderRadiusLg};
   font-family: ${halisFont};
   font-size: ${pSize};
-  padding: 8px 24px;
+  padding: ${elemSpacingSm} ${elemSpacingMd};
 `;
 
 export default Button;

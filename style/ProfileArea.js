@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { pSize, workSansFont } from './constants';
+import { pSize } from './constants';
 import Image from './Image';
 import P from './P';
 

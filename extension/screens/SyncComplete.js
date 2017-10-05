@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Form, H1, Logo, NumberInput, ProfileArea } from 'style';
+import { Button, Form, H1, Logo, ProfileArea } from 'style';
 import ScreenContainer from '../components/ScreenContainer';
 
 export default class SyncComplete extends React.Component {

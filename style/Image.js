@@ -1,17 +1,17 @@
 import styled from 'styled-components';
-import { border, buttonColor } from './constants';
+import { borderRadiusSm, borderSolidBlack, buttonColor, elemSpacingSm, elemSpacingMd, elemSpacingLg } from './constants';
 
 const Image = styled.img`
-  height: ${props => props.large ? '48px' : '24px'};
-  width: ${props => props.large ? '48px' : '24px'};
+  height: ${props => props.large ? elemSpacingLg : elemSpacingMd};
+  width: ${props => props.large ? elemSpacingLg : elemSpacingMd};
   background-color: ${buttonColor};
   /*background-image: url(${props => props.img});*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: ${props => props.rounded ? '50%' : '3px'};
-  border: ${border};
-  margin-right: 8px;
+  border-radius: ${props => props.rounded ? '50%' : borderRadiusSm};
+  border: ${borderSolidBlack};
+  margin-right: ${elemSpacingSm};
 `;
 
 export default Image;
