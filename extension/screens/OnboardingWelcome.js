@@ -1,8 +1,5 @@
 import React from 'react';
-import Logo from '../../style/Logo';
-import H1 from '../../style/H1';
-import P from '../../style/P';
-import Button from '../../style/Button';
+import { Logo, H1, P, Button } from 'style';
 
 export default class OnboardingWelcome extends React.Component {
 
