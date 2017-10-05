@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../style/Logo';
+import { Logo } from 'style';
 import H1 from '../../style/H1';
 import P from '../../style/P';
 import PrimaryButton from '../../style/PrimaryButton';
