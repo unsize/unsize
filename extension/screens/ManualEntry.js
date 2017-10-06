@@ -1,6 +1,5 @@
 import React from 'react';
-import extend from 'styled-components';
-import { Button, Form, H1, Logo, NumberInput, ProfileArea, TwoColumnForm } from 'style';
+import { Button, H1, Logo, NumberInput, ProfileArea, TwoColumnForm } from 'style';
 import ScreenContainer from '../components/ScreenContainer';
 
 export default class ManualEntry extends React.Component {

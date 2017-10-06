@@ -1,4 +1,4 @@
-import style from 'styled-components';
+import extend from 'styled-components';
 import Form from './Form';
 import { elemSpacingMd, pSize } from './constants';
 
