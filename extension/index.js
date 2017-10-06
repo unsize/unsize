@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SimpleRouter, { goTo } from './utils/SimpleRouter';
-import Home from './components/Home';
-import ManualEntry from './screens/ManualEntry';
-import SyncComplete from './screens/SyncComplete';
+import Router from 'route-lite';
+import { Window } from 'style';
+import OnboardingWelcome from './screens/OnboardingWelcome';
 import 'style/fontFaces';
 
-goTo(ManualEntry, { name: 'Shuya', profilePic: 'https://quikconsult.com/images/profile.png'});
-ReactDOM.render(<SimpleRouter />, document.querySelector('#root'));
+ReactDOM.render(
+  <Window>
+    <Router>
+      <OnboardingWelcome/>
+    </Router>
+  </Window>,
+  document.querySelector('#root')
+);
