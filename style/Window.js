@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { backgroundColor } from './constants';
 
 const Window = styled.div`
 width: 350px;
 height: 250px;
 margin:auto;
-background-color: rgb(246, 246, 246);
+background-color: ${backgroundColor};
 
 justify-content: center;
 align-items: center;

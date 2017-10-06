@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { background, blue, borderSolidBlack, borderRadiusLg, elemSpacingSm, pSize, white, workSansFont } from './constants';
+import { backgroundColor, blue, borderSolidBlack, borderRadiusLg, elemSpacingSm, fontSizeNormal, white, workSansFont } from './constants';
 
 const NumberInput = styled.input.attrs({
   type: 'number',
   min: 0,
   placeholder: props => props.placeholder,
 })`
-  background-color: ${background};
+  background-color: ${backgroundColor};
   border: ${borderSolidBlack};
   border-radius: ${borderRadiusLg};
   font-family: ${workSansFont};
-  font-size: ${pSize};
+  font-size: ${fontSizeNormal};
   padding: ${elemSpacingSm} 12px;
   outline: none;
   &:focus {

@@ -5,7 +5,6 @@ const Image = styled.img`
   height: ${props => props.large ? elemSpacingLg : elemSpacingMd};
   width: ${props => props.large ? elemSpacingLg : elemSpacingMd};
   background-color: ${buttonColor};
-  /*background-image: url(${props => props.img});*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

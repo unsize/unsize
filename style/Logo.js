@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { pSize } from './constants'
 
 const Logo = styled.img.attrs({
   src: '/static/images/logo.png'

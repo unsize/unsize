@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borderSolidBlack, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingMd, halisFont, pSize } from './constants';
+import { borderSolidBlack, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingMd, halisFont, fontSizeNormal } from './constants';
 
 const Button = styled.button`
   font-family: ${halisFont};
@@ -10,7 +10,7 @@ const Button = styled.button`
   border-radius: ${borderRadiusLg};
   border: ${borderSolidBlack};
   margin: ${elemSpacingSm} auto;
-  font-size: ${pSize};
+  font-size: ${fontSizeNormal};
   display: block;
 `;
 

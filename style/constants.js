@@ -14,7 +14,7 @@ export const pink = '#ED166C';
 export const black = '#1D1F27';
 export const smoke = '#606060';
 export const white = '#ffffff';
-export const background = '#F6F6F6';
+export const backgroundColor = '#F6F6F6';
 export const buttonColor = '#D8D8D8';
 
 ////////////
@@ -27,7 +27,7 @@ export const borderRadiusLg = '10px';
 /////////////////////
 // SIZES & SPACING //
 /////////////////////
-export const pSize = '16px';
+export const fontSizeNormal = '16px';
 export const elemSpacingSm = '8px';
 export const elemSpacingMd = '24px';
 export const elemSpacingLg = '48px';
