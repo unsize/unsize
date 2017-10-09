@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from 'route-lite';
-import Window from '../style/Window';
+import { Window } from 'style';
 import OnboardingWelcome from './screens/OnboardingWelcome';
 import 'style/fontFaces';
 
 ReactDOM.render(
-  <Wrapper>
+  <Window>
     <Router>
       <OnboardingWelcome/>
     </Router>
-  </Wrapper>,
+  </Window>,
   document.querySelector('#root')
 );
-

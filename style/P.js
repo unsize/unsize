@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { workSansFont } from './constants';
+import { fontSizeNormal, workSansFont } from './constants';
 
 const P = styled.p`
   font-family: ${workSansFont};
-  text-align: center;
+  font-size: ${fontSizeNormal};
   margin: 5px;
 `;
 
