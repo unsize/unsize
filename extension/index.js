@@ -8,7 +8,7 @@ import 'style/fontFaces';
 ReactDOM.render(
   <Window>
     <Router>
-      <OnboardingWelcome/>
+      <OnboardingWelcome />
     </Router>
   </Window>,
   document.querySelector('#root')

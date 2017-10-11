@@ -1,5 +1,12 @@
 import React from 'react';
-import { Button, H1, Logo, NumberInput, ProfileArea, TwoColumnForm } from 'style';
+import {
+  Button,
+  H1,
+  Logo,
+  NumberInput,
+  ProfileArea,
+  TwoColumnForm
+} from 'style';
 
 export default class ManualEntry extends React.Component {
   render() {
