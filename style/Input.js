@@ -1,16 +1,32 @@
 import styled from 'styled-components';
-import { halisFont } from './constants';
+import {
+  backgroundColor,
+  blue,
+  borderSolidBlack,
+  borderRadiusLg,
+  elemSpacingSm,
+  fontSizeNormal,
+  white,
+  workSansFont
+} from './constants';
 
-const Input = styled.input`
-font-family: ${halisFont};
-display: block;
-margin: auto;
-width: 250px;
-height: 30px;
-border-radius: 10px;
-border-style: solid;
-border-width: 1px;
-border-color: #000;
+const Input = styled.input.attrs({
+  type: ({ type }) => (type === 'number' ? type : 'text'),
+  min: ({ min }) => (min ? min : 0),
+  placeholder: ({ placeholder }) => placeholder
+})`
+  background-color: ${backgroundColor};
+  border: ${borderSolidBlack};
+  border-radius: ${borderRadiusLg};
+  font-family: ${workSansFont};
+  font-size: ${fontSizeNormal};
+  padding: ${elemSpacingSm} 12px;
+  margin: auto;
+  outline: none;
+  &:focus {
+    background-color: ${white};
+    border-color: ${blue};
+  }
 `;
 
 export default Input;
