@@ -20,9 +20,9 @@ export default class OnboardingWelcome extends React.Component {
         <Logo src="icon.png" />
         <H1>Shuya,</H1>
         <P>You're almost there!</P>
-        <P>Sync or enter your measurements to start shopping</P>
-        <Button onClick={this.handleSyncMeasurements}>Sync with tailor</Button>
-        <Button onClick={this.handleManualEntry}>Enter measurements</Button>
+        <P>Sync your measurements with Tailor to begin</P>
+        <Button onClick={this.handleSyncMeasurements}>Sync with Tailor</Button>
+        <P onClick={this.handleManualEntry}>Enter measurements</P>
       </div>
     );
   }
