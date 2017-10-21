@@ -1,6 +1,5 @@
 import React from 'react';
-import { Logo } from 'style';
-import { H1, P, Button } from 'style';
+import { Button, H1, Link, Logo, P } from 'style';
 import { goTo } from 'route-lite';
 import ManualEntry from './ManualEntry';
 import SyncComplete from './SyncComplete';
@@ -22,7 +21,7 @@ export default class OnboardingWelcome extends React.Component {
         <P>You're almost there!</P>
         <P>Sync your measurements with Tailor to begin</P>
         <Button onClick={this.handleSyncMeasurements}>Sync with Tailor</Button>
-        <P onClick={this.handleManualEntry}>Enter measurements</P>
+        <Link onClick={this.handleManualEntry}>Enter measurements</Link>
       </div>
     );
   }

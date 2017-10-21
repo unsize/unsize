@@ -7,26 +7,53 @@ import {
   elemSpacingSm,
   fontSizeNormal,
   white,
-  workSansFont
+  workSansFont,
+  workSansSemibold
 } from './constants';
 
-const Input = styled.input.attrs({
-  type: ({ type }) => (type === 'number' ? type : 'text'),
-  min: ({ min }) => (min ? min : 0),
-  placeholder: ({ placeholder }) => placeholder
-})`
+const InputElem = styled.input`
   background-color: ${backgroundColor};
-  border: ${borderSolidBlack};
-  border-radius: ${borderRadiusLg};
+  border: none;
+  border-bottom: ${borderSolidBlack};
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
   padding: ${elemSpacingSm} 12px;
   margin: auto;
   outline: none;
+  position: relative;
+  text-align: right;
   &:focus {
     background-color: ${white};
     border-color: ${blue};
   }
 `;
 
-export default Input;
+const Label = styled.label`
+  position: absolute;
+  left: ${elemSpacingSm};
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-family: ${workSansFont};
+  font-size: ${fontSizeNormal};
+  font-weight: ${workSansSemibold};
+`;
+
+const Container = styled.div`
+  position: relative;
+  margin-bottom: ${elemSpacingSm};
+`;
+
+export default class Input extends React.Component {
+  render() {
+    const { labelName, placeholder, type } = this.props;
+    return (
+      <Container>
+        <Label htmlFor={labelName}>{labelName}</Label>
+        <InputElem id={labelName} placeholder={placeholder} type={type} />
+      </Container>
+    );
+  }
+}
+
+//export default Input;

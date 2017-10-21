@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, H1, Input, Logo, P, ProfileArea, Form } from 'style';
+import { Button, H1, Input, Link, Logo, P, ProfileArea, Form } from 'style';
 
 export default class ManualEntry extends React.Component {
   render() {
@@ -12,13 +12,13 @@ export default class ManualEntry extends React.Component {
         <P>Enter your measurements below to unsize yourself!</P>
         <P>Choose your units: in cm</P>
         <Form>
-          {measurements.map(function(placeholder, i) {
-            return <Input type="number" placeholder={placeholder} key={i} />;
+          {measurements.map(function(name, i) {
+            return <Input labelName={name} placeholder="0" key={i} type="number" />
           })}
           <Button>Unsize Me!</Button>
         </Form>
         <P>Having trouble measuring? Unsure?</P>
-        <P>Meet Tailor</P>
+        <Link>Meet Tailor</Link>
       </div>
     );
   }
