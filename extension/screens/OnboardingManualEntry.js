@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, H1, Input, Link, Logo, P, ProfileArea, Form } from 'style';
 
-export default class ManualEntry extends React.Component {
+export default class OnboardingManualEntry extends React.Component {
   render() {
     const measurements = ['neck', 'chest', 'sleeve', 'waist', 'hip', 'inseam'];
     return (
@@ -18,7 +18,7 @@ export default class ManualEntry extends React.Component {
           <Button>Unsize Me!</Button>
         </Form>
         <P>Having trouble measuring? Unsure?</P>
-        <Link>Meet Tailor</Link>
+        <Link href="http://unsize.me">Meet Tailor</Link>
       </div>
     );
   }

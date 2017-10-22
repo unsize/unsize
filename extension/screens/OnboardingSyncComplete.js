@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, H1, Logo, ProfileArea } from 'style';
 
-export default class SyncComplete extends React.Component {
+export default class OnboardingSyncComplete extends React.Component {
   render() {
     return (
       <div>

@@ -1,27 +1,27 @@
 import React from 'react';
 import { Button, H1, Link, Logo, P } from 'style';
 import { goTo } from 'route-lite';
-import ManualEntry from './ManualEntry';
-import SyncComplete from './SyncComplete';
+import OnboardingManualEntry from './OnboardingManualEntry';
+import OnboardingSyncComplete from './OnboardingSyncComplete';
 
 export default class OnboardingWelcome extends React.Component {
   handleManualEntry() {
-    goTo(ManualEntry);
+    goTo(OnboardingManualEntry, this.props);
   }
 
   handleSyncMeasurements() {
-    goTo(SyncComplete);
+    goTo(OnboardingSyncComplete, this.props);
   }
 
   render() {
     return (
       <div>
         <Logo src="icon.png" />
-        <H1>Shuya,</H1>
+        <H1>{this.props.name},</H1>
         <P>You're almost there!</P>
         <P>Sync your measurements with Tailor to begin</P>
-        <Button onClick={this.handleSyncMeasurements}>Sync with Tailor</Button>
-        <Link onClick={this.handleManualEntry}>Enter measurements</Link>
+        <Button onClick={this.handleSyncMeasurements.bind(this)}>Sync with Tailor</Button>
+        <Link onClick={this.handleManualEntry.bind(this)}>Enter measurements</Link>
       </div>
     );
   }

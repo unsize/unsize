@@ -5,7 +5,7 @@ import OnboardingMethod from './OnboardingMethod';
 
 export default class OnboardingWelcome extends React.Component {
   handleNext() {
-    goTo(OnboardingMethod);
+    goTo(OnboardingMethod, {name: document.getElementById("name").value});
   }
 
   render() {
