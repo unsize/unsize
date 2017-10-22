@@ -14,7 +14,7 @@ export default class OnboardingWelcome extends React.Component {
         <H1>Welcome to unsize!</H1>
         <Logo src="icon.png" />
         <P>Join the revolution and figure out YOUR size</P>
-        <Button onClick={this.handleUnsizeClick}>NEXT</Button>
+        <Button onClick={this.handleUnsizeClick}>Start</Button>
       </div>
     );
   }

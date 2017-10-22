@@ -13,7 +13,7 @@ export default class OnboardingManualEntry extends React.Component {
         <P>Choose your units: in cm</P>
         <Form>
           {measurements.map(function(name, i) {
-            return <Input labelName={name} placeholder="0" key={i} type="number" />
+            return <Input labelName={name} key={i} type="number" />
           })}
           <Button>Unsize Me!</Button>
         </Form>

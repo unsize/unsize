@@ -26,13 +26,15 @@ export const buttonColor = '#D8D8D8';
 ////////////
 // STYLES //
 ////////////
-export const borderSolidBlack = '2px solid #000';
+export const borderSolidBlack = '2px solid ' + black;
+export const borderSolidSmoke = '2px solid ' + smoke;
 export const borderRadiusSm = '3px';
 export const borderRadiusLg = '10px';
 
 /////////////////////
 // SIZES & SPACING //
 /////////////////////
+export const fontSizeCaption = '12px';
 export const fontSizeNormal = '16px';
 export const elemSpacingSm = '8px';
 export const elemSpacingMd = '24px';

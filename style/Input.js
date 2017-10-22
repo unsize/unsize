@@ -1,59 +1,69 @@
 import styled from 'styled-components';
 import {
   backgroundColor,
+  black,
   blue,
-  borderSolidBlack,
+  borderSolidSmoke,
   borderRadiusLg,
   elemSpacingSm,
+  elemSpacingMd,
   fontSizeNormal,
+  fontSizeCaption,
+  smoke,
   white,
-  workSansFont,
-  workSansSemibold
+  workSansFont
 } from './constants';
 
 const InputElem = styled.input`
   background-color: ${backgroundColor};
   border: none;
-  border-bottom: ${borderSolidBlack};
+  border-bottom: ${borderSolidSmoke};
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
-  padding: ${elemSpacingSm} 12px;
+  padding: ${elemSpacingSm} 0;
   margin: auto;
   outline: none;
   position: relative;
-  text-align: right;
+  transition: 0.25s ease;
+  width: 80%;
   &:focus {
-    background-color: ${white};
     border-color: ${blue};
+  }
+  &:focus + label, &:valid + label {
+    transform: translateY(-200%);
+    font-size: ${fontSizeCaption};
+  }
+  &:focus + label {
+    color: ${blue};
   }
 `;
 
 const Label = styled.label`
   position: absolute;
-  left: ${elemSpacingSm};
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
-  font-weight: ${workSansSemibold};
+  color: ${smoke};
+  transition: 0.25s ease;
 `;
 
-const Container = styled.div`
+const InputGroup = styled.div`
   position: relative;
-  margin-bottom: ${elemSpacingSm};
+  margin-top: ${fontSizeNormal};
+  margin-bottom: ${fontSizeCaption};
 `;
 
 export default class Input extends React.Component {
   render() {
     const { labelName, placeholder, type } = this.props;
     return (
-      <Container>
+      <InputGroup>
+        <InputElem id={labelName} placeholder={placeholder} type={type} required />
         <Label htmlFor={labelName}>{labelName}</Label>
-        <InputElem id={labelName} placeholder={placeholder} type={type} />
-      </Container>
+      </InputGroup>
     );
   }
 }
-
-//export default Input;

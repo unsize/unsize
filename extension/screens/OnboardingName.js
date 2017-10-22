@@ -14,7 +14,7 @@ export default class OnboardingWelcome extends React.Component {
         <Logo src="icon.png" />
         <H2>We want to help you find YOUR fit</H2>
         <P>But first, can we get your name?</P>
-        <Input labelName="name" placeholder="Enter your name" />
+        <Input labelName="name" />
         <Button onClick={this.handleNext}>Next</Button>
       </div>
     );
