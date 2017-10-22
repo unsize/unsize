@@ -6,9 +6,6 @@ const Form = styled.form`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  input {
-    width: 100%;
-  }
 `;
 
 export default Form;

@@ -1,5 +1,13 @@
 import styled from 'styled-components';
-import { borderRadiusSm, borderSolidBlack, buttonColor, elemSpacingSm, elemSpacingMd, elemSpacingLg } from './constants';
+import {
+  black,
+  borderRadiusSm,
+  borderSolid,
+  buttonColor,
+  elemSpacingXs,
+  elemSpacingMd,
+  elemSpacingLg
+} from './constants';
 
 const Image = styled.img`
   height: ${props => props.large ? elemSpacingLg : elemSpacingMd};
@@ -9,8 +17,8 @@ const Image = styled.img`
   background-position: center;
   background-repeat: no-repeat;
   border-radius: ${props => props.rounded ? '50%' : borderRadiusSm};
-  border: ${borderSolidBlack};
-  margin-right: ${elemSpacingSm};
+  border: ${borderSolid} ${black};
+  margin-right: ${elemSpacingXs};
 `;
 
 export default Image;

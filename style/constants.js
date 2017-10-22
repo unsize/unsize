@@ -19,6 +19,7 @@ export const yellow = '#FECF11';
 export const pink = '#ED166C';
 export const black = '#1D1F27';
 export const smoke = '#606060';
+export const unfocusedGray = '#808080';
 export const white = '#ffffff';
 export const backgroundColor = '#F6F6F6';
 export const buttonColor = '#D8D8D8';
@@ -26,8 +27,7 @@ export const buttonColor = '#D8D8D8';
 ////////////
 // STYLES //
 ////////////
-export const borderSolidBlack = '2px solid ' + black;
-export const borderSolidSmoke = '2px solid ' + smoke;
+export const borderSolid = '2px solid';
 export const borderRadiusSm = '3px';
 export const borderRadiusLg = '10px';
 
@@ -36,6 +36,12 @@ export const borderRadiusLg = '10px';
 /////////////////////
 export const fontSizeCaption = '12px';
 export const fontSizeNormal = '16px';
-export const elemSpacingSm = '8px';
-export const elemSpacingMd = '24px';
-export const elemSpacingLg = '48px';
+export const elemSpacingXs = '5px';
+export const elemSpacingSm = '10px';
+export const elemSpacingMd = '20px';
+export const elemSpacingLg = '40px';
+
+/////////////////
+// TRANSITIONS //
+/////////////////
+export const transitionFastEase = '0.25s ease';

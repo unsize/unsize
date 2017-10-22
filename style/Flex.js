@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { fontSizeNormal } from './constants';
+import { elemSpacingSm } from './constants';
 
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  margin-left: ${fontSizeNormal};
+  margin-left: ${elemSpacingSm};
 `;
 
 export default Flex;

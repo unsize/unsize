@@ -3,38 +3,41 @@ import {
   backgroundColor,
   black,
   blue,
-  borderSolidSmoke,
+  borderSolid,
   borderRadiusLg,
+  elemSpacingXs,
   elemSpacingSm,
-  elemSpacingMd,
   fontSizeNormal,
   fontSizeCaption,
   smoke,
+  transitionFastEase,
+  unfocusedGray,
   white,
   workSansFont
 } from './constants';
 
 const InputElem = styled.input`
+  position: relative;
+  width: 100%;
   background-color: ${backgroundColor};
   border: none;
-  border-bottom: ${borderSolidSmoke};
+  border-bottom: ${borderSolid} ${unfocusedGray};
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
-  padding: ${elemSpacingSm} 0;
   margin: auto;
   outline: none;
-  position: relative;
-  transition: 0.25s ease;
-  width: 80%;
+  padding: ${elemSpacingXs} 0;
+  transition: ${transitionFastEase};
   &:focus {
     border-color: ${blue};
   }
-  &:focus + label, &:valid + label {
-    transform: translateY(-200%);
-    font-size: ${fontSizeCaption};
-  }
   &:focus + label {
     color: ${blue};
+  }
+  &:focus + label, &:valid + label {
+    font-size: ${fontSizeCaption};
+    top: 0;
+    transform: translateY(-75%);
   }
 `;
 
@@ -42,18 +45,17 @@ const Label = styled.label`
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+  color: ${unfocusedGray};
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
-  color: ${smoke};
-  transition: 0.25s ease;
+  transform: translateY(-50%);
+  transition: ${transitionFastEase};
+  z-index: 1;
 `;
 
 const InputGroup = styled.div`
+  margin: ${fontSizeNormal} 0 ${elemSpacingXs};
   position: relative;
-  margin-top: ${fontSizeNormal};
-  margin-bottom: ${fontSizeCaption};
 `;
 
 export default class Input extends React.Component {

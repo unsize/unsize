@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { borderSolidBlack, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingMd, halisFont, fontSizeNormal } from './constants';
+import { black, borderSolid, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingLg, halisFont, fontSizeNormal } from './constants';
 
 const Button = styled.button`
   font-family: ${halisFont};
   background: ${props => props.primary ? 'black' : 'white'};
   color: ${props => props.primary ? 'white' : 'black'};
   width: 200px;
-  height: 40px;
+  height: ${elemSpacingLg};
   border-radius: ${borderRadiusLg};
-  border: ${borderSolidBlack};
+  border: ${borderSolid} ${black};
   margin: ${elemSpacingSm} auto;
   font-size: ${fontSizeNormal};
   display: block;
