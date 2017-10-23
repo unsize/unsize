@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { backgroundColor } from './constants';
+import { backgroundColor } from 'style/constants';
 
 const Window = styled.div`
   width: 350px;
@@ -9,6 +9,7 @@ const Window = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px 8px 0px 8px;
+  text-align: center;
 `;
 
 export default Window;

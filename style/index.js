@@ -18,7 +18,6 @@ import P from './P';
 import ProfileArea from './ProfileArea';
 import Strong from './Strong';
 import TwoColumnForm from './TwoColumnForm';
-import Window from './Window';
 
 export {
   Button,
@@ -39,6 +38,5 @@ export {
   ProfileArea,
   P,
   Strong,
-  TwoColumnForm,
-  Window
+  TwoColumnForm
 };

@@ -2,10 +2,13 @@ import React from 'react';
 import { goTo } from 'route-lite';
 import { Button, Form, Input, Logo, H2, P } from 'style';
 import OnboardingMethod from './OnboardingMethod';
+import isFormFilled from '../formCheck.js';
 
 export default class OnboardingWelcome extends React.Component {
   handleNext() {
-    goTo(OnboardingMethod, {name: document.getElementById("name").value});
+    if (isFormFilled()) {
+      goTo(OnboardingMethod, {name: document.getElementById("name").value});
+    }
   }
 
   render() {
