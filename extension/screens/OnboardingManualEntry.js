@@ -1,12 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import { goTo } from 'route-lite';
-import { Button, H1, Input, Link, Logo, P, ProfileArea, Form } from 'style';
+import { Button, Form, H1, Input, Link, Logo, P, ProfileArea, RadioButton } from 'style';
 import OnboardingEnd from './OnboardingEnd';
 import isFormFilled from '../formCheck.js';
 
+const InlineGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export default class OnboardingManualEntry extends React.Component {
   handleNext() {
-    if (isFormFilled()) {
+    if (isFormFilled(document.getElementsByTagName('form')[0])) {
       goTo(OnboardingEnd, this.props);
     }
   }
@@ -19,8 +25,12 @@ export default class OnboardingManualEntry extends React.Component {
         <Logo />
         <H1>{this.props.name}'s Measurements</H1>
         <P>Enter your measurements below to unsize yourself!</P>
-        <P>Choose your units: in cm</P>
+        <P>Choose your units:</P>
         <Form>
+          <InlineGroup>
+            <RadioButton groupName="units" labelName="in" checked />
+            <RadioButton groupName="units" labelName="cm" />
+          </InlineGroup>
           {measurements.map(function(name, i) {
             return <Input labelName={name} key={i} type="number" />
           })}

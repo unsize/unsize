@@ -1,7 +1,7 @@
-export default function isFormFilled() {
-  let form = document.getElementsByTagName('form')[0].getElementsByTagName('input');
-  for (var i = 0; i < form.length; i++) {
-    if (form[i].required && form[i].value.trim() === "") {
+export default function isFormFilled(form) {
+  let formInputs = form.getElementsByTagName('input');
+  for (var i = 0; i < formInputs.length; i++) {
+    if (formInputs[i].required && formInputs[i].value.trim() === "") {
       return false;
     }
   }

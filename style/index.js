@@ -16,6 +16,7 @@ import Link from './Link';
 import Logo from './Logo';
 import P from './P';
 import ProfileArea from './ProfileArea';
+import RadioButton from './RadioButton';
 import Strong from './Strong';
 import TwoColumnForm from './TwoColumnForm';
 
@@ -35,8 +36,9 @@ export {
   Input,
   Link,
   Logo,
-  ProfileArea,
   P,
+  ProfileArea,
+  RadioButton,
   Strong,
   TwoColumnForm
 };
