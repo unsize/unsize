@@ -15,8 +15,11 @@ import {
   white,
   workSansFont
 } from './constants';
+import Label from './Label';
 
-const Radio = styled.input`
+const Radio = styled.input.attrs({
+  type: "radio"
+})`
   position: absolute;
   left: 0;
   opacity: 0;
@@ -25,12 +28,10 @@ const Radio = styled.input`
   }
 `;
 
-const Label = styled.label`
-  font-family: ${workSansFont};
-  font-size: ${fontSizeNormal};
+const RadioLabel = Label.extend`
+  border-radius: ${borderRadiusSm};
   color: ${smoke};
   padding: ${elemSpacingXs} ${elemSpacingSm};
-  border-radius: ${borderRadiusSm};
 `;
 
 const InputGroup = styled.div`
@@ -41,14 +42,10 @@ const InputGroup = styled.div`
 export default class RadioButton extends React.Component {
   render() {
     const { groupName, labelName, checked } = this.props;
-    let radio = <Radio id={labelName} type="radio" name={groupName} />;
-    if (checked) {
-      radio = <Radio id={labelName} type="radio" name={groupName} defaultChecked />;
-    }
     return (
       <InputGroup>
-        {radio}
-        <Label htmlFor={labelName}>{labelName}</Label>
+        <Radio id={labelName} name={groupName} defaultChecked={checked} />
+        <RadioLabel htmlFor={labelName}>{labelName}</RadioLabel>
       </InputGroup>
     );
   }

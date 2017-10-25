@@ -15,6 +15,7 @@ import {
   white,
   workSansFont
 } from './constants';
+import Label from './Label';
 
 const InputElem = styled.input`
   position: relative;
@@ -41,30 +42,27 @@ const InputElem = styled.input`
   }
 `;
 
-const Label = styled.label`
+const InputLabel = Label.extend`
   position: absolute;
   left: 0;
   top: 50%;
   color: ${unfocusedGray};
-  font-family: ${workSansFont};
-  font-size: ${fontSizeNormal};
   transform: translateY(-50%);
   transition: ${transitionFastEase};
-  z-index: 1;
 `;
 
 const InputGroup = styled.div`
-  margin: ${fontSizeNormal} 0 ${elemSpacingXs};
   position: relative;
+  margin: ${fontSizeNormal} 0 ${elemSpacingXs};
 `;
 
 export default class Input extends React.Component {
   render() {
-    const { labelName, placeholder, type } = this.props;
+    const { focused, labelName, type } = this.props;
     return (
       <InputGroup>
-        <InputElem id={labelName} placeholder={placeholder} type={type} required />
-        <Label htmlFor={labelName}>{labelName}</Label>
+        <InputElem id={labelName} type={type} required autoFocus={focused} />
+        <InputLabel htmlFor={labelName}>{labelName}</InputLabel>
       </InputGroup>
     );
   }

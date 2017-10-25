@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 import { black, fontSizeNormal, workSansFont, workSansSemibold } from './constants';
 
-const Link = styled.a.attrs({
-  href: ({href}) => href,
-  //onClick: chrome.tabs.create({url: ({href}) => href})
-})`
+const Link = styled.a`
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
   font-weight: ${workSansSemibold};

@@ -32,12 +32,12 @@ export default class OnboardingManualEntry extends React.Component {
             <RadioButton groupName="units" labelName="cm" />
           </InlineGroup>
           {measurements.map(function(name, i) {
-            return <Input labelName={name} key={i} type="number" />
+            return <Input labelName={name} key={i} type="number" focused={i == 0} />
           })}
           <Button onClick={this.handleNext.bind(this)}>Unsize Me!</Button>
         </Form>
         <P>Having trouble measuring? Unsure?</P>
-        <Link href="http://unsize.me">Meet Tailor</Link>
+        <Link>Meet Tailor</Link>
       </div>
     );
   }

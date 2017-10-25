@@ -1,6 +1,6 @@
 import React from 'react';
 import { goTo } from 'route-lite';
-import { Button, Form, Input, Logo, H2, P } from 'style';
+import { Button, Form, Input, Logo, H1, P } from 'style';
 import OnboardingMethod from './OnboardingMethod';
 import isFormFilled from '../formCheck.js';
 
@@ -15,10 +15,10 @@ export default class OnboardingWelcome extends React.Component {
     return (
       <div>
         <Logo src="icon.png" />
-        <H2>We want to help you find YOUR size</H2>
+        <H1>We want to help you find YOUR size</H1>
         <P>but first, can we get your name?</P>
         <Form>
-          <Input labelName="name" />
+          <Input labelName="name" focused />
           <Button onClick={this.handleNext}>Next</Button>
         </Form>
       </div>
