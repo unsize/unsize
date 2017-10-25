@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { borderRadiusSm, borderSolidBlack, buttonColor, elemSpacingSm, elemSpacingMd, elemSpacingLg } from './constants';
 
 const Image = styled.img`
-  height: ${props => props.large ? elemSpacingLg : elemSpacingMd};
-  width: ${props => props.large ? elemSpacingLg : elemSpacingMd};
+  height: ${props => props.height ? props.height : props.large ? elemSpacingLg : elemSpacingMd};
+  width: ${props => props.width ? props.width : props.large ? elemSpacingLg : elemSpacingMd};
   background-color: ${buttonColor};
   background-size: cover;
   background-position: center;

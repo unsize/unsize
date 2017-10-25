@@ -9,7 +9,7 @@ const Button = styled.button`
   height: 40px;
   border-radius: ${borderRadiusLg};
   border: ${borderSolidBlack};
-  margin: ${elemSpacingSm} auto;
+  margin: ${elemSpacingSm} 0;
   font-size: ${fontSizeNormal};
   display: block;
 `;
