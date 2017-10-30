@@ -57,11 +57,26 @@ const InputGroup = styled.div`
 `;
 
 export default class Input extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+      required: true
+    };
+  }
+
+  updateValue(event) {
+    this.setState({
+      value: event.target.value
+    });
+  }
+
   render() {
     const { focused, labelName, type } = this.props;
     return (
       <InputGroup>
-        <InputElem id={labelName} type={type} required autoFocus={focused} />
+        <InputElem value={this.state.value} onChange={this.updateValue.bind(this)} id={labelName}
+          type={type} required autoFocus={focused} />
         <InputLabel htmlFor={labelName}>{labelName}</InputLabel>
       </InputGroup>
     );

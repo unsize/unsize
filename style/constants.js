@@ -4,12 +4,6 @@
 export const halisFont = "'Halis', Helvetica, sans-serif";
 export const workSansFont = "'Work Sans', Helvetica, sans-serif";
 
-//////////////////
-// FONT WEIGHTS //
-//////////////////
-export const workSansRegular = '400';
-export const workSansSemibold = '600';
-
 ////////////
 // COLORS //
 ////////////

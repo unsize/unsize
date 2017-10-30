@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { goTo } from 'route-lite';
 import { Button, Form, H1, Input, Link, Logo, P, ProfileArea, RadioButton } from 'style';
 import OnboardingEnd from './OnboardingEnd';
-import isFormFilled from '../formCheck.js';
 
 const InlineGroup = styled.div`
   display: flex;
@@ -11,14 +10,26 @@ const InlineGroup = styled.div`
 `;
 
 export default class OnboardingManualEntry extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      'inputs': []
+    };
+  }
+
   handleNext() {
-    if (isFormFilled(document.getElementsByTagName('form')[0])) {
-      goTo(OnboardingEnd, this.props);
+    for (var i in this.state.inputs) {
+      var input = this.state.inputs[i];
+      if (input.state.required && input.state.value.trim() === "") {
+        return;
+      }
     }
+    goTo(OnboardingEnd, this.props);
   }
 
   render() {
     const measurements = ['neck', 'chest', 'sleeve', 'waist', 'hip', 'inseam'];
+    var parent = this;
     return (
       <div>
         <ProfileArea {...this.props} />
@@ -32,7 +43,8 @@ export default class OnboardingManualEntry extends React.Component {
             <RadioButton groupName="units" labelName="cm" />
           </InlineGroup>
           {measurements.map(function(name, i) {
-            return <Input labelName={name} key={i} type="number" focused={i == 0} />
+            return <Input ref={el => parent.state.inputs.push(el)} labelName={name}
+              key={i} type="number" focused={i == 0} />
           })}
           <Button onClick={this.handleNext.bind(this)}>Unsize Me!</Button>
         </Form>
