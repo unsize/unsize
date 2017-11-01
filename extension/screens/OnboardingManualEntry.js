@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { goTo } from 'route-lite';
-import { Button, Form, H1, Input, Link, Logo, P, ProfileArea, RadioButton } from 'style';
+import { Button, Form, H1, Input, Link, P, RadioButton } from 'style';
+import { elemSpacingXs, elemSpacingSm } from 'style/constants';
 import OnboardingEnd from './OnboardingEnd';
+import { BackProfileHeader, WindowCorners } from '../components';
 
 const InlineGroup = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  p {
+    margin-right: ${elemSpacingSm};
+  }
 `;
 
 export default class OnboardingManualEntry extends React.Component {
@@ -31,14 +37,13 @@ export default class OnboardingManualEntry extends React.Component {
     const measurements = ['neck', 'chest', 'sleeve', 'waist', 'hip', 'inseam'];
     var parent = this;
     return (
-      <div>
-        <ProfileArea {...this.props} />
-        <Logo />
-        <H1>{this.props.name}'s Measurements</H1>
-        <P>Enter your measurements below to unsize yourself!</P>
-        <P>Choose your units:</P>
+      <WindowCorners>
+        <BackProfileHeader {...this.props} includeBack />
+        <H1>Enter your measurements</H1>
+        <P>You can always change these later</P>
         <Form>
           <InlineGroup>
+            <P>Choose your units:</P>
             <RadioButton groupName="units" labelName="in" checked />
             <RadioButton groupName="units" labelName="cm" />
           </InlineGroup>
@@ -46,11 +51,11 @@ export default class OnboardingManualEntry extends React.Component {
             return <Input ref={el => parent.state.inputs.push(el)} labelName={name}
               key={i} type="number" focused={i == 0} />
           })}
-          <Button onClick={this.handleNext.bind(this)}>Unsize Me!</Button>
+          <Button onClick={this.handleNext.bind(this)}>Unsize me!</Button>
         </Form>
-        <P>Having trouble measuring? Unsure?</P>
-        <Link>Meet Tailor</Link>
-      </div>
+        <P small>Having trouble measuring?</P>
+        <Link small>Meet Tailor</Link>
+      </WindowCorners>
     );
   }
 }

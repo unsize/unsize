@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button, H1, Link, Logo, P } from 'style';
+import styled from 'styled-components';
+import { Button, H1, Link, P } from 'style';
 import { goTo } from 'route-lite';
 import OnboardingManualEntry from './OnboardingManualEntry';
 import OnboardingSyncComplete from './OnboardingSyncComplete';
+import { BackProfileHeader, WindowCorners } from '../components';
 
 export default class OnboardingWelcome extends React.Component {
   handleManualEntry() {
@@ -15,14 +17,14 @@ export default class OnboardingWelcome extends React.Component {
 
   render() {
     return (
-      <div>
-        <Logo src="icon.png" />
-        <H1>{this.props.name},</H1>
-        <P>You're almost there!</P>
+      <WindowCorners>
+        <BackProfileHeader {...this.props} includeBack />
+        <H1>You're almost there!</H1>
         <P>Sync your measurements with Tailor to begin</P>
         <Button onClick={this.handleSyncMeasurements.bind(this)}>Sync with Tailor</Button>
-        <Link onClick={this.handleManualEntry.bind(this)}>Enter measurements</Link>
-      </div>
+        <P small>Already know your measurements?</P>
+        <Link small onClick={this.handleManualEntry.bind(this)}>Enter them here</Link>
+      </WindowCorners>
     );
   }
 }

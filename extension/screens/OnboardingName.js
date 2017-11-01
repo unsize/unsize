@@ -14,8 +14,8 @@ export default class OnboardingName extends React.Component {
     return (
       <div>
         <Logo src="icon.png" />
-        <H1>We want to help you find YOUR size</H1>
-        <P>but first, can we get your name?</P>
+        <H1>Let's get started!</H1>
+        <P>What's your name?</P>
         <Form>
           <Input ref={c => this.name = c} type="text" labelName="name" focused />
           <Button onClick={this.handleNext.bind(this)}>Next</Button>

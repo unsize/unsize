@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, H1, Link, P, ProfileArea, TwoColumnLayout } from 'style';
+import { BackProfileHeader } from '../components';
 
 export default class OnboardingEnd extends React.Component {
   render() {
     return (
       <div>
-        <ProfileArea {...this.props} />
+        <BackProfileHeader {...this.props} />
         <H1>Woo! You're all set, {this.props.name}!</H1>
         <P>Start shopping with our partnered brands</P>
         <TwoColumnLayout>

@@ -11,10 +11,10 @@ export default class OnboardingWelcome extends React.Component {
   render() {
     return (
       <div>
-        <H1>Welcome to unsize!</H1>
         <Logo src="icon.png" />
-        <P>Join the revolution and figure out YOUR size</P>
-        <Button onClick={this.handleUnsizeClick}>Start</Button>
+        <H1>Welcome to Unsize!</H1>
+        <P>Join the revolution and find YOUR size</P>
+        <Button onClick={this.handleUnsizeClick}>Let's go!</Button>
       </div>
     );
   }

@@ -20,7 +20,7 @@ import Label from './Label';
 const InputElem = styled.input`
   position: relative;
   width: 100%;
-  background-color: ${backgroundColor};
+  background-color: ${white};
   border: none;
   border-bottom: ${borderSolid} ${unfocusedGray};
   font-family: ${workSansFont};

@@ -9,6 +9,7 @@ import {
   elemSpacingSm,
   fontSizeNormal,
   fontSizeCaption,
+  green,
   smoke,
   transitionFastEase,
   unfocusedGray,
@@ -24,12 +25,12 @@ const Radio = styled.input.attrs({
   left: 0;
   opacity: 0;
   &:checked + label {
-    background-color: #ddd;
+    background-color: ${green};
+    color: ${white};
   }
 `;
 
 const RadioLabel = Label.extend`
-  border-radius: ${borderRadiusSm};
   color: ${smoke};
   padding: ${elemSpacingXs} ${elemSpacingSm};
 `;

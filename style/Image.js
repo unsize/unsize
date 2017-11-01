@@ -3,22 +3,20 @@ import {
   black,
   borderRadiusSm,
   borderSolid,
-  buttonColor,
   elemSpacingXs,
   elemSpacingMd,
-  elemSpacingLg
+  elemSpacingLg,
+  pink
 } from './constants';
 
 const Image = styled.img`
   height: ${props => props.large ? elemSpacingLg : elemSpacingMd};
   width: ${props => props.large ? elemSpacingLg : elemSpacingMd};
-  background-color: ${buttonColor};
+  background-color: ${pink};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: ${props => props.rounded ? '50%' : borderRadiusSm};
-  border: ${borderSolid} ${black};
-  margin-right: ${elemSpacingXs};
 `;
 
 export default Image;

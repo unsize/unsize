@@ -1,17 +1,54 @@
 import styled from 'styled-components';
-import { black, borderSolid, borderRadiusLg, buttonColor, elemSpacingSm, elemSpacingLg, halisFont, fontSizeNormal } from './constants';
+import {
+  black,
+  blue90,
+  borderSolid,
+  borderRadiusLg,
+  buttonColor,
+  elemSpacingSm,
+  elemSpacingMd,
+  elemSpacing,
+  fontSizeNormal,
+  green,
+  halisFont,
+  transitionFastEase,
+  white
+} from './constants';
 
 const Button = styled.button`
-  font-family: ${halisFont};
-  background: ${props => props.primary ? 'black' : 'white'};
-  color: ${props => props.primary ? 'white' : 'black'};
-  width: 200px;
-  height: ${elemSpacingLg};
-  border-radius: ${borderRadiusLg};
-  border: ${borderSolid} ${black};
-  margin: ${elemSpacingSm} auto;
-  font-size: ${fontSizeNormal};
   display: block;
+  position: relative;
+  margin: ${elemSpacingSm} auto;
+  padding: ${elemSpacingSm} ${elemSpacingLg};
+  min-width: 100px;
+  background: ${blue90};
+  color: ${white};
+  font-size: 18px;
+  font-family: ${halisFont};
+  font-weight: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${green};
+    background-image: url('/static/images/button_boost.png');
+    background-size: 200px;
+    background-position: left;
+    transform: translate(6px, 6px);
+    transition: ${transitionFastEase};
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      transform: translate(3px, 3px);
+    }
+  }
 `;
 
 export default Button;
