@@ -9,7 +9,7 @@ export const workSansFont = "'Work Sans', Helvetica, sans-serif";
 ////////////
 export const green = '#10DDB5';
 export const blue = '#0B37F5';
-export const blue90 = 'rgba(11,55,245, 0.9)';
+export const blue90 = 'rgba(11, 55, 245, 0.9)';
 export const yellow = '#FECF11';
 export const pink = '#ED166C';
 export const black = '#1D1F27';
@@ -42,4 +42,4 @@ export const elemSpacingXl = '40px';
 // TRANSITIONS //
 /////////////////
 export const transitionFastEase = '0.25s ease';
-export const transitionLargeObject = '0.5s cubic-bezier(.85,.54,.2,.92)';
+export const easingLargeObject = 'cubic-bezier(.85,.54,.2,.92)';

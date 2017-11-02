@@ -7,7 +7,7 @@ import {
   buttonColor,
   elemSpacingSm,
   elemSpacingMd,
-  elemSpacing,
+  elemSpacingLg,
   fontSizeNormal,
   green,
   halisFont,

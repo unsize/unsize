@@ -14,10 +14,10 @@ const HeaderContainer = styled.div`
 export default class BackProfileHeader extends React.Component {
   render() {
     let { includeBack } = this.props;
-    let back = includeBack ? <BackButton onClick={goBack} /> : null;
+    let backButton = includeBack ? <BackButton onClick={goBack} /> : null;
     return (
       <HeaderContainer includeBack={includeBack}>
-        { back }
+        { backButton }
         <ProfileArea {...this.props} />
       </HeaderContainer>
     );

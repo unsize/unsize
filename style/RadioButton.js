@@ -33,6 +33,7 @@ const Radio = styled.input.attrs({
 const RadioLabel = Label.extend`
   color: ${smoke};
   padding: ${elemSpacingXs} ${elemSpacingSm};
+  cursor: pointer;
 `;
 
 const InputGroup = styled.div`

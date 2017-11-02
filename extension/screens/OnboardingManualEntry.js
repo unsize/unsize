@@ -2,16 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import { goTo } from 'route-lite';
 import { Button, Form, H1, Input, Link, P, RadioButton } from 'style';
-import { elemSpacingXs, elemSpacingSm } from 'style/constants';
+import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
 import OnboardingEnd from './OnboardingEnd';
-import { BackProfileHeader, WindowCorners } from '../components';
+import { BackProfileHeader, ScreenContainer, WindowCorners } from '../components';
 
 const InlineGroup = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: ${elemSpacingXs};
   p {
-    margin-right: ${elemSpacingSm};
+    margin-right: ${elemSpacingSm} !important;
+  }
+`;
+
+const ManualEntryContainer = ScreenContainer.extend`
+  form {
+    margin-top: ${elemSpacingMd};
+  }
+  button {
+    margin-top: calc(${elemSpacingSm} + ${elemSpacingXs});
   }
 `;
 
@@ -19,7 +29,7 @@ export default class OnboardingManualEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      'inputs': []
+      inputs: []
     };
   }
 
@@ -30,14 +40,17 @@ export default class OnboardingManualEntry extends React.Component {
         return;
       }
     }
-    goTo(OnboardingEnd, this.props);
+    this.corners.hideCorners(function() {
+      goTo(OnboardingEnd, this.props);
+    }.bind(this));
   }
 
   render() {
     const measurements = ['neck', 'chest', 'sleeve', 'waist', 'hip', 'inseam'];
     var parent = this;
     return (
-      <WindowCorners>
+      <ManualEntryContainer>
+        <WindowCorners ref={corners => this.corners = corners} />
         <BackProfileHeader {...this.props} includeBack />
         <H1>Enter your measurements</H1>
         <P>You can always change these later</P>
@@ -55,7 +68,7 @@ export default class OnboardingManualEntry extends React.Component {
         </Form>
         <P small>Having trouble measuring?</P>
         <Link small>Meet Tailor</Link>
-      </WindowCorners>
+      </ManualEntryContainer>
     );
   }
 }

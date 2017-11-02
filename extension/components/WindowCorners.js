@@ -1,30 +1,18 @@
-import styled, {keyframes} from 'styled-components';
-import { elemSpacingSm, transitionLargeObject } from 'style/constants';
+import React from 'react';
+import styled from 'styled-components';
+import { elemSpacingSm, easingLargeObject } from 'style/constants';
 
-const bottomLeft = keyframes`
-  from {
-    transform: translate(-100%, 100%);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-`;
+const transitionTime = 500;
 
-const bottomRight = keyframes`
-  from {
-    transform: translate(100%, 100%);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-`;
-
-const WindowCorners = styled.div`
+const Corners = styled.div`
   width: 100%;
   height: 100%;
   padding-bottom: ${elemSpacingSm};
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   overflow: hidden;
+  z-index: -1;
   &::before, &::after {
     content: '';
     position: absolute;
@@ -34,19 +22,54 @@ const WindowCorners = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
+    transition: ${transitionTime}ms ${easingLargeObject};
+    transform: translate(0, 0);
   }
   &::before {
     left: 0;
     background-image: url('/static/images/left_corner.png');
     background-position: left bottom;
-    animation: ${bottomLeft} ${transitionLargeObject};
   }
   &::after {
     right: 0;
     background-image: url('/static/images/right_corner.png');
     background-position: right bottom;
-    animation: ${bottomRight} ${transitionLargeObject};
+  }
+  &.hidden {
+    &::before {
+      transform: translate(-100%, 100%);
+    }
+    &::after {
+      transform: translate(100%, 100%);
+    }
   }
 `;
 
-export default WindowCorners;
+export default class WindowCorners extends React.Component {
+  constructor(props) {
+    super(props);
+    this.hideCorners = this.hideCorners.bind(this);
+    this.state = {
+      hidden: true
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(function() {
+      this.setState({
+        hidden: false
+      });
+    }.bind(this), 100);
+  }
+
+  hideCorners(callback) {
+    this.setState({
+      hidden: true
+    });
+    setTimeout(callback, transitionTime);
+  }
+
+  render() {
+    return <Corners className={this.state.hidden ? 'hidden' : null} />;
+  }
+}

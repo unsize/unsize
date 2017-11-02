@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Button, H1, Link, P, ProfileArea, TwoColumnLayout } from 'style';
+import { Button, H1, Link, P, TwoColumnLayout } from 'style';
 import { BackProfileHeader } from '../components';
 
 export default class OnboardingEnd extends React.Component {
