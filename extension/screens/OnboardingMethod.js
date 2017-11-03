@@ -37,7 +37,7 @@ export default class OnboardingMethod extends React.Component {
         <H1>You're almost there!</H1>
         <P>Sync your measurements with Tailor to begin</P>
         <Image src="/static/images/illustrations/sync_line.png" height="125px" />
-        <Button onClick={this.handleSyncMeasurements.bind(this)}>Sync with Tailor</Button>
+        <Button primary onClick={this.handleSyncMeasurements.bind(this)}>Sync with Tailor</Button>
         <P small>Already know your measurements?</P>
         <Link small onClick={this.handleManualEntry.bind(this)}>Enter them here</Link>
       </MethodContainer>

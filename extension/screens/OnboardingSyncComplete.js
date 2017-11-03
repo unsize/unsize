@@ -26,11 +26,11 @@ export default class OnboardingSyncComplete extends React.Component {
       <SyncCompleteContainer>
         <WindowCorners ref={corners => this.corners = corners} />
         <BackProfileHeader {...this.props} />
-        <H1>Sync Complete!</H1>
+        <H1>Sync complete!</H1>
         <P>Press the button below to finish up</P>
         <Image src="/static/images/illustrations/sync_complete_line.png" height="125px" />
         <Form>
-          <Button onClick={this.handleNext.bind(this)}>Unsize me!</Button>
+          <Button primary onClick={this.handleNext.bind(this)}>Unsize me!</Button>
         </Form>
       </SyncCompleteContainer>
     );

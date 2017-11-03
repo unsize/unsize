@@ -64,7 +64,7 @@ export default class OnboardingManualEntry extends React.Component {
             return <Input ref={el => parent.state.inputs.push(el)} labelName={name}
               key={i} type="number" focused={i == 0} />
           })}
-          <Button onClick={this.handleNext.bind(this)}>Unsize me!</Button>
+          <Button primary onClick={this.handleNext.bind(this)}>Unsize me!</Button>
         </Form>
         <P small>Having trouble measuring?</P>
         <Link small>Meet Tailor</Link>

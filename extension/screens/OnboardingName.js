@@ -6,9 +6,10 @@ import { ScreenContainer } from '../components';
 
 export default class OnboardingName extends React.Component {
   handleNext() {
-    if (this.name.state.value.trim() !== "") {
+    let name = this.name.state.value.trim();
+    if (name !== "") {
       goTo(OnboardingMethod, {
-        name: this.name.state.value,
+        name: name,
         sprinkle: Math.floor((Math.random() * 4))
       });
     }
@@ -17,12 +18,12 @@ export default class OnboardingName extends React.Component {
   render() {
     return (
       <ScreenContainer>
-        <Logo src="icon.png" />
+        <Logo id="logo" />
         <H1>Let's get started!</H1>
         <P>What's your name?</P>
         <Form>
-          <Input ref={c => this.name = c} type="text" labelName="name" focused />
-          <Button onClick={this.handleNext.bind(this)}>Next</Button>
+          <Input ref={name => this.name = name} type="text" labelName="name" focused />
+          <Button primary onClick={this.handleNext.bind(this)}>Next</Button>
         </Form>
       </ScreenContainer>
     );
