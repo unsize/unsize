@@ -12,7 +12,6 @@ import H6 from './H6';
 import Header from './Header';
 import Image from './Image';
 import Input from './Input';
-import Intro from './Intro';
 import Link from './Link';
 import Logo from './Logo';
 import Lockup from './Lockup';
@@ -36,7 +35,6 @@ export {
   Header,
   Image,
   Input,
-  Intro,
   Link,
   Logo,
   Lockup,
