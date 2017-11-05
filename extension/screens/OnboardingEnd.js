@@ -7,7 +7,7 @@ export default class OnboardingEnd extends React.Component {
     return (
       <div>
         <BackProfileHeader {...this.props} />
-        <H1>Woo! You're all set, {this.props.name}!</H1>
+        <H1>Woo! You're all set!</H1>
         <P>Start shopping with our partnered brands</P>
         <TwoColumnLayout>
           <Button>Partner 1</Button>
@@ -15,7 +15,7 @@ export default class OnboardingEnd extends React.Component {
           <Button>Partner 3</Button>
           <Button>Partner 4</Button>
         </TwoColumnLayout>
-        <Link>Meet Tailor</Link>
+        <Link small>Meet Tailor</Link>
       </div>
     );
   }

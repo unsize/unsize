@@ -30,8 +30,8 @@ export const borderRadiusLg = '10px';
 // SIZES & SPACING //
 /////////////////////
 export const fontSizeCaption = '12px';
-export const fontSizeSmall = '14px';
-export const fontSizeNormal = '16px';
+export const fontSizeSmall = '16px';
+export const fontSizeNormal = '18px';
 export const elemSpacingXs = '5px';
 export const elemSpacingSm = '10px';
 export const elemSpacingMd = '20px';

@@ -6,22 +6,58 @@ import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
 import OnboardingName from './OnboardingName';
 
 const WelcomeContainer = styled.div`
-  margin-left: ${elemSpacingMd};
-  margin-bottom: ${elemSpacingMd};
+  margin-left: calc(${elemSpacingXs} + ${elemSpacingMd});
   text-align: left;
   #logo {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
     margin: 0 0 0 auto;
+    transform: translate(-40px, 20px);
   }
   h1 {
-    margin-bottom: ${elemSpacingXs};
+    margin-top: 45px;
+    margin-bottom: 0;
   }
   p {
     margin: 0;
   }
   button {
     margin: 0;
+    margin-top: calc(${elemSpacingXs} + ${elemSpacingSm});
+    margin-bottom: ${elemSpacingMd};
+  }
+`;
+
+const CornerDecorations = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('/static/images/welcome_header.png');
+    background-position: center top;
+  }
+  &::after {
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 250px;
+    background-image: url('/static/images/welcome_blue.png');
+    background-position: right bottom;
   }
 `;
 
@@ -31,12 +67,16 @@ export default class OnboardingWelcome extends React.Component {
   }
 
   render() {
+    const finders = ['style', 'confidence', 'perfect look', 'new favorite outfit'];
     return (
       <WelcomeContainer>
+        <CornerDecorations />
         <Logo id="logo" />
         <H1>Welcome to Unsize!</H1>
-        <P>Join the revolution and find YOUR size</P>
-        <Button primary onClick={this.handleUnsizeClick}>Let's go!</Button>
+        <P>Let's find YOUR {finders[Math.floor(Math.random() * finders.length)]}</P>
+        <Button primary onClick={this.handleUnsizeClick}>
+          Let's Go
+        </Button>
       </WelcomeContainer>
     );
   }

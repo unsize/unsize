@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Logo = styled.img.attrs({
-  src: '/static/images/logo.png'
+  src: props => props.transparent ? '/static/images/logo.png' : 'static/images/logo_opaque.png'
 })`
   width: 50px;
   height: 50px;

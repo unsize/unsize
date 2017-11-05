@@ -20,7 +20,7 @@ const Button = styled.button`
   display: block;
   position: relative;
   margin: ${elemSpacingSm} auto;
-  padding: ${elemSpacingSm} ${elemSpacingLg};
+  padding: 8px ${elemSpacingMd};
   min-width: 100px;
   font-size: 18px;
   font-family: ${halisFont};
@@ -45,13 +45,13 @@ const Button = styled.button`
       background-image: url('/static/images/button_boost.png');
       background-size: 200px;
       background-position: left;
-      transform: translate(8px, 8px);
-      transition: ${transitionFastEase};
+      transform: translate(0px, 0px);
+      transition: 0.1s ease;
       z-index: -1;
     }
     &:hover {
       &::after {
-        transform: translate(4px, 4px);
+        transform: translate(8px, 8px);
       }
     }
   `}
