@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from 'route-lite';
 import Window from './components/Window';
-import OnboardingWelcome from './screens/OnboardingWelcome';
+import Welcome from './screens/onboarding/Welcome';
 import 'style/fontFaces';
 
 ReactDOM.render(
   <Window>
     <Router>
-      <OnboardingWelcome />
+      <Welcome />
     </Router>
   </Window>,
   document.querySelector('#root')

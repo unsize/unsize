@@ -55,6 +55,14 @@ const Button = styled.button`
       }
     }
   `}
+  ${props => props.image && css`
+    background-color: ${white};
+    background-image: url(${props.image});
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+  `}
 `;
 
 export default Button;

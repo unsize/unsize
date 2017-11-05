@@ -3,12 +3,12 @@ import { goTo } from 'route-lite';
 import styled from 'styled-components';
 import { Button, Form, H1, Image, P } from 'style';
 import { elemSpacingXs, elemSpacingSm } from 'style/constants';
-import OnboardingEnd from './OnboardingEnd';
+import FinishRetailers from './FinishRetailers';
 import {
   BackProfileHeader,
   ScreenContainer,
   WindowCorners
-} from '../components';
+} from '../../components';
 
 const SyncCompleteContainer = ScreenContainer.extend`
   img {
@@ -17,9 +17,9 @@ const SyncCompleteContainer = ScreenContainer.extend`
   }
 `;
 
-export default class OnboardingSyncComplete extends React.Component {
+export default class SyncComplete extends React.Component {
   handleNext() {
-    goTo(OnboardingEnd, this.props);
+    goTo(FinishRetailers, this.props);
   }
 
   render() {

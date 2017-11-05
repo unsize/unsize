@@ -2,8 +2,8 @@ import React from 'react';
 import { goTo } from 'route-lite';
 import { Button, Form, Input, Logo, H1, P } from 'style';
 import { elemSpacingSm, elemSpacingMd } from 'style/constants';
-import OnboardingMethod from './OnboardingMethod';
-import { ScreenContainer } from '../components';
+import Method from './Method';
+import { ScreenContainer } from '../../components';
 
 const NameContainer = ScreenContainer.extend`
   #logo {
@@ -14,11 +14,11 @@ const NameContainer = ScreenContainer.extend`
   }
 `;
 
-export default class OnboardingName extends React.Component {
+export default class NameEntry extends React.Component {
   handleNext() {
     let name = this.name.state.value.trim();
     if (name !== '') {
-      goTo(OnboardingMethod, {
+      goTo(Method, {
         name: name,
         sprinkle: Math.floor(Math.random() * 4)
       });

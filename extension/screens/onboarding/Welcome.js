@@ -3,7 +3,7 @@ import { goTo } from 'route-lite';
 import styled from 'styled-components';
 import { Logo, H1, P, Button } from 'style';
 import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
-import OnboardingName from './OnboardingName';
+import NameEntry from './NameEntry';
 
 const WelcomeContainer = styled.div`
   margin-left: calc(${elemSpacingXs} + ${elemSpacingMd});
@@ -61,19 +61,26 @@ const CornerDecorations = styled.div`
   }
 `;
 
-export default class OnboardingWelcome extends React.Component {
+export default class Welcome extends React.Component {
   handleUnsizeClick() {
-    goTo(OnboardingName);
+    goTo(NameEntry);
   }
 
   render() {
-    const finders = ['style', 'confidence', 'perfect look', 'new favorite outfit'];
+    const finders = [
+      'style',
+      'confidence',
+      'perfect look',
+      'new favorite outfit'
+    ];
     return (
       <WelcomeContainer>
         <CornerDecorations />
         <Logo id="logo" />
         <H1>Welcome to Unsize!</H1>
-        <P>Let's find YOUR {finders[Math.floor(Math.random() * finders.length)]}</P>
+        <P>
+          Let's find your {finders[Math.floor(Math.random() * finders.length)]}
+        </P>
         <Button primary onClick={this.handleUnsizeClick}>
           Let's Go
         </Button>

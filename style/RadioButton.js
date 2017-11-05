@@ -27,6 +27,7 @@ const Radio = styled.input.attrs({
   &:checked + label {
     background-color: ${green};
     color: ${white};
+    font-weight: bold;
   }
 `;
 

@@ -3,30 +3,30 @@ import { goTo } from 'route-lite';
 import styled from 'styled-components';
 import { Button, H1, Image, Link, P } from 'style';
 import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
-import OnboardingManualEntry from './OnboardingManualEntry';
-import OnboardingSyncComplete from './OnboardingSyncComplete';
+import ManualEntry from './ManualEntry';
+import SyncComplete from './SyncComplete';
 import {
   BackProfileHeader,
   ScreenContainer,
   WindowCorners
-} from '../components';
+} from '../../components';
 
 const MethodContainer = ScreenContainer.extend`
   img {
     margin: ${elemSpacingMd} 0 ${elemSpacingSm};
-  }s
+  }
   a {
     margin-bottom: ${elemSpacingSm};
   }
 `;
 
-export default class OnboardingMethod extends React.Component {
+export default class Method extends React.Component {
   handleManualEntry() {
-    goTo(OnboardingManualEntry, this.props);
+    goTo(ManualEntry, this.props);
   }
 
   handleSyncMeasurements() {
-    goTo(OnboardingSyncComplete, this.props);
+    goTo(SyncComplete, this.props);
   }
 
   render() {

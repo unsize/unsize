@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { goTo } from 'route-lite';
 import { Button, Form, H1, Input, Link, P, RadioButton } from 'style';
-import { elemSpacingXs, elemSpacingSm, elemSpacingMd, fontSizeSmall } from 'style/constants';
-import OnboardingEnd from './OnboardingEnd';
+import {
+  elemSpacingXs,
+  elemSpacingSm,
+  elemSpacingMd,
+  fontSizeSmall
+} from 'style/constants';
+import FinishRetailers from './FinishRetailers';
 import {
   BackProfileHeader,
   ScreenContainer,
   WindowCorners
-} from '../components';
+} from '../../components';
 
 const InlineGroup = styled.div`
   display: flex;
@@ -33,7 +38,7 @@ const ManualEntryContainer = ScreenContainer.extend`
   }
 `;
 
-export default class OnboardingManualEntry extends React.Component {
+export default class ManualEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +53,7 @@ export default class OnboardingManualEntry extends React.Component {
         return;
       }
     }
-    goTo(OnboardingEnd, this.props);
+    goTo(FinishRetailers, this.props);
   }
 
   render() {
