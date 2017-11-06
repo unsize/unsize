@@ -15,6 +15,7 @@ import Input from './Input';
 import Label from './Label';
 import Link from './Link';
 import Logo from './Logo';
+import Lockup from './Lockup';
 import P from './P';
 import ProfileArea from './ProfileArea';
 import RadioButton from './RadioButton';
@@ -38,6 +39,7 @@ export {
   Label,
   Link,
   Logo,
+  Lockup,
   P,
   ProfileArea,
   RadioButton,

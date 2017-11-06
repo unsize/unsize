@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import 'style/fontFaces';
+import 'style/fontSizes';
 
 export default class UnsizeBase extends Document {
   static getInitialProps({ renderPage }) {
@@ -19,7 +20,7 @@ export default class UnsizeBase extends Document {
           <title>My page</title>
           {this.props.styleTags}
         </Head>
-        <body>
+        <body style={{ margin: 0 }}>
           <Main />
           <NextScript />
         </body>
