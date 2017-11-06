@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { elemSpacingSm, white } from 'style/constants';
+import { blue, borderSolid, elemSpacingSm, green, pink, white, yellow } from 'style/constants';
 
 const Container = styled.button`
   display: block;
@@ -8,21 +8,33 @@ const Container = styled.button`
   margin: ${elemSpacingSm} 0;
   min-width: 100px;
   height: 50px;
-  border: none;
+  border: ${borderSolid};
   outline: none;
   cursor: pointer;
   background-color: ${white};
   position: relative;
+  ${props => props.pink && css`
+    border-color: ${pink};
+  `}
+  ${props => props.green && css`
+    border-color: ${green};
+  `}
+  ${props => props.yellow && css`
+    border-color: ${yellow};
+  `}
+  ${props => props.blue && css`
+    border-color: ${blue};
+  `}
 `;
 
 const Logo = styled.img.attrs({
-  src: props => props.img
+  src: props => props.logo
 })`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-height: 70%;
+  max-height: 50%;
   max-width: 70%;
 `;
 
@@ -30,8 +42,8 @@ export default class Retailer extends React.Component {
   render() {
     console.log(this.props.logo);
     return (
-      <Container>
-        <Logo img={this.props.logo} />
+      <Container {...this.props}>
+        <Logo logo={this.props.logo} />
       </Container>
     );
   }

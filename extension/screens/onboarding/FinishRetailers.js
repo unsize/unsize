@@ -5,7 +5,8 @@ import {
   elemSpacingXs,
   elemSpacingSm,
   elemSpacingMd,
-  elemSpacingLg
+  elemSpacingLg,
+  white
 } from 'style/constants';
 import { BackProfileHeader, Retailer, ScreenContainer } from '../../components';
 
@@ -17,9 +18,9 @@ const EndContainer = ScreenContainer.extend`
     margin-bottom: ${elemSpacingSm};
   }
   #partners {
-    margin: ${elemSpacingSm} 0 calc(${elemSpacingSm} + ${elemSpacingXs});
-    background: ${blue};
-    padding: calc(${elemSpacingXs} + ${elemSpacingSm})
+    margin: 0 0 calc(${elemSpacingSm} + ${elemSpacingXs});
+    background: ${white};
+    padding: /*calc(${elemSpacingXs} + ${elemSpacingSm})*/ 0
       calc(${elemSpacingSm} + ${elemSpacingLg});
   }
 `;
@@ -32,9 +33,9 @@ export default class FinishRetailers extends React.Component {
         <H1>Woo! You're all set!</H1>
         <P id="subheader">Start shopping with our partnered brands</P>
         <TwoColumnLayout id="partners">
-          <Retailer logo="/static/images/retailers/asos.png" />
-          <Retailer logo="/static/images/retailers/lyst.png" />
-          <Retailer logo="/static/images/retailers/shopstyle.png" />
+          <Retailer pink logo="/static/images/retailers/asos.png" />
+          <Retailer green logo="/static/images/retailers/lyst.png" />
+          <Retailer yellow logo="/static/images/retailers/shopstyle.png" />
         </TwoColumnLayout>
         <Link small>Meet Tailor</Link>
       </EndContainer>
