@@ -12,7 +12,9 @@ import H6 from './H6';
 import Header from './Header';
 import Image from './Image';
 import Input from './Input';
+import Link from './Link';
 import Logo from './Logo';
+import Lockup from './Lockup';
 import P from './P';
 import ProfileArea from './ProfileArea';
 import Strong from './Strong';
@@ -33,7 +35,9 @@ export {
   Header,
   Image,
   Input,
+  Link,
   Logo,
+  Lockup,
   ProfileArea,
   P,
   Strong,

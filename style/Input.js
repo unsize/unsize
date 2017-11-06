@@ -21,7 +21,7 @@ const Input = styled.input.attrs({
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
   padding: ${elemSpacingSm} 12px;
-  margin: auto;
+  margin: auto 0;
   outline: none;
   &:focus {
     background-color: ${white};
