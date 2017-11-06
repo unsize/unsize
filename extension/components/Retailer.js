@@ -40,7 +40,6 @@ const Logo = styled.img.attrs({
 
 export default class Retailer extends React.Component {
   render() {
-    console.log(this.props.logo);
     return (
       <Container {...this.props}>
         <Logo logo={this.props.logo} />

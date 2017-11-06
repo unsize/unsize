@@ -18,10 +18,9 @@ const EndContainer = ScreenContainer.extend`
     margin-bottom: ${elemSpacingSm};
   }
   #partners {
-    margin: 0 0 calc(${elemSpacingSm} + ${elemSpacingXs});
+    margin-bottom: calc(${elemSpacingSm} + ${elemSpacingXs});
     background: ${white};
-    padding: /*calc(${elemSpacingXs} + ${elemSpacingSm})*/ 0
-      calc(${elemSpacingSm} + ${elemSpacingLg});
+    padding: 0 calc(${elemSpacingSm} + ${elemSpacingLg});
   }
 `;
 
