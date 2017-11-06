@@ -1,21 +1,25 @@
 import React from 'react';
 import { goTo } from 'route-lite';
-import { Logo, H2, P, Button, Input } from 'style';
+import { Button, Form, Input, Logo, H1, P } from 'style';
 import OnboardingMethod from './OnboardingMethod';
 
-export default class OnboardingWelcome extends React.Component {
+export default class OnboardingName extends React.Component {
   handleNext() {
-    goTo(OnboardingMethod);
+    if (this.name.state.value.trim() !== "") {
+      goTo(OnboardingMethod, {name: this.name.state.value});
+    }
   }
 
   render() {
     return (
       <div>
         <Logo src="icon.png" />
-        <H2>We want to help you find YOUR fit</H2>
-        <P>But first, can we get your name?</P>
-        <Input />
-        <Button onClick={this.handleNext}>Next</Button>
+        <H1>We want to help you find YOUR size</H1>
+        <P>but first, can we get your name?</P>
+        <Form>
+          <Input ref={c => this.name = c} type="text" labelName="name" focused />
+          <Button onClick={this.handleNext.bind(this)}>Next</Button>
+        </Form>
       </div>
     );
   }

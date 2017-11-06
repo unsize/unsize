@@ -1,22 +1,23 @@
 import styled from 'styled-components';
-import {
-  borderSolidBlack,
-  borderRadiusLg,
-  buttonColor,
-  elemSpacingSm,
-  elemSpacingMd,
-  halisFont,
-  fontSizeNormal
+import { 
+  black, 
+  borderSolid, 
+  borderRadiusLg, 
+  buttonColor, 
+  elemSpacingSm, 
+  elemSpacingLg, 
+  halisFont, 
+  fontSizeNormal 
 } from './constants';
 
 const Button = styled.button`
   font-family: ${halisFont};
-  background: ${props => (props.primary ? 'black' : 'white')};
-  color: ${props => (props.primary ? 'white' : 'black')};
+  background: ${props => props.primary ? 'black' : 'white'};
+  color: ${props => props.primary ? 'white' : 'black'};
   width: ${props => (props.width ? props.width : '200px')};
-  height: 40px;
+  height: ${elemSpacingLg};
   border-radius: ${borderRadiusLg};
-  border: ${borderSolidBlack};
+  border: ${borderSolid} ${black};
   margin: ${elemSpacingSm} 0;
   font-size: ${fontSizeNormal};
   display: block;

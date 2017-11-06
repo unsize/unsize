@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import {
+  black,
   borderRadiusSm,
-  borderSolidBlack,
+  borderSolid,
   buttonColor,
+  elemSpacingXs,
   elemSpacingSm,
   elemSpacingMd,
   elemSpacingLg
@@ -17,9 +19,9 @@ const Image = styled.img`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: ${props => (props.rounded ? '50%' : borderRadiusSm)};
-  border: ${borderSolidBlack};
-  margin-right: ${elemSpacingSm};
+  border-radius: ${props => props.rounded ? '50%' : borderRadiusSm};
+  border: ${borderSolid} ${black};
+  margin-right: ${elemSpacingXs};
 `;
 
 export default Image;

@@ -12,14 +12,15 @@ import H6 from './H6';
 import Header from './Header';
 import Image from './Image';
 import Input from './Input';
+import Label from './Label';
 import Link from './Link';
 import Logo from './Logo';
 import Lockup from './Lockup';
 import P from './P';
 import ProfileArea from './ProfileArea';
+import RadioButton from './RadioButton';
 import Strong from './Strong';
-import TwoColumnForm from './TwoColumnForm';
-import Window from './Window';
+import TwoColumnLayout from './TwoColumnLayout';
 
 export {
   Button,
@@ -35,12 +36,13 @@ export {
   Header,
   Image,
   Input,
+  Label,
   Link,
   Logo,
   Lockup,
-  ProfileArea,
   P,
+  ProfileArea,
+  RadioButton,
   Strong,
-  TwoColumnForm,
-  Window
+  TwoColumnLayout
 };
