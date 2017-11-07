@@ -35,7 +35,8 @@ const InputElem = styled.input`
   &:focus + label {
     color: ${blue};
   }
-  &:focus + label, &:valid + label {
+  &:focus + label,
+  &:valid + label {
     font-size: ${fontSizeCaption};
     top: 0;
     transform: translateY(-75%);
@@ -75,8 +76,14 @@ export default class Input extends React.Component {
     const { focused, labelName, type } = this.props;
     return (
       <InputGroup>
-        <InputElem value={this.state.value} onChange={this.updateValue.bind(this)} id={labelName}
-          type={type} required autoFocus={focused} />
+        <InputElem
+          value={this.state.value}
+          onChange={this.updateValue.bind(this)}
+          id={labelName}
+          type={type}
+          required
+          autoFocus={focused}
+        />
         <InputLabel htmlFor={labelName}>{labelName}</InputLabel>
       </InputGroup>
     );

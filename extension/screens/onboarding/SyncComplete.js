@@ -4,11 +4,7 @@ import styled from 'styled-components';
 import { Button, Form, H1, Image, P } from 'style';
 import { elemSpacingXs, elemSpacingSm } from 'style/constants';
 import FinishRetailers from './FinishRetailers';
-import {
-  BackProfileHeader,
-  ScreenContainer,
-  WindowCorners
-} from '../../components';
+import { BackProfileHeader, ScreenContainer } from '../../components';
 
 const SyncCompleteContainer = ScreenContainer.extend`
   img {

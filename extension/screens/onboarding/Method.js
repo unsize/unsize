@@ -5,11 +5,7 @@ import { Button, H1, Image, Link, P } from 'style';
 import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
 import ManualEntry from './ManualEntry';
 import SyncComplete from './SyncComplete';
-import {
-  BackProfileHeader,
-  ScreenContainer,
-  WindowCorners
-} from '../../components';
+import { BackProfileHeader, ScreenContainer } from '../../components';
 
 const MethodContainer = ScreenContainer.extend`
   img {

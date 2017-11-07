@@ -9,11 +9,7 @@ import {
   fontSizeSmall
 } from 'style/constants';
 import FinishRetailers from './FinishRetailers';
-import {
-  BackProfileHeader,
-  ScreenContainer,
-  WindowCorners
-} from '../../components';
+import { BackProfileHeader, ScreenContainer } from '../../components';
 
 const InlineGroup = styled.div`
   display: flex;
