@@ -25,7 +25,8 @@ const InputElem = styled.input`
   border-bottom: ${borderSolid} ${unfocusedGray};
   font-family: ${workSansFont};
   font-size: ${fontSizeNormal};
-  margin: auto;
+  padding: ${elemSpacingSm} 12px;
+  margin: auto 0;
   outline: none;
   padding: ${elemSpacingXs} 0;
   transition: ${transitionFastEase};

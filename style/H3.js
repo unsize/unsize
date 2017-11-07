@@ -4,6 +4,7 @@ import { halisFont } from './constants';
 const H3 = styled.h3`
   font-family: ${halisFont};
   font-weight: bold;
+  text-align: ${props => props.align ? props.align : "center"};
 `;
 
 export default H3;

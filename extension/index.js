@@ -4,6 +4,7 @@ import Router from 'route-lite';
 import Window from './components/Window';
 import Welcome from './screens/onboarding/Welcome';
 import 'style/fontFaces';
+import 'style/fontSizes';
 
 ReactDOM.render(
   <Window>

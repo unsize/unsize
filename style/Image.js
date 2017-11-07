@@ -4,6 +4,7 @@ import {
   borderRadiusSm,
   borderSolid,
   elemSpacingXs,
+  elemSpacingSm,
   elemSpacingMd,
   elemSpacingLg,
   pink
