@@ -20,7 +20,7 @@ export default class NameEntry extends React.Component {
     if (name !== '') {
       goTo(Method, {
         name: name,
-        sprinkle: Math.floor(Math.random() * 4)
+        sprinkle: parseInt(name, 36) % 4
       });
     }
   }

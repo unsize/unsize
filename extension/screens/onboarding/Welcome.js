@@ -15,6 +15,7 @@ const WelcomeContainer = styled.div`
     transform: translate(-40px, 20px);
   }
   h1 {
+    text-align: left;
     margin-top: 45px;
     margin-bottom: 0;
   }

@@ -43,13 +43,12 @@ export default class ManualEntry extends React.Component {
   }
 
   handleNext() {
-    for (var i in this.state.inputs) {
-      var input = this.state.inputs[i];
-      if (input.state.required && input.state.value.trim() === '') {
-        return;
-      }
+    var found = this.state.inputs.find(input => {
+      return input.state.required && input.state.value.trim() === '';
+    });
+    if (found == undefined) {
+      goTo(FinishRetailers, this.props);
     }
-    goTo(FinishRetailers, this.props);
   }
 
   render() {
