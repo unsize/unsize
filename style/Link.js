@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { black, fontSizeNormal, workSansFont } from './constants';
+import { blue, fontSizeNormal, fontSizeSmall, workSansFont } from './constants';
 
 const Link = styled.a`
   font-family: ${workSansFont};
-  font-size: ${fontSizeNormal};
-  font-weight: bold;
+  font-size: ${props => props.small ? fontSizeSmall : fontSizeNormal};
   margin: 5px;
-  color: ${black};
+  color: ${blue};
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Link;

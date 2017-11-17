@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { elemSpacingXs } from './constants';
+import { elemSpacingXs, elemSpacingMd } from './constants';
 
 const TwoColumnLayout = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-flow: column wrap;
   flex-direction: row;
   & > * {
-    width: 40%;
+    width: 45%;
     margin: ${elemSpacingXs};
   }
 `;

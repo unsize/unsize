@@ -1,3 +1,4 @@
+import BackButton from './BackButton';
 import Button from './Button';
 import Div from './Div';
 import Flex from './Flex';
@@ -23,6 +24,7 @@ import Strong from './Strong';
 import TwoColumnLayout from './TwoColumnLayout';
 
 export {
+  BackButton,
   Button,
   Div,
   Footer,
