@@ -4,7 +4,7 @@ import { screenWidth } from 'style/constants';
 
 const PageWrapper = styled.article`
   max-width: ${screenWidth};
-  margin: 100px auto 0;
+  margin: 130px auto 0;
 
   @media (max-width: ${screenWidth}) {
     margin: 100px 60px 0;

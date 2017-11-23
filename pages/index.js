@@ -16,7 +16,7 @@ export default () => (
       primaryCta
       ctaText="Get Started"
       height="450px"
-      tabletHeight="350px"
+      tabletHeight="425px"
     />
     <WhyUnsize />
     <TwoColumnImageRow
@@ -31,6 +31,7 @@ export default () => (
       primaryCta
       ctaText="Pre-order"
       height="600px"
+      tabletHeight="450px"
     />
 
     <TwoColumnImageRow
@@ -48,6 +49,7 @@ export default () => (
       primaryCta
       ctaText="Get Started"
       height="350px"
+      tabletHeight="250px"
     />
     <BrandListing />
     <Start />

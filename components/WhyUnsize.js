@@ -1,23 +1,11 @@
 import React from 'react';
-import { H1, H2, H4, H5, H6, P, Button, Image } from 'style';
+import { H1, H2 as _H2, H4, H5, H6, P, Button, Image } from 'style';
 import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 const QuoteWrapper = styled.div`
   position: relative;
   width: 100%;
-`;
-
-const QuoteBackground = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 115px;
-  z-index: -1;
 `;
 
 const BrandWrapper = styled.div`
@@ -28,6 +16,25 @@ const BrandWrapper = styled.div`
 
   img {
     margin: 10px 0;
+  }
+`;
+
+const H2 = _H2.extend`
+  background-image: url("/static/images/quote_background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  margin: 0px 10px;
+
+  @media (max-width: 768px) {
+    margin: 0 30px;
+    padding: 30px 0;
+  }
+
+  @media (max-width: 480px) {
+    margin: 20px 0;
+    background-size: contain;
   }
 `;
 
@@ -42,12 +49,6 @@ export default class WhyUnsize extends React.Component {
               <H4>You said:</H4>
               <QuoteWrapper>
                 <H2>My thighs aren't made for jeans|</H2>
-                <QuoteBackground>
-                  <Image
-                    height="100%"
-                    src="/static/images/quote_background.png"
-                  />
-                </QuoteBackground>
               </QuoteWrapper>
               <Row center="xs">
                 <Col xs={10}>

@@ -7,9 +7,10 @@ const StyledImage = Image.extend`
   position: absolute;
   ${({ layout }) => (layout === 'left' ? 'right: 0' : 'left: 0')};
   top: 0;
-  height: ${({ height }) => (height ? height : 'auto')};
+  min-height: ${({ height }) => (height ? height : 'auto')};
 
-  @media (max-wdith: 768px) {
+  @media (max-width: 768px) {
+    min-height: 0;
     height: ${({ tabletHeight }) => (tabletHeight ? tabletHeight : 'inherit')};
   }
 
@@ -22,7 +23,7 @@ const StyledImage = Image.extend`
 `;
 
 const RowLayout = styled.section`
-  height: ${({ height }) => (height ? height : 'fit-content')};
+  min-height: ${({ height }) => (height ? height : 'auto')};
   width: 100%;
   position: relative;
   display: flex;
@@ -36,8 +37,7 @@ const RowLayout = styled.section`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: ${({ tabletHeight }) =>
-      tabletHeight ? tabletHeight : 'fit-content'};
+    min-height: ${({ tabletHeight }) => (tabletHeight ? tabletHeight : 'auto')};
     margin: 20px 0;
   }
 
@@ -50,7 +50,7 @@ const RowLayout = styled.section`
 
 const TextLayout = styled.aside`
   margin-left: ${({ layout }) => (layout === 'left' ? '0' : 'auto')};
-  max-width: 55%;
+  max-width: 50%;
   min-width: 320px;
 `;
 
@@ -75,9 +75,11 @@ class TwoColumnImageRow extends React.Component {
           <H1 align="left">{this.props.title}</H1>
           <H6>{this.props.subtitle}</H6>
           <P>{this.props.body}</P>
-          <Button primary={!!this.props.primaryCta}>
-            {this.props.ctaText}
-          </Button>
+          {this.props.ctaText && (
+            <Button primary={!!this.props.primaryCta}>
+              {this.props.ctaText}
+            </Button>
+          )}
         </TextLayout>
         <StyledImage
           layout={this.getHeaderAlign(this.props.layout)}
