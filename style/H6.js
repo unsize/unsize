@@ -5,7 +5,7 @@ const H6 = styled.h6`
   font-family: ${workSansFont};
   font-weight: normal;
   font-size: 20px;
-  margin: 5px 0px;
+  margin: 5px 0px 20px 0;
   color: #9b9b9b;
 `;
 

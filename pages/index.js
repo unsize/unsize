@@ -13,7 +13,6 @@ export default () => (
     <Grid style={{ maxWidth: 1024 }}>
       <Nav />
       <Hero />
-      <About />
       <Why />
       <Start />
       <Footer />

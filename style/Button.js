@@ -31,38 +31,42 @@ const Button = styled.button`
   border: ${borderSolid} ${blue};
   background: ${white};
   color: ${blue};
-  ${props => props.primary && css`
-    background: ${blue90};
-    color: ${white};
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: ${green};
-      background-image: url('/static/images/button_boost.png');
-      background-size: 200px;
-      background-position: left;
-      transform: translate(0px, 0px);
-      transition: 0.1s ease;
-      z-index: -1;
-    }
-    &:hover {
+  border-radius: 0;
+  ${props =>
+    props.primary &&
+    css`
+      background: ${blue90};
+      color: ${white};
       &::after {
-        transform: translate(8px, 8px);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: ${green};
+        background-image: url('/static/images/button_boost.png');
+        background-size: 200px;
+        background-position: left;
+        transform: translate(0px, 0px);
+        transition: 0.1s ease;
+        z-index: -1;
       }
-    }
-  `}
-  ${props => props.image && css`
-    background-color: ${white};
-    background-image: url(${props.image});
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50px;
-  `}
+      &:hover {
+        &::after {
+          transform: translate(8px, 8px);
+        }
+      }
+    `} ${props =>
+      props.image &&
+      css`
+        background-color: ${white};
+        background-image: url(${props.image});
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50px;
+      `};
 `;
 
 export default Button;
