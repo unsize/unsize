@@ -25,10 +25,15 @@ export const buttonColor = '#D8D8D8';
 export const borderSolid = '2px solid';
 export const borderRadiusSm = '3px';
 export const borderRadiusLg = '10px';
+export const brandBlueBorder = `4px solid ${blue}`;
+export const brandGreenBorder = `4px solid ${green}`;
+export const brandYellowBorder = `4px solid ${yellow}`;
+export const brandPinkBorder = `4px solid ${pink}`;
 
 /////////////////////
 // SIZES & SPACING //
 /////////////////////
+export const screenWidth = '1024px';
 export const fontSizeCaption = '12px';
 export const fontSizeSmall = '16px';
 export const fontSizeNormal = '18px';

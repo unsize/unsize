@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import { screenWidth } from 'style/constants';
 
 injectGlobal`
 
@@ -32,7 +33,7 @@ injectGlobal`
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: ${screenWidth}) and (max-width: 1439px) {
   h1 {
     font-size: 56px;
     line-height: 56px;

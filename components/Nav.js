@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Lockup, Link as StyledLink } from 'style';
 import { Row, Col } from 'react-flexbox-grid';
-import { black, white } from 'style/constants';
+import { black, white, screenWidth } from 'style/constants';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -20,10 +20,14 @@ const NavWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 1024px;
+  max-width: ${screenWidth};
   margin: 0 auto;
   align-items: center;
   height: 75px;
+
+  @media (max-width: ${screenWidth}) {
+    margin: 0 60px;
+  }
 `;
 
 const RightNav = styled.div`
