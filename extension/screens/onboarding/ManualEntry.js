@@ -47,6 +47,7 @@ export default class ManualEntry extends React.Component {
       return input.state.required && input.state.value.trim() === '';
     });
     if (found == undefined) {
+      chrome.storage.sync.set({ hasOnboarded: true });
       goTo(FinishRetailers, this.props);
     }
   }

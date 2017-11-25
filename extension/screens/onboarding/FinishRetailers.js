@@ -25,6 +25,19 @@ const EndContainer = ScreenContainer.extend`
 `;
 
 export default class FinishRetailers extends React.Component {
+  renderReset() {
+    if (!('update_url' in chrome.runtime.getManifest())) {
+      return (
+        <button
+          onClick={() => chrome.storage.sync.set({ hasOnboarded: false })}
+        >
+          RESET ONBOARDING
+        </button>
+      );
+    }
+    return null;
+  }
+
   render() {
     return (
       <EndContainer>
@@ -37,6 +50,7 @@ export default class FinishRetailers extends React.Component {
           <Retailer yellow logo="/static/images/retailers/shopstyle.png" />
         </TwoColumnLayout>
         <Link small>Meet Tailor</Link>
+        {this.renderReset()}
       </EndContainer>
     );
   }

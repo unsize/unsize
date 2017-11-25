@@ -15,6 +15,7 @@ const SyncCompleteContainer = ScreenContainer.extend`
 
 export default class SyncComplete extends React.Component {
   handleNext() {
+    chrome.storage.sync.set({ hasOnboarded: true });
     goTo(FinishRetailers, this.props);
   }
 
