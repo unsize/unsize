@@ -1,7 +1,7 @@
 import React from 'react';
 import { H1, H2 as _H2, H4, H5, H6, P, Button, Image } from 'style';
 import styled from 'styled-components';
-import { setInterval } from 'timers';
+import { setInterval, clearInterval } from 'timers';
 
 const Quote = _H2.extend`
   background-image: url("/static/images/quote_background.png");
@@ -43,6 +43,10 @@ export default class WhyUnsize extends React.Component {
         return { caretVisible: !old.caretVisible };
       });
     }, 750);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   getCaret = () => (this.state.caretVisible ? '|' : '&nbsp;');
