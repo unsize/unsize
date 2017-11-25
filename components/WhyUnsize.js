@@ -53,7 +53,7 @@ export default class WhyUnsize extends React.Component {
         <H1 align="center">Why Unsize?</H1>
         <ContentWrapper>
           <H4 align="center">You said:</H4>
-          <Quote>
+          <Quote align="center">
             My thighs aren't made for jeans
             <code dangerouslySetInnerHTML={{ __html: this.getCaret() }} />
           </Quote>
