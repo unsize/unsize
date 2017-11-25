@@ -21,7 +21,7 @@ const BrandWrapper = styled.div`
 
 const BrandListing = () => {
   return (
-    <div>
+    <section>
       <H4>
         We’ve partnered with the following brands for the official launch of our
         Chrome extension
@@ -43,7 +43,7 @@ const BrandListing = () => {
           src="/static/images/retailers/shopstyle.png"
         />
       </BrandWrapper>
-    </div>
+    </section>
   );
 };
 

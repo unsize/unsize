@@ -1,6 +1,5 @@
 import React from 'react';
 import { H1, H3 as _H3, H4, H5 as _H5, Image, Button } from 'style';
-import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 const StepsContainer = styled.div`
@@ -37,7 +36,7 @@ const H5 = _H5.extend`
 `;
 
 const Wrapper = styled.div`
-  margin: 100px auto;
+  margin: 100px auto 0;
   max-width: 900px;
 `;
 
