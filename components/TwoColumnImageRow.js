@@ -29,7 +29,7 @@ const RowLayout = styled.section`
   display: flex;
   flex-flow: row wrap;
   object-fit: contain;
-  margin: 50px auto;
+  margin: 100px auto;
 
   h1 {
     margin-top: 0;
@@ -54,6 +54,10 @@ const TextLayout = styled.aside`
   min-width: 320px;
 `;
 
+const CTA = Button.extend`
+  display: inline;
+`;
+
 class TwoColumnImageRow extends React.Component {
   getHeaderAlign(align = 'imgRight') {
     switch (align) {
@@ -76,9 +80,9 @@ class TwoColumnImageRow extends React.Component {
           <H6>{this.props.subtitle}</H6>
           <P>{this.props.body}</P>
           {this.props.ctaText && (
-            <Button primary={!!this.props.primaryCta}>
+            <CTA align="left" primary={!!this.props.primaryCta}>
               {this.props.ctaText}
-            </Button>
+            </CTA>
           )}
         </TextLayout>
         <StyledImage

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { workSansFont } from './constants';
 
 const H6 = styled.h6`
+  text-align: ${props => (props.align ? props.align : 'left')};
   font-family: ${workSansFont};
   font-weight: normal;
   font-size: 20px;

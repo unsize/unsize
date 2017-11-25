@@ -13,13 +13,11 @@ const Layout = ({ children, title = 'Unsize' }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/static/favicon.png" />
       </Head>
-      <body>
-        <Nav />
-        <main>
-          <PageWrapper>{children}</PageWrapper>
-        </main>
-        <Footer />
-      </body>
+      <Nav />
+      <main>
+        <PageWrapper>{children}</PageWrapper>
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -17,7 +17,6 @@ import {
 } from './constants';
 
 const Button = styled.button`
-  display: block;
   position: relative;
   margin: ${elemSpacingSm} auto;
   padding: 8px ${elemSpacingMd};

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Lockup, Link as StyledLink } from 'style';
-import { Row, Col } from 'react-flexbox-grid';
 import { black, white, screenWidth } from 'style/constants';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -47,12 +46,18 @@ export default class Nav extends React.Component {
     return (
       <NavBackground>
         <NavWrapper>
-          <Lockup light />
+          <Link href="/" passHref prefetch>
+            <a>
+              <Lockup light />
+            </a>
+          </Link>
           <RightNav>
-            <Link href="/about">
+            <Link href="/about" passHref prefetch>
               <StyledLink color={white}>About</StyledLink>
             </Link>
-            <StyledLink color={white}>Why Unsize?</StyledLink>
+            <StyledLink color={white} href="#why">
+              Why Unsize?
+            </StyledLink>
             <Button primary>Get Started</Button>
           </RightNav>
         </NavWrapper>

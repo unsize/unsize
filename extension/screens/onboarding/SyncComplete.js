@@ -22,7 +22,7 @@ export default class SyncComplete extends React.Component {
     return (
       <SyncCompleteContainer>
         <BackProfileHeader {...this.props} />
-        <H1>Sync complete!</H1>
+        <H1 align="center">Sync complete!</H1>
         <Image
           src="/static/images/illustrations/sync_complete_line.png"
           height="125px"

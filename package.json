@@ -16,19 +16,19 @@
     "url": "https://github.com/Scout-NU/unsize/issues"
   },
   "dependencies": {
-    "babel-loader": "^7.1.2",
-    "babel-plugin-module-alias": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "immutable": "^3.8.1",
-    "next": "^3.2.2",
-    "prop-types": "^15.6.0",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "react-flexbox-grid": "^1.1.5",
-    "route-lite": "^0.1.2",
-    "style-loader": "^0.19.0",
-    "styled-components": "^2.1.2",
-    "webpack": "^3.6.0"
+    "babel-loader": "7.1.2",
+    "babel-plugin-module-alias": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.7",
+    "immutable": "3.8.2",
+    "next": "4.1.4",
+    "prop-types": "15.6.0",
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
+    "react-flexbox-grid": "1.1.5",
+    "route-lite": "0.3.0",
+    "style-loader": "0.19.0",
+    "styled-components": "2.2.3",
+    "webpack": "3.8.1"
   }
 }

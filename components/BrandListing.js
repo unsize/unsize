@@ -10,6 +10,7 @@ const BrandWrapper = styled.div`
 
   img {
     margin: 10px 0;
+    max-height: 40px;
     @media (max-width: 768px) {
       max-height: 30px;
       height: auto;
@@ -23,7 +24,7 @@ const BrandListing = () => {
     <div>
       <H4>
         We’ve partnered with the following brands for the official launch of our
-        chrome extension
+        Chrome extension
       </H4>
       <BrandWrapper>
         <Image

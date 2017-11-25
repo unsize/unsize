@@ -78,7 +78,7 @@ export default class Welcome extends React.Component {
       <WelcomeContainer>
         <CornerDecorations />
         <Logo id="logo" />
-        <H1>Welcome to Unsize!</H1>
+        <H1 align="center">Welcome to Unsize!</H1>
         <P>
           Let's find your {finders[Math.floor(Math.random() * finders.length)]}
         </P>
