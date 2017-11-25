@@ -1,5 +1,4 @@
 import React from 'react';
-import About from '../components/About';
 import WhyUnsize from '../components/WhyUnsize';
 import Start from '../components/Start';
 import Layout from '../components/Layout';
