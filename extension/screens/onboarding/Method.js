@@ -29,7 +29,7 @@ export default class Method extends React.Component {
     return (
       <MethodContainer>
         <BackProfileHeader {...this.props} includeBack />
-        <H1>Time for the fun part!</H1>
+        <H1 align="center">Time for the fun part!</H1>
         <P>Sync your measurements with Tailor to begin</P>
         <Image
           src="/static/images/illustrations/sync_line.png"
