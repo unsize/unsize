@@ -10,6 +10,8 @@ import {
 } from 'style/constants';
 import FinishRetailers from './FinishRetailers';
 import { BackProfileHeader, ScreenContainer } from '../../components';
+import { Unit } from '../../model/Unit';
+import { Measurements } from '../../model/Measurements';
 
 const InlineGroup = styled.div`
   display: flex;
@@ -48,12 +50,18 @@ export default class ManualEntry extends React.Component {
     });
     if (found == undefined) {
       chrome.storage.sync.set({ hasOnboarded: true });
+      let result = new Measurements();
+      this.state.inputs.forEach(input => {
+        result = result.set(input.props.labelName, input.state.value.trim());
+      });
+      chrome.storage.sync.set({ measurements: result.toJS() });
       goTo(FinishRetailers, this.props);
     }
   }
 
   render() {
-    const measurements = ['neck', 'chest', 'sleeve', 'waist', 'hip', 'inseam'];
+    const measurements = new Measurements().keySeq().toJS();
+    measurements.pop();
     var parent = this;
     return (
       <ManualEntryContainer>
@@ -62,8 +70,8 @@ export default class ManualEntry extends React.Component {
         <Form>
           <InlineGroup>
             <P>Choose your units:</P>
-            <RadioButton groupName="units" labelName="in" checked />
-            <RadioButton groupName="units" labelName="cm" />
+            <RadioButton groupName="units" labelName={Unit.IN} checked />
+            <RadioButton groupName="units" labelName={Unit.CM} />
           </InlineGroup>
           {measurements.map(function(name, i) {
             return (
