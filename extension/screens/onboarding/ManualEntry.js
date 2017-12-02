@@ -81,6 +81,7 @@ export default class ManualEntry extends React.Component {
                 key={i}
                 type="number"
                 focused={i == 0}
+                defaultValue={this.props.measurements.get(name) || ''}
               />
             );
           })}
