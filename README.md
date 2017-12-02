@@ -1,6 +1,20 @@
 # Unsize
 This repository houses all of the code for [Unsize](http://unsize.me). There are three components: the Unsize UI component library, a marketing website, and a Chrome extension.
 
+- [Unsize](#unsize)
+  - [Getting Started](#getting-started)
+    - [Marketing Site](#marketing-site)
+    - [Chrome Extension](#chrome-extension)
+  - [Style Guide](#style-guide)
+  - [Marketing Website](#marketing-website)
+  - [Chrome Extension](#chrome-extension)
+  - [Common Technologies](#common-technologies)
+    - [React](#react)
+    - [styled components](#styled-components)
+    - [Build](#build)
+    - [Prettier](#prettier)
+  - [Project Structure](#project-structure)
+
 ## Getting Started
 Getting your development environment up and running is quite simple! Regardless of whether you're running the marketing site or the Chrome extension, the starting point is installing all of the dependencies:
 
@@ -80,7 +94,7 @@ import 'style/fontSizes';
 ### Prettier
 We've got this beautiful website, we want it to be backed by beautiful code! In order to keep the codebase clean, we use some magical software called [Prettier](https://prettier.io). While we don't have this formally enforced via a precommit hook or anything, we HIGHLY recommend installing the plugin for your editor. It should pick up the `.prettierrc` file we have in the root of the project and format your code accordingly. This means you don't have to make code review comments about formatting and you don't have to worry about formatting your own code, so please do it.
 
-### Project Structure
+## Project Structure
 ```
 unsize
   |---components           # components specific to the marketing site
