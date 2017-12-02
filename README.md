@@ -46,7 +46,7 @@ Time: 4037ms
 ./extension/build/unsize.js.map  1.31 MB       0  [emitted]         main
 ```
 
-This means the build worked successfully. Next, go to [chrome://extensions](chrome://extensions), turn on "Developer mode" if you haven't already, and click "Load unpacked extension." On your filesystem, navigate **into** the `extension/` directory and confirm. *If you select the extension folder itself instead of the contents this will not work*.
+This means the build worked successfully. Next, go to `chrome://extensions`, turn on "Developer mode" if you haven't already, and click "Load unpacked extension." On your filesystem, navigate **into** the `extension/` directory and confirm. *If you select the extension folder itself instead of the contents this will not work*.
 
 You should now see the Unsize logo in your Chrome toolbar. Click it and you'll be on your way!
 
@@ -55,7 +55,7 @@ The UI component guide, located in the `style/` directory, is built on a combina
 
 The only components in the style guide should be those that are universal. Things that are relevant across the marketing website and the Chrome extension. If it's specific to one of those or is a single-use component, it doesn't belong in the style guide.
 
-In order to use the style guide, every component should be exported out of `style/index.js`. This comes in handy when taking advantage of some of our [build tooling](#Build). Without exporting every component, the `import { Component } from 'style'` syntax won't work. In the future, publishing the component guide to npm would allow the removal of the build tooling and the splitting of Unsize into multiple repositories.
+In order to use the style guide, every component should be exported out of `style/index.js`. This comes in handy when taking advantage of some of our [build tooling](#build). Without exporting every component, the `import { Component } from 'style'` syntax won't work. In the future, publishing the component guide to npm would allow the removal of the build tooling and the splitting of Unsize into multiple repositories.
 
 ## Marketing Website
 The marketing website is built using [Next.js](https://github.com/zeit/next.js). Next is a static site/server-side rendering framework built using webpack and React, allowing really a simple React implementation for static sites, as well as exporting the files as static assets to be hosted on a service like GitHub Pages. Read the Next.js docs for information on things like routing, static files, and more.
