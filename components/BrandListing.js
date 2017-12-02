@@ -29,14 +29,17 @@ const BrandListing = () => {
       <BrandWrapper>
         <Image
           height="50px"
+          border="yellow"
           src="/static/images/retailers/asos.png"
         />
         <Image
           height="50px"
+          border="pink"
           src="/static/images/retailers/lyst.png"
         />
         <Image
           height="50px"
+          border="green"
           src="/static/images/retailers/shopstyle.png"
         />
       </BrandWrapper>
