@@ -1,0 +1,90 @@
+nav {
+  background: #455868;
+  font-weight: bold;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+  width: 36em;
+}
+nav li {
+  display: inline;
+}
+nav li:last-child a {
+  border-right: none;
+}
+nav a {
+  color: #fff;
+  display: inline-block;
+  width: 6em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+}
+nav a:hover,
+nav a:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #8c99a4;
+}
+nav #pull {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    height: auto;
+  }
+  nav ul {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  nav li {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    border-top: 1px solid #576979;
+    text-align: left;
+    width: 100%;
+    text-indent: 2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    border-bottom: 0;
+    transition: transform ease-in-out 250ms;
+    transform: translateY(0);
+  }
+  nav.collapsed {
+    transform: translateY(-6em);
+  }
+  nav #pull {
+    display: block;
+    background-color: #283744;
+    color: #fff;
+    height: 2em;
+    text-align: right;
+    padding-right: 1em;
+    line-height: 2em;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 320px) {
+  nav {
+    transition: transform ease-in-out 250ms;
+    transform: translateY(0);
+  }
+  nav.collapsed {
+    transform: translateY(-12em);
+  }
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}

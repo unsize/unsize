@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Image, H4 } from 'style';
+import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
 
 const BrandWrapper = styled.div`
   display: flex;
@@ -21,29 +22,40 @@ const BrandWrapper = styled.div`
 
 const BrandListing = () => {
   return (
-    <section>
-      <H4>
-        We’ve partnered with the following brands for the official launch of our
-        Chrome extension
-      </H4>
-      <BrandWrapper>
-        <Image
-          height="50px"
-          border="yellow"
-          src="/static/images/retailers/asos.png"
-        />
-        <Image
-          height="50px"
-          border="pink"
-          src="/static/images/retailers/lyst.png"
-        />
-        <Image
-          height="50px"
-          border="green"
-          src="/static/images/retailers/shopstyle.png"
-        />
-      </BrandWrapper>
-    </section>
+    <Row style={{ height: '400px' }}>
+      <Col lgWidth={10} xsWidth={10} lgXOffset={1} xsXOffset={1}>
+        <H4 align="center">
+          We’ve partnered with the following brands for the official launch of
+          our Chrome extension
+        </H4>
+      </Col>
+      <Col
+        lgWidth={10}
+        xsWidth={12}
+        lgXOffset={1}
+        xsXOffset={0}
+        lgYOffset={3}
+        xsYOffset={5}
+      >
+        <BrandWrapper>
+          <Image
+            height="50px"
+            border="yellow"
+            src="/static/images/retailers/asos.png"
+          />
+          <Image
+            height="50px"
+            border="green"
+            src="/static/images/retailers/shopstyle.png"
+          />
+          <Image
+            height="50px"
+            border="pink"
+            src="/static/images/retailers/lyst.png"
+          />
+        </BrandWrapper>
+      </Col>
+    </Row>
   );
 };
 

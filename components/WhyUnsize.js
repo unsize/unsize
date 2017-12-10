@@ -2,6 +2,7 @@ import React from 'react';
 import { H1, H2 as _H2, H4, H5, H6, P, Button, Image } from 'style';
 import styled from 'styled-components';
 import { setInterval, clearInterval } from 'timers';
+import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
 
 const Quote = _H2.extend`
   background-image: url("/static/images/quote_background.png");
@@ -20,10 +21,6 @@ const Quote = _H2.extend`
     margin: 20px 0;
     background-size: contain;
   }
-`;
-
-const WhyContainer = styled.section`
-  margin: 100px auto;
 `;
 
 const ContentWrapper = styled.div`
@@ -53,21 +50,20 @@ export default class WhyUnsize extends React.Component {
 
   render() {
     return (
-      <WhyContainer id="why">
-        <H1 align="center">Why Unsize?</H1>
-        <ContentWrapper>
+      <Row style={{ maxHeight: '475px' }}>
+        <Col lgWidth={10} lgXOffset={1} xsWidth={10} xsXOffset={1} id="why">
+          <H1 align="center">Why Unsize?</H1>
           <H4 align="center">You said:</H4>
           <Quote align="center">
             My thighs aren't made for jeans
             <code dangerouslySetInnerHTML={{ __html: this.getCaret() }} />
           </Quote>
-          <H5>
-            You talked, and we listened. After our extensive user research, we
-            came up with a two part system to help remove the frustration and
-            difficulty from online shopping.
+          <H5 align="center">
+            You talked and we listened. After some research we came up with a
+            way to remove the frustration and difficulty from online shopping.
           </H5>
-        </ContentWrapper>
-      </WhyContainer>
+        </Col>
+      </Row>
     );
   }
 }

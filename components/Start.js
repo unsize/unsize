@@ -1,31 +1,8 @@
 import React from 'react';
 import { H1, H3 as _H3, H4, H5 as _H5, Image, Button } from 'style';
+import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
 import styled from 'styled-components';
-
-const StepsContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-top: 50px;
-
-  @media (max-width: 839px) {
-    text-align: center;
-  }
-`;
-
-const Step = styled.div`
-  min-width: 400px;
-  max-width: 385px;
-  margin-bottom: 50px;
-  @media (min-width: 840px) {
-    max-width: 45%;
-  }
-
-  img {
-    max-height: 350px;
-    max-width: 385px;
-  }
-`;
+import ContentContainer from './ContentContainer';
 
 const H3 = _H3.extend`
   margin-bottom: 0;
@@ -43,26 +20,86 @@ const Wrapper = styled.div`
 export default class Start extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <H1 align="center">Get Started</H1>
-        <StepsContainer>
-          <Step>
-            <Image width="100%" height={450} src="/static/images/step_1.png" />
+      <div>
+        <Row style={{ height: '100px' }}>
+          <Col lgWidth={10} lgXOffset={1}>
+            <H1 align="left">Get Started</H1>
+          </Col>
+        </Row>
+        <Row style={{ height: '400px' }}>
+          <Col
+            lgWidth={4}
+            lgXOffset={1}
+            xsWidth={10}
+            xsXOffset={1}
+            xsYOffset={11}
+          >
             <H3>Step 1</H3>
-            <H5>Join the sizing revolution and figure out your size</H5>
+            <H5>
+              Figure out your measurements with the help of Tailor, our
+              bluetooth measuring device.
+            </H5>
+            <Button style={{ marginRight: '5px' }}> Learn more </Button>
             <Button primary>Pre-order</Button>
-          </Step>
-          <Step>
-            <Image width="100%" height={450} src="/static/images/step_2.png" />
+          </Col>
+          <ContentContainer
+            width={[5, 5, 5, 12]}
+            height={[7, 6, 6, 10]}
+            x={[6, 6, 6, 0]}
+            y={[0, 0, 0, 0]}
+            z={[0, 0, 0, 0]}
+            img="https://media.giphy.com/media/xT1R9yrDcsDL5t65DW/giphy.gif"
+          />
+        </Row>
+        <Row style={{ height: '400px' }}>
+          <Col
+            lgWidth={4}
+            lgXOffset={1}
+            xsWidth={10}
+            xsXOffset={1}
+            xsYOffset={6}
+          >
             <H3>Step 2</H3>
             <H5>
-              Download our Chrome Extension and start shopping personally
-              online.
+              Download our Chrome Extension and automatically sync your
+              measurements with Tailor.
             </H5>
-            <Button primary>Get the Extension</Button>
-          </Step>
-        </StepsContainer>
-      </Wrapper>
+            <Button style={{ marginRight: '5px' }}> Learn more </Button>
+            <Button primary>Download</Button>
+          </Col>
+          <ContentContainer
+            width={[5, 5, 5, 12]}
+            height={[7, 6, 6, 6]}
+            x={[6, 6, 6, 0]}
+            y={[0, 0, 0, 0]}
+            z={[0, 0, 0, 0]}
+            img="/static/images/step_2.png"
+          />
+        </Row>
+        <Row style={{ height: '400px' }}>
+          <Col
+            lgWidth={4}
+            lgXOffset={1}
+            xsWidth={10}
+            xsXOffset={1}
+            xsYOffset={6}
+          >
+            <H3>Step 3</H3>
+            <H5>
+              Get shopping! Our extension works with a number of sites to choose
+              the best size for you based on your measurements.
+            </H5>
+          </Col>
+          <ContentContainer
+            width={[5, 5, 5, 12]}
+            height={[7, 6, 6, 6]}
+            x={[6, 6, 6, 0]}
+            y={[0, 0, 0, 0]}
+            z={[0, 0, 0, 0]}
+            img="/static/images/step_1.png"
+          />
+        </Row>
+      </div>
     );
   }
 }

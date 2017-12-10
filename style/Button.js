@@ -65,6 +65,9 @@ const Button = styled.button`
         background-position: center;
         background-repeat: no-repeat;
         height: 50px;
+        &:hover {
+          background-color: ${blue90};
+        }
       `};
 `;
 

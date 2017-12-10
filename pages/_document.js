@@ -2,6 +2,7 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import 'style/fontFaces';
 import 'style/fontSizes';
+import '/Users/Jon/Desktop/unsize/components/grid/flexboxgrid.css';
 
 export default class UnsizeBase extends Document {
   static getInitialProps({ renderPage }) {

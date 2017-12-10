@@ -10,7 +10,7 @@ const NavBackground = styled.nav`
   top: 0;
   left: 0;
   margin: 0;
-  height: 75px;
+  height: 60px;
   background-color: ${black};
   z-index: 999;
 `;
@@ -22,10 +22,10 @@ const NavWrapper = styled.div`
   max-width: ${screenWidth};
   margin: 0 auto;
   align-items: center;
-  height: 75px;
+  height: 60px;
 
   @media (max-width: ${screenWidth}) {
-    margin: 0 60px;
+    margin: 0 15px;
   }
 `;
 
@@ -55,9 +55,6 @@ export default class Nav extends React.Component {
             <Link href="/about" passHref prefetch>
               <StyledLink color={white}>About</StyledLink>
             </Link>
-            <StyledLink color={white} href="#why">
-              Why Unsize?
-            </StyledLink>
             <Button primary>Get Started</Button>
           </RightNav>
         </NavWrapper>

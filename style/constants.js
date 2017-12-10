@@ -33,13 +33,13 @@ export const brandPinkBorder = `4px solid ${pink}`;
 /////////////////////
 // SIZES & SPACING //
 /////////////////////
-export const screenWidth = '1024px';
+export const screenWidth = '1020px';
 export const fontSizeCaption = '12px';
-export const fontSizeSmall = '16px';
+export const fontSizeSmall = '14px';
 export const fontSizeNormal = '18px';
 export const elemSpacingXs = '5px';
 export const elemSpacingSm = '10px';
-export const elemSpacingMd = '20px';
+export const elemSpacingMd = '15px';
 export const elemSpacingLg = '30px';
 export const elemSpacingXl = '40px';
 
