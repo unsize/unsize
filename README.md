@@ -5,6 +5,7 @@ This repository houses all of the code for [Unsize](http://unsize.me). There are
   - [Getting Started](#getting-started)
     - [Marketing Site](#marketing-site)
     - [Chrome Extension](#chrome-extension)
+  - [Deploying the Site](#deploying-the-site)
   - [Style Guide](#style-guide)
   - [Marketing Website](#marketing-website)
   - [Chrome Extension](#chrome-extension)
@@ -49,6 +50,37 @@ Time: 4037ms
 This means the build worked successfully. Next, go to `chrome://extensions`, turn on "Developer mode" if you haven't already, and click "Load unpacked extension." On your filesystem, navigate **into** the `extension/` directory and confirm. *If you select the extension folder itself instead of the contents this will not work*.
 
 You should now see the Unsize logo in your Chrome toolbar. Click it and you'll be on your way!
+
+## Deploying the Site
+In order to deploy the site, first make sure you've pulled the latest changes from GitHub and that the repository is set to deploy from the `gh-pages` branch of the repository. You may have to create the `gh-pages` branch before changing this setting in the repository settings.
+
+Next, run the script to build the site into static HTML and JS files:
+```sh
+$ npm run build
+
+> unsize@0.1.0 build /Users/myuser/git/unsize
+> next build && next export -o 'gh-pages'
+
+> Using external babel configuration
+> Location: "/Users/myuser/git/unsize/.babelrc"
+  using build directory: /Users/myuser/git/unsize/.next
+  copying "static" directory
+  exporting path: /
+  exporting path: /about
+```
+
+Once you see the output above, you can exit the export command by hitting `Control+C`. Then create a new commit with the new site files:
+```sh
+$ git add .
+$ git commit -m 'deploy site'
+```
+
+Once you have the new commit, you can deploy the site:
+```sh
+$ npm run deploy
+```
+
+Don't forget to push up the new changes to the `develop` branch once you're done with this!
 
 ## Style Guide
 The UI component guide, located in the `style/` directory, is built on a combination of React and styled components. The goal was to create a shared set of components that would allow developers to just plug and play with the Unsize brand. No worrying about writing CSS for buttons or headers, it all "just works."

@@ -4,7 +4,8 @@
   "description": "Unsize fixes online shopping using a unified sizing experience",
   "scripts": {
     "start": "next",
-    "build": "next build && next export",
+    "build": "next build && next export -o 'gh-pages'",
+    "deploy": "touch gh-pages/.nojekyll && git subtree push --prefix gh-pages origin gh-pages",
     "extension": "webpack --config ./extension/webpack.config.js --watch"
   },
   "repository": {
