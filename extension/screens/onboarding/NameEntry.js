@@ -18,9 +18,15 @@ export default class NameEntry extends React.Component {
   handleNext() {
     let name = this.name.state.value.trim();
     if (name !== '') {
+      const sprinkle = parseInt(name, 36) % 4;
+      chrome.storage.sync.set({
+        name,
+        sprinkle,
+        sprinkleOverride: false
+      });
       goTo(Method, {
-        name: name,
-        sprinkle: parseInt(name, 36) % 4
+        name,
+        sprinkle
       });
     }
   }

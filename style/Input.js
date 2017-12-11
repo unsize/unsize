@@ -62,7 +62,7 @@ export default class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: props.defaultValue || '',
       required: true
     };
   }
@@ -76,7 +76,7 @@ export default class Input extends React.Component {
   render() {
     const { focused, labelName, type } = this.props;
     return (
-      <InputGroup>
+      <InputGroup className="input-group">
         <InputElem
           value={this.state.value}
           onChange={this.updateValue.bind(this)}

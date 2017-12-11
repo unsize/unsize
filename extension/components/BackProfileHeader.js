@@ -7,7 +7,8 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: ${props => props.includeBack ? 'space-between' : 'flex-end'};
+  justify-content: ${props =>
+    props.includeBack ? 'space-between' : 'flex-end'};
   padding: ${elemSpacingSm} ${elemSpacingMd} 0;
 `;
 
@@ -17,7 +18,7 @@ export default class BackProfileHeader extends React.Component {
     let backButton = includeBack ? <BackButton onClick={goBack} /> : null;
     return (
       <HeaderContainer includeBack={includeBack}>
-        { backButton }
+        {backButton}
         <ProfileArea {...this.props} />
       </HeaderContainer>
     );
