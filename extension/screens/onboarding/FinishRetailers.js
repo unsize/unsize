@@ -42,7 +42,7 @@ export default class FinishRetailers extends React.Component {
     return (
       <EndContainer>
         <BackProfileHeader {...this.props} />
-        <H1>Woo! You're all set!</H1>
+        <H1 align="center">Woo! You're all set!</H1>
         <P id="subheader">Start shopping with our partnered brands</P>
         <TwoColumnLayout id="partners">
           <Retailer pink logo="/static/images/retailers/asos.png" />

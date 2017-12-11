@@ -66,7 +66,7 @@ export default class ManualEntry extends React.Component {
     return (
       <ManualEntryContainer>
         <BackProfileHeader {...this.props} includeBack />
-        <H1>Enter your measurements</H1>
+        <H1 align="center">Enter your measurements</H1>
         <Form>
           <InlineGroup>
             <P>Choose your units:</P>

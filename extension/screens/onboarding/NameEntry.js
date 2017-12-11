@@ -29,7 +29,7 @@ export default class NameEntry extends React.Component {
     return (
       <NameContainer>
         <Logo id="logo" />
-        <H1>Let's get started!</H1>
+        <H1 align="center">Let's get started!</H1>
         <P>What's your name?</P>
         <Form>
           <Input

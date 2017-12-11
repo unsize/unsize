@@ -1,76 +1,80 @@
 import React from 'react';
-import { H4, P, Input, Button, Logo, Image, Link } from 'style';
+import { Image } from 'style';
+import styled from 'styled-components';
+import { black, white, workSansFont } from 'style/constants';
 
-import { Row, Col } from 'react-flexbox-grid';
+const footerHeight = '100px';
+
+const FooterWrapper = styled.footer`
+  height: ${footerHeight};
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+`;
+
+const Scribble = Image.extend`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const ContactWrapper = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: ${footerHeight};
+  background-color: ${black};
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
+`;
+
+const Logo = Image.extend`
+  width: 75px;
+  height: 75px;
+  margin: 30px;
+`;
+
+const ContactInfo = styled.div`
+  color: ${white};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  font-family: ${workSansFont};
+`;
+
+const SocialIcon = Image.extend`
+  height: 30px;
+  margin: 15px;
+`;
 
 export default class Footer extends React.Component {
   render() {
-    var inline = {
-      display: 'inline',
-      margin: '0 15px'
-    };
     return (
-      <div>
-        <Row style={{ marginTop: 100 }}>
-          <Col xs={12}>
-            <H4 align="left">Find a fit that makes you feel good.</H4>
-            <P>Leave your email here and join the sizing revolution</P>
-            <Row>
-              <Input />
-              <Button primary width="120px">
-                Subscribe
-              </Button>
-            </Row>
-          </Col>
-        </Row>
-        <Row
-          style={{ marginTop: 40, marginBottom: 40 }}
-          between="sm"
-          bottom="xs"
-        >
-          <Col sm={4} md={3} xs={12}>
-            <Row bottom="xs" center="xs">
-              <Col sm={4} xs={3} xsOffset={1} smOffset={0}>
-                <Logo height={'80px'} width={'80px'} />
-              </Col>
-              <Col sm={8} xs={6}>
-                <Link
-                  style={{
-                    display: 'block',
-                    margin: '10px 4px',
-                    textAlign: 'left'
-                  }}
-                >
-                  hello@unsize.me
-                </Link>
-                <Link
-                  style={{
-                    display: 'block',
-                    margin: '10px 4px',
-                    textAlign: 'left'
-                  }}
-                >
-                  (xxx)-xxx-xxxx
-                </Link>
-              </Col>
-            </Row>
-          </Col>
-          <Col
-            lg={3}
-            md={3}
-            sm={4}
-            xs={8}
-            xsOffset={2}
-            style={{ marginTop: '20px' }}
-          >
-            <Row center="xs" around="xs">
-              <Image height={'35px'} width={'35px'} style={inline} />
-              <Image height={'35px'} width={'35px'} style={inline} />
-              <Image height={'35px'} width={'35px'} style={inline} />
-            </Row>
-          </Col>
-        </Row>
-      </div>
+      <FooterWrapper>
+        <Scribble src="/static/images/footer_scribble.png" />
+        <ContactWrapper>
+          <Logo src="/static/images/favicon_white.png" />
+          <ContactInfo>
+            <div>(123) 555-6789</div>
+            <div>shuya@unsize.me</div>
+          </ContactInfo>
+          <SocialIcon src="/static/images/facebook.png" />
+          <SocialIcon src="/static/images/twitter.png" />
+          <SocialIcon src="/static/images/instagram.png" />
+        </ContactWrapper>
+      </FooterWrapper>
     );
   }
 }
