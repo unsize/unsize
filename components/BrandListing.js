@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Image, H4 } from 'style';
 import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import Link from 'next/link';
 
 const BrandWrapper = styled.div`
   display: flex;
@@ -31,28 +32,38 @@ const BrandListing = () => {
       </Col>
       <Col
         lgWidth={10}
+        smWidth={12}
         xsWidth={12}
         lgXOffset={1}
+        smXOffset={1}
         xsXOffset={0}
         lgYOffset={3}
+        smYOffset={3}
         xsYOffset={5}
       >
         <BrandWrapper>
-          <Image
-            height="50px"
-            border="yellow"
-            src="/static/images/retailers/asos.png"
-          />
-          <Image
-            height="50px"
-            border="green"
-            src="/static/images/retailers/shopstyle.png"
-          />
-          <Image
-            height="50px"
-            border="pink"
-            src="/static/images/retailers/lyst.png"
-          />
+          <a href="http://us.asos.com/" target="_blank">
+            <Image
+              height="50px"
+              border="yellow"
+              src="/static/images/retailers/asos.png"
+            />
+          </a>
+
+          <a href="https://www.shopstyle.com/" target="_blank">
+            <Image
+              height="50px"
+              border="green"
+              src="/static/images/retailers/shopstyle.png"
+            />
+          </a>
+          <a href="https://www.lyst.com/" target="_blank">
+            <Image
+              height="50px"
+              border="pink"
+              src="/static/images/retailers/lyst.png"
+            />
+          </a>
         </BrandWrapper>
       </Col>
     </Row>

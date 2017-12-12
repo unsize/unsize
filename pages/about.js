@@ -11,13 +11,13 @@ export default class About extends React.Component {
         <Row>
           <ContentContainer
             img="/static/images/about.png"
-            x={[0, 0, 0, 1]}
+            x={[1, 0, 0, 1]}
             y={[0, 0, 0, 0]}
             z={[1, 1, 1, 1]}
             width={[4, 5, 5, 5]}
             height={[9, 10, 10, 10]}
           />
-          <Col lgWidth={6} lgXOffset={6}>
+          <Col lgWidth={5} lgXOffset={6}>
             <H1>About Unsize</H1>
             <H6>
               Unsize sprouted from the idea that everyone has the right to find
