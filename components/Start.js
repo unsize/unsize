@@ -16,14 +16,17 @@ const P = _P.extend`
   margin: 15px auto;
 `;
 
-const Wrapper = styled.div`
-  margin: 100px auto 0;
-  max-width: 900px;
-`;
-
 const StepWrapper = styled.div`
+  height: 400px;
   @media (max-width: 768px) {
     min-height: 600px;
+  }
+`;
+
+const LastStepWrapper = styled.div`
+  height: 400px;
+  @media (max-width: 768px) {
+    min-height: 500px;
   }
 `;
 
@@ -41,7 +44,7 @@ export default class Start extends React.Component {
           </Col>
         </Row>
         <StepWrapper>
-          <Row>
+          <Row style={{ height: 'inherit' }}>
             <Col
               lgWidth={4}
               mdWidth={4}
@@ -87,8 +90,8 @@ export default class Start extends React.Component {
               </Button>
             </Col>
             <ContentContainer
-              width={[5, 5, 5, 12]}
-              height={[7, 6, 6, 10]}
+              width={[5, 5, 6, 12]}
+              height={[7, 6, 7, 10]}
               x={[6, 6, 6, 0]}
               y={[0, 0, 0, 0]}
               z={[0, 0, 0, 0]}
@@ -97,7 +100,7 @@ export default class Start extends React.Component {
           </Row>
         </StepWrapper>
         <StepWrapper>
-          <Row>
+          <Row style={{ height: 'inherit' }}>
             <Col
               lgWidth={4}
               mdWidth={4}
@@ -121,7 +124,7 @@ export default class Start extends React.Component {
                 <div>
                   <H3>Chrome Extension</H3>
                   <P>
-                    The chrome extension (the brains of our operation) tackles
+                    Our chrome extension (the brains of the operation) tackles
                     inconsistent and confusing sizing. With your measurements
                     are entered, it works with select sites to automatically
                     choose the best size for you. It’s with you for every step
@@ -143,8 +146,8 @@ export default class Start extends React.Component {
               </Button>
             </Col>
             <ContentContainer
-              width={[5, 5, 5, 12]}
-              height={[7, 6, 6, 10]}
+              width={[5, 5, 6, 12]}
+              height={[7, 6, 7, 10]}
               x={[6, 6, 6, 0]}
               y={[0, 0, 0, 0]}
               z={[0, 0, 0, 0]}
@@ -152,8 +155,8 @@ export default class Start extends React.Component {
             />
           </Row>
         </StepWrapper>
-        <StepWrapper style={{ minHeight: '400px' }}>
-          <Row>
+        <LastStepWrapper>
+          <Row style={{ height: 'inherit' }}>
             <Col
               lgWidth={4}
               mdWidth={4}
@@ -172,15 +175,15 @@ export default class Start extends React.Component {
               </H5>
             </Col>
             <ContentContainer
-              width={[5, 5, 5, 12]}
-              height={[7, 6, 6, 10]}
+              width={[5, 5, 6, 12]}
+              height={[7, 6, 7, 10]}
               x={[6, 6, 6, 0]}
               y={[0, 0, 0, 0]}
               z={[0, 0, 0, 0]}
               img="/static/images/step_1.png"
             />
           </Row>
-        </StepWrapper>
+        </LastStepWrapper>
       </div>
     );
   }

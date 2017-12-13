@@ -9,18 +9,18 @@ import Link from 'next/link';
 export default class WhyUnsize extends React.Component {
   render() {
     return (
-      <Row style={{ minHeight: '550px' }}>
+      <Row style={{ height: '550px' }}>
         <Col
           lgWidth={6}
           mdWidth={6}
-          smWidth={6}
+          smWidth={5}
           xsWidth={10}
           lgXOffset={0}
           xsXOffset={1}
           xsYOffset={0}
         >
           <H1 align="left">Welcome to your best fit ever.</H1>
-          <Col lgWidth={5} mdWidth={5}>
+          <Col lgWidth={5} mdWidth={5} smWidth={4}>
             <P>
               Enough is enough. It's time to unbox ourselves and wear what we
               want to, in clothing that feels amazing, because why not?
@@ -31,9 +31,9 @@ export default class WhyUnsize extends React.Component {
           </Col>
         </Col>
         <ContentContainer
-          width={[9, 9, 9, 12]}
-          height={[10, 9, 8, 12]}
-          x={[3, 3, 3, 0]}
+          width={[9, 9, 11, 12]}
+          height={[10, 9, 10, 12]}
+          x={[3, 3, 1, 0]}
           y={[0, 0, 0, 8]}
           z={[-5, -5, -5, -5]}
           img="/static/images/hero.png"

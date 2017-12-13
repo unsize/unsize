@@ -6,6 +6,10 @@ const Lockup = styled.img.attrs({
 })`
   height: 36px;
   display: block;
+
+  @media (max-width: 767px) {
+    height: 30px;
+  }
 `;
 
 export default Lockup;

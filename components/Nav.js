@@ -3,6 +3,7 @@ import { Button, Lockup, Link as StyledLink } from 'style';
 import { black, white, screenWidth } from 'style/constants';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { Row } from 'react-flexbox-grid-plus';
 
 const NavBackground = styled.nav`
   width: 100%;
@@ -13,6 +14,10 @@ const NavBackground = styled.nav`
   height: 60px;
   background-color: ${black};
   z-index: 999;
+
+  @media (max-width: 768px) {
+    height: 50px;
+  }
 `;
 
 const NavWrapper = styled.div`
@@ -25,7 +30,13 @@ const NavWrapper = styled.div`
   height: 60px;
 
   @media (max-width: ${screenWidth}) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 767px) {
     margin: 0 15px;
+    height: 50px;
   }
 `;
 
@@ -35,9 +46,23 @@ const RightNav = styled.div`
   justify-content: end;
   align-items: center;
 
-  a,
   button {
-    margin-left: 20px;
+    margin: 0 0 0 15px;
+  }
+
+  a {
+    margin: 0px;
+  }
+
+  @media (max-width: 767px) {
+    button {
+      height: 50px;
+      font-size: 16px;
+      margin: 0 0 0 15px;
+    }
+    a {
+      font-size: 16px;
+    }
   }
 `;
 

@@ -4,11 +4,9 @@ import styled from 'styled-components';
 import { black, white, workSansFont, screenWidth } from 'style/constants';
 import { Col, Row } from 'react-flexbox-grid-plus';
 
-const FooterBackground = styled.footer`
+const FooterBackground = styled.div`
   width: 100%;
-  bottom: 0;
-  left: 0;
-  margin: 0;
+  margin: 20px 0 0 0;
   height: min-content;
   background-color: ${black};
   padding: 10px 0;
@@ -24,7 +22,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
   height: min-content;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${screenWidth}) {
     justify-content: space-around;
     padding: 0 15px;
   }
@@ -42,7 +40,7 @@ const Logo = Image.extend`
 `;
 
 const ContactInfo = styled.div`
-  color: ${white};
+  color: #dadada;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -64,6 +62,9 @@ const MiddleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  P {
+    color: #dadada;
+  }
 `;
 
 const RightWrapper = styled.div`

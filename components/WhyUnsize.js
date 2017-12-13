@@ -68,7 +68,7 @@ export default class WhyUnsize extends React.Component {
 
   render() {
     return (
-      <Row style={{ maxHeight: '425px' }}>
+      <Row style={{ maxHeight: '400px' }}>
         <Col lgWidth={10} lgXOffset={1} xsWidth={10} xsXOffset={1}>
           <H1 align="center">Why Unsize?</H1>
           <H4 align="center">You said:</H4>

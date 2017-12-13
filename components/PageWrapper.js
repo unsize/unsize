@@ -7,7 +7,8 @@ const PageWrapper = styled.article`
   margin: 100px auto 0;
 
   @media (max-width: ${screenWidth}) {
-    margin: 100px 60px 0;
+    max-width: 768px;
+    margin: 100px auto 0;
   }
 
   @media (max-width: 768px) {
