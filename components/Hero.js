@@ -2,7 +2,7 @@ import React from 'react';
 import { H1, H6, Button, Image, P } from 'style';
 import styled from 'styled-components';
 import { setInterval, clearInterval } from 'timers';
-import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col, Row } from 'react-flexbox-grid-plus';
 import ContentContainer from './ContentContainer';
 import Link from 'next/link';
 

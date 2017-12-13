@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Row, Col } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Row, Col } from 'react-flexbox-grid-plus';
 import ContentContainer from '../components/ContentContainer';
 import { H1, H6, P } from 'style';
 

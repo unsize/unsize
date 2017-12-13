@@ -11,7 +11,7 @@ import {
 } from 'style';
 import styled from 'styled-components';
 import { setInterval, clearInterval } from 'timers';
-import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col, Row } from 'react-flexbox-grid-plus';
 import Typist from 'react-typist';
 
 const Quote = _H2.extend`

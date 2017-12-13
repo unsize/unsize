@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Image, H4 } from 'style';
-import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col, Row } from 'react-flexbox-grid-plus';
 import Link from 'next/link';
 
 const BrandWrapper = styled.div`

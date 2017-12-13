@@ -5,7 +5,6 @@ import Start from '../components/Start';
 import Layout from '../components/Layout';
 import BrandListing from '../components/BrandListing';
 import styled from 'styled-components';
-import '/Users/Jon/Desktop/unsize/components/grid/flexboxgrid.css';
 
 export default () => {
   return (

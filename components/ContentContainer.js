@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col } from 'react-flexbox-grid-plus';
 
 class ContentContainer extends React.Component {
   render() {

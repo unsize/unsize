@@ -1,6 +1,6 @@
 import React from 'react';
 import { H1, H3 as _H3, H4, H5 as _H5, P as _P, Image, Button } from 'style';
-import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col, Row } from 'react-flexbox-grid-plus';
 import styled from 'styled-components';
 import ContentContainer from './ContentContainer';
 

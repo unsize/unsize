@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, P } from 'style';
 import styled from 'styled-components';
 import { black, white, workSansFont, screenWidth } from 'style/constants';
-import { Col, Row } from '/Users/Jon/Desktop/unsize/components/grid';
+import { Col, Row } from 'react-flexbox-grid-plus';
 
 const FooterBackground = styled.footer`
   width: 100%;
