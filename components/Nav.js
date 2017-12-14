@@ -47,21 +47,18 @@ const RightNav = styled.div`
   align-items: center;
 
   button {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 20px;
+    font-size: 16px;
   }
 
   a {
     margin: 0px;
+    font-size: 16px;
   }
 
   @media (max-width: 767px) {
     button {
       height: 50px;
-      font-size: 16px;
-      margin: 0 0 0 15px;
-    }
-    a {
-      font-size: 16px;
     }
   }
 `;
@@ -81,7 +78,7 @@ export default class Nav extends React.Component {
               <StyledLink color={white}>About</StyledLink>
             </Link>
             <Link href="/#start" passHref prefetch>
-              <Button primary>Get Started</Button>
+              <Button primary>Get started</Button>
             </Link>
           </RightNav>
         </NavWrapper>

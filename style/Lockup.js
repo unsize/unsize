@@ -4,12 +4,8 @@ const Lockup = styled.img.attrs({
   src: ({ light }) =>
     light ? '/static/images/lockup_light.png' : '/static/images/lockup.png'
 })`
-  height: 36px;
+  height: 32px;
   display: block;
-
-  @media (max-width: 767px) {
-    height: 30px;
-  }
 `;
 
 export default Lockup;

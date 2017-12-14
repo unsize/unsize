@@ -21,10 +21,10 @@ export default class WhyUnsize extends React.Component {
         >
           <H1 align="left">Welcome to your best fit ever.</H1>
           <Col lgWidth={5} mdWidth={5} smWidth={4}>
-            <P>
+            <H6>
               Enough is enough. It's time to unbox ourselves and wear what we
               want to, in clothing that feels amazing, because why not?
-            </P>
+            </H6>
             <Link href="/#start" passHref prefetch>
               <Button primary>Get Started</Button>
             </Link>

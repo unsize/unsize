@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1, H3 as _H3, H4, H5 as _H5, P as _P, Image, Button } from 'style';
+import { H1, H3 as _H3, H4, H6 as _H6, P as _P, Image, Button } from 'style';
 import { Col, Row } from 'react-flexbox-grid-plus';
 import styled from 'styled-components';
 import ContentContainer from './ContentContainer';
@@ -8,7 +8,7 @@ const H3 = _H3.extend`
   margin-bottom: 0;
 `;
 
-const H5 = _H5.extend`
+const H6 = _H6.extend`
   margin: 15px auto;
 `;
 
@@ -59,10 +59,10 @@ export default class Start extends React.Component {
               {this.state.stepOneClicked ? (
                 <div>
                   <H3>Step 1</H3>
-                  <H5>
+                  <H6>
                     Figure out your measurements with the help of Tailor, our
                     bluetooth measuring device.
-                  </H5>
+                  </H6>
                 </div>
               ) : (
                 <div>
@@ -115,10 +115,10 @@ export default class Start extends React.Component {
               {this.state.stepTwoClicked ? (
                 <div>
                   <H3>Step 2</H3>
-                  <H5>
+                  <H6>
                     Download our Chrome Extension and automatically sync your
                     measurements with Tailor.
-                  </H5>
+                  </H6>
                 </div>
               ) : (
                 <div>
@@ -169,10 +169,10 @@ export default class Start extends React.Component {
               xsYOffset={11}
             >
               <H3>Step 3</H3>
-              <H5>
+              <H6>
                 Get shopping! Our extension works with a number of sites to
                 choose the best size for you based on your measurements.
-              </H5>
+              </H6>
             </Col>
             <ContentContainer
               width={[5, 5, 6, 12]}
