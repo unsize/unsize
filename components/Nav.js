@@ -59,6 +59,7 @@ const RightNav = styled.div`
   @media (max-width: 767px) {
     button {
       height: 50px;
+      padding: 8px 10px;
     }
   }
 `;

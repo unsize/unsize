@@ -20,7 +20,7 @@ import {
 const Button = styled.button`
   position: relative;
   margin: ${elemSpacingSm} auto;
-  padding: 8px ${elemSpacingSm};
+  padding: 8px ${elemSpacingMd};
   min-width: 100px;
   font-size: 18px;
   font-family: ${halisFont};
