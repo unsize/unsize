@@ -60,7 +60,7 @@ export default class ManualEntry extends React.Component {
         result = result.set(input.props.labelName, input.state.value.trim());
       });
       chrome.storage.sync.set({ measurements: result.toJS() });
-      if (this.props.measurements !== new Measurements()) {
+      if (this.props.returningUser) {
         goTo(Settings, this.props);
       } else {
         goTo(FinishRetailers, this.props);

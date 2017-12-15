@@ -51,7 +51,7 @@ const Pointer = styled.div`
   height: 20px;
   position: absolute;
   top: -10px;
-  left: ${({ selected }) => `${30 + 97 * selected}px`};
+  left: ${({ pointTo }) => `${30 + 97 * pointTo}px`};
   background-color: ${buttonColor};
   transform: rotate(45deg);
 `;
@@ -102,7 +102,7 @@ export default class SprinkleSelect extends React.Component {
   render() {
     return (
       <SprinkleSelectContainer>
-        <SprinklesContainer>
+        <SprinklesContainer onMouseLeave={this.onMouseLeave}>
           {sprinkles.map((value, index) => (
             <SprinkleSelector
               key={index}
@@ -110,12 +110,15 @@ export default class SprinkleSelect extends React.Component {
               name={value.get('name')}
               onClick={this.handleSprinkleClick.bind(this, index)}
               onMouseEnter={this.handleSprinkleHover}
-              onMouseLeave={this.onMouseLeave}
             />
           ))}
         </SprinklesContainer>
         <SprinkleDescription>
-          <Pointer selected={this.state.selected} />
+          <Pointer
+            pointTo={sprinkles.findIndex(
+              value => this.state.lastHover === value.get('name')
+            )}
+          />
           {sprinkles
             .find(el => el.get('name') === this.state.lastHover)
             .get('desc')}

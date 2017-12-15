@@ -46,7 +46,7 @@ export default class Settings extends React.Component {
       if (items['measurements']) {
         measurements = measurements.merge(items['measurements']);
       }
-      goTo(Method, { ...this.props, measurements });
+      goTo(Method, { ...this.props, measurements, returningUser: true });
     });
   };
 
