@@ -20,11 +20,11 @@ export default class About extends React.Component {
           <Row style={{ height: 'inherit' }}>
             <ContentContainer
               img="/static/images/about.png"
-              x={[1, 0, 0, 0]}
+              x={[1, 0, 0, 1]}
               y={[0, 0, 0, 0]}
               z={[1, 1, 1, 1]}
-              width={[4, 5, 6, 12]}
-              height={[9, 10, 10, 10]}
+              width={[4, 5, 6, 10]}
+              height={[9, 10, 10, 12]}
             />
             <Col
               lgWidth={5}
@@ -33,7 +33,7 @@ export default class About extends React.Component {
               lgXOffset={6}
               smXOffset={7}
               xsXOffset={1}
-              xsYOffset={11}
+              xsYOffset={13}
             >
               <H1>About Unsize</H1>
               <H6>
