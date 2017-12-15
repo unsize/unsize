@@ -46,6 +46,9 @@ const ContactInfo = styled.div`
   height: 100%;
   justify-content: space-evenly;
   font-family: ${workSansFont};
+  a {
+    color: #dadada;
+  }
 `;
 
 const SocialIcon = Image.extend`
@@ -64,6 +67,9 @@ const MiddleWrapper = styled.div`
   justify-content: center;
   P {
     color: #dadada;
+    a {
+      color: #dadada;
+    }
   }
 `;
 
@@ -72,6 +78,9 @@ const RightWrapper = styled.div`
   flex-direction: row;
   justify-content: end;
   align-items: center;
+  a {
+    height: 60px;
+  }
 `;
 
 export default class Footer extends React.Component {
@@ -84,13 +93,18 @@ export default class Footer extends React.Component {
             <ContactWrapper>
               <ContactInfo>
                 <div>(123) 555-6789</div>
-                <div>hello@unsize.me</div>
+                <a href="mailto:hello@unsize.me?Subject=Hello!">
+                  hello@unsize.me
+                </a>
               </ContactInfo>
             </ContactWrapper>
           </LeftWrapper>
           <MiddleWrapper>
             <P small white noMargin>
-              Made with 💛 at Scout
+              Made with 💛 by{' '}
+              <a href="https://neu.edu/scout" target="_blank">
+                Scout
+              </a>
             </P>
           </MiddleWrapper>
           <RightWrapper>
