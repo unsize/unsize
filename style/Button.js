@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import {
   black,
   blue,
@@ -31,6 +32,19 @@ const Button = styled.button`
   background: ${white};
   color: ${blue};
   border-radius: 0;
+  &:disabled {
+    border-color: #7a90fd;
+    color: #7a90fd;
+  }
+  ${props =>
+    !props.primary &&
+    css`
+      transition: 0.1s ease;
+      &:hover {
+        background-color: ${blue90};
+        color: ${white};
+      }
+    `};
   ${props =>
     props.primary &&
     css`
@@ -55,6 +69,16 @@ const Button = styled.button`
         &::after {
           transform: translate(8px, 8px);
         }
+        &:disabled {
+          &::after {
+            transform: translate(0px, 0px);
+          }
+        }
+      }
+      &:disabled {
+        background-color: #7a90fd;
+        border-color: #7a90fd;
+        color: ${white};
       }
     `} ${props =>
       props.image &&
