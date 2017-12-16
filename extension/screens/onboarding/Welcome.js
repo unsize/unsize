@@ -5,6 +5,7 @@ import { Logo, H1, P, Button } from 'style';
 import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
 import NameEntry from './NameEntry';
 import FinishRetailers from './FinishRetailers';
+import Settings from '../Settings';
 
 const WelcomeContainer = styled.div`
   margin-left: calc(${elemSpacingXs} + ${elemSpacingMd});
@@ -65,9 +66,12 @@ const CornerDecorations = styled.div`
 
 export default class Welcome extends React.Component {
   componentWillMount() {
-    chrome.storage.sync.get('hasOnboarded', items => {
-      if (items['hasOnboarded']) {
-        goTo(FinishRetailers);
+    chrome.storage.sync.get(['hasOnboarded', 'name', 'sprinkle'], items => {
+      if (items['hasOnboarded'] && items['name'] && items['sprinkle']) {
+        goTo(Settings, {
+          name: items['name'],
+          sprinkle: items['sprinkle']
+        });
       }
     });
   }

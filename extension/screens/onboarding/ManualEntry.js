@@ -12,6 +12,7 @@ import FinishRetailers from './FinishRetailers';
 import { BackProfileHeader, ScreenContainer } from '../../components';
 import { Unit } from '../../model/Unit';
 import { Measurements } from '../../model/Measurements';
+import Settings from '../Settings';
 
 const InlineGroup = styled.div`
   display: flex;
@@ -44,7 +45,11 @@ export default class ManualEntry extends React.Component {
     };
   }
 
-  handleNext() {
+  static defaultProps = {
+    measurements: new Measurements()
+  };
+
+  handleNext = () => {
     var found = this.state.inputs.find(input => {
       return input.state.required && input.state.value.trim() === '';
     });
@@ -55,9 +60,13 @@ export default class ManualEntry extends React.Component {
         result = result.set(input.props.labelName, input.state.value.trim());
       });
       chrome.storage.sync.set({ measurements: result.toJS() });
-      goTo(FinishRetailers, this.props);
+      if (this.props.returningUser) {
+        goTo(Settings, this.props);
+      } else {
+        goTo(FinishRetailers, this.props);
+      }
     }
-  }
+  };
 
   render() {
     const measurements = new Measurements().keySeq().toJS();
@@ -73,20 +82,18 @@ export default class ManualEntry extends React.Component {
             <RadioButton groupName="units" labelName={Unit.IN} checked />
             <RadioButton groupName="units" labelName={Unit.CM} />
           </InlineGroup>
-          {measurements.map(function(name, i) {
-            return (
-              <Input
-                ref={el => parent.state.inputs.push(el)}
-                labelName={name}
-                key={i}
-                type="number"
-                focused={i == 0}
-                defaultValue={this.props.measurements.get(name) || ''}
-              />
-            );
-          })}
-          <Button primary onClick={this.handleNext.bind(this)}>
-            Unsize Me
+          {measurements.map((name, i) => (
+            <Input
+              ref={el => parent.state.inputs.push(el)}
+              labelName={name}
+              key={i}
+              type="number"
+              focused={i == 0}
+              defaultValue={this.props.measurements.get(name)}
+            />
+          ))}
+          <Button primary onClick={this.handleNext}>
+            {this.props.measurements ? 'Update Measurements' : 'Unsize Me'}
           </Button>
         </Form>
         <P small>Having trouble measuring?</P>

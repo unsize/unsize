@@ -14,32 +14,39 @@ const MethodContainer = ScreenContainer.extend`
   a {
     margin-bottom: ${elemSpacingSm};
   }
+
+  button {
+    display: block;
+  }
 `;
 
 export default class Method extends React.Component {
-  handleManualEntry() {
+  handleManualEntry = () => {
     goTo(ManualEntry, this.props);
-  }
+  };
 
-  handleSyncMeasurements() {
+  handleSyncMeasurements = () => {
     goTo(SyncComplete, this.props);
-  }
+  };
 
   render() {
+    const headerText = this.props.measurements
+      ? 'Update your fit'
+      : 'Time for the fun part!';
     return (
       <MethodContainer>
         <BackProfileHeader {...this.props} includeBack />
-        <H1 align="center">Time for the fun part!</H1>
+        <H1 align="center">{headerText}</H1>
         <P>Sync your measurements with Tailor to begin</P>
         <Image
           src="/static/images/illustrations/sync_line.png"
           height="125px"
         />
-        <Button primary onClick={this.handleSyncMeasurements.bind(this)}>
+        <Button primary onClick={this.handleSyncMeasurements}>
           Sync with Tailor
         </Button>
         <P small>Ahead of the game?</P>
-        <Link small onClick={this.handleManualEntry.bind(this)}>
+        <Link small onClick={this.handleManualEntry}>
           Enter your measurements here
         </Link>
       </MethodContainer>
