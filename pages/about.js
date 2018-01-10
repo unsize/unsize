@@ -15,7 +15,7 @@ const RowWrapper = styled.div`
 export default class About extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout title="Unsize | About">
         <RowWrapper>
           <Row style={{ height: 'inherit' }}>
             <ContentContainer
