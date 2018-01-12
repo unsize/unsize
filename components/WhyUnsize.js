@@ -10,8 +10,7 @@ import {
   Image
 } from 'style';
 import styled from 'styled-components';
-import { setInterval, clearInterval } from 'timers';
-import { Col, Row } from 'react-flexbox-grid-plus';
+import RowWrapper from './RowWrapper';
 import Typist from 'react-typist';
 
 const Quote = _H2.extend`
@@ -34,11 +33,15 @@ const Quote = _H2.extend`
 `;
 
 const H5 = _H5.extend`
-margin: 0;
+  margin: 30px 60px 0 0;
+
+  @media (max-width: 768px) {
+    margin: 30px 10px;
+  }
 `;
 
 const H4 = _H4.extend`
-margin-bottom: 0;
+  margin-bottom: 0;
 `;
 
 const ContentWrapper = styled.div`
@@ -68,32 +71,29 @@ export default class WhyUnsize extends React.Component {
 
   render() {
     return (
-      <Row style={{ maxHeight: '400px' }}>
-        <Col lgWidth={10} lgXOffset={1} xsWidth={10} xsXOffset={1}>
-          <H1 align="center">Why Unsize?</H1>
-          <H4 align="center">You said:</H4>
+      <RowWrapper>
+        <H1 align="center">Why Unsize?</H1>
+        <H4 align="center">You said:</H4>
 
-          <Quote style={{ minHeight: '60px' }} align="center">
-            <Typist>
-              My thighs aren't made for jeans
-              <Typist.Backspace count={31} delay={1000} />
-              These are all smalls 🙄
-              <Typist.Backspace count={31} delay={1000} />
-              Online shopping is a pain
-              <Typist.Backspace count={31} delay={1000} />
-              I never fit right 😔
-              <Typist.Backspace count={31} delay={1000} />
-              This is why I don't wear dresses 👗🙅‍♀️
-            </Typist>
-          </Quote>
+        <Quote style={{ minHeight: '60px' }} align="center">
+          <Typist>
+            My thighs aren't made for jeans
+            <Typist.Backspace count={31} delay={1000} />
+            These are all smalls 🙄
+            <Typist.Backspace count={31} delay={1000} />
+            Online shopping is a pain
+            <Typist.Backspace count={31} delay={1000} />
+            I never fit right 😔
+            <Typist.Backspace count={31} delay={1000} />
+            This is why I don't wear dresses 👗🙅‍♀️
+          </Typist>
+        </Quote>
 
-          <H5 align="center">
-            You talked and we listened. After a bit of research we came up with
-            some ways remove the frustration and difficulty from online
-            shopping.
-          </H5>
-        </Col>
-      </Row>
+        <H5 align="center">
+          You talked and we listened. After a bit of research we came up with
+          some ways remove the frustration and difficulty from online shopping.
+        </H5>
+      </RowWrapper>
     );
   }
 }

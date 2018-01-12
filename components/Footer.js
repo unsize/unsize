@@ -2,7 +2,6 @@ import React from 'react';
 import { Image, P } from 'style';
 import styled from 'styled-components';
 import { black, white, workSansFont, screenWidth } from 'style/constants';
-import { Col, Row } from 'react-flexbox-grid-plus';
 
 const FooterBackground = styled.div`
   width: 100%;
@@ -92,9 +91,8 @@ export default class Footer extends React.Component {
             <Logo src="/static/images/favicon_white.png" />
             <ContactWrapper>
               <ContactInfo>
-                <div>(123) 555-6789</div>
-                <a href="mailto:hello@unsize.me?Subject=Hello!">
-                  hello@unsize.me
+                <a href="mailto:katie@unsize.me?Subject=Hello!">
+                  katie@unsize.me
                 </a>
               </ContactInfo>
             </ContactWrapper>

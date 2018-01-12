@@ -1,11 +1,13 @@
 module.exports = {
   exportPathMap() {
     return {
-      '/': { page: '/' }
+      '/': { page: '/' },
+      '/about': { page: '/about' }
     };
   },
   webpack: function(config) {
-    require.extensions['.css'] = () => {
+    require.extensions['.css'] = file => {
+      console.log(file);
       return;
     };
     config.module.rules = (config.module.rules || []).concat({

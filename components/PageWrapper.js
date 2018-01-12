@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { screenWidth } from 'style/constants';
+import { screenWidth, tabletWidth } from 'style/constants';
 
 const PageWrapper = styled.article`
   max-width: ${screenWidth};
-  margin: 100px auto 0;
+  margin: 125px auto 0;
 
   @media (max-width: ${screenWidth}) {
-    max-width: 768px;
-    margin: 100px auto 0;
+    max-width: ${tabletWidth};
+    margin: 125px auto 0;
   }
 
-  @media (max-width: 768px) {
-    margin: 100px 0px 0;
+  @media (max-width: ${tabletWidth}) {
+    margin: 125px 15px 0;
   }
 `;
 

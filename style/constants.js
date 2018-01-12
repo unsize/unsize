@@ -34,6 +34,7 @@ export const brandPinkBorder = `4px solid ${pink}`;
 // SIZES & SPACING //
 /////////////////////
 export const screenWidth = '1020px';
+export const tabletWidth = '768px';
 export const fontSizeCaption = '12px';
 export const fontSizeSmall = '14px';
 export const fontSizeNormal = '18px';
