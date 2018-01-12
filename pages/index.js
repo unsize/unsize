@@ -12,7 +12,7 @@ export default () => {
       <Hero />
       <WhyUnsize />
       <Start />
-      <BrandListing />
+      {/* <BrandListing /> */}
     </Layout>
   );
 };
