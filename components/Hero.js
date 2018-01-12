@@ -2,7 +2,6 @@ import React from 'react';
 import { H1, H6, Button, Image, P } from 'style';
 import styled from 'styled-components';
 import { setInterval, clearInterval } from 'timers';
-import ContentContainer from './ContentContainer';
 import Link from 'next/link';
 import TwoColumnImageRow from './TwoColumnImageRow';
 import RowWrapper from './RowWrapper';

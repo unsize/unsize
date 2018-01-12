@@ -3,7 +3,6 @@ import { Button, Lockup, Link as StyledLink } from 'style';
 import { black, white, screenWidth } from 'style/constants';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Row } from 'react-flexbox-grid-plus';
 
 const NavBackground = styled.nav`
   width: 100%;

@@ -8,9 +8,7 @@ import {
   Image,
   Button
 } from 'style';
-import { Col, Row } from 'react-flexbox-grid-plus';
 import styled from 'styled-components';
-import ContentContainer from './ContentContainer';
 import _RowWrapper from './RowWrapper';
 import TwoColumnImageRow from './TwoColumnImageRow';
 

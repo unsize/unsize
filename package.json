@@ -26,7 +26,6 @@
     "prop-types": "^15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-flexbox-grid-plus": "^1.0.1",
     "react-typist": "^2.0.4",
     "route-lite": "0.3.0",
     "style-loader": "0.19.1",
