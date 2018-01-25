@@ -91,7 +91,7 @@ export default class WhyUnsize extends React.Component {
 
         <H5 align="center">
           You talked and we listened. After a bit of research we came up with
-          some ways remove the frustration and difficulty from online shopping.
+          some ways to remove the frustration and difficulty from online shopping.
         </H5>
       </RowWrapper>
     );
