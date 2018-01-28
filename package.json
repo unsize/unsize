@@ -1,11 +1,10 @@
 {
   "name": "unsize",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unsize fixes online shopping using a unified sizing experience",
   "scripts": {
     "start": "next",
-    "build": "next build && next export -o 'gh-pages'",
-    "deploy": "touch gh-pages/.nojekyll && git subtree push --prefix gh-pages origin gh-pages",
+    "build": "next build && next export -o 'docs'",
     "extension": "webpack --config ./extension/webpack.config.js --watch"
   },
   "repository": {
