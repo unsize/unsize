@@ -42,10 +42,14 @@ const mailchimpdata = `
       width: 100%;
     }
   }
+  @media (max-width: 768px) {
+    #mc_embed_signup_scroll .mc-field-group input.email {
+      margin-bottom: 25px;
+    }
+  }
   #mc_embed_signup_scroll .mc-field-group input.email {
     width: 350px;
     margin-right: 20px;
-    margin-bottom: 25px;
   }
   #mc_embed_signup_scroll .mc-field-group button.button {
     position: relative;
