@@ -5,7 +5,7 @@ import Start from '../components/Start';
 import Layout from '../components/Layout';
 import BrandListing from '../components/BrandListing';
 import styled from 'styled-components';
-
+import MailChimp from '../components/MailChimp';
 export default () => {
   return (
     <Layout>
@@ -13,6 +13,7 @@ export default () => {
       <WhyUnsize />
       <Start />
       {/* <BrandListing /> */}
+      <MailChimp />
     </Layout>
   );
 };

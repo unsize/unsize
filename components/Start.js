@@ -92,7 +92,7 @@ export default class Start extends React.Component {
           {this.state.stepOneClicked ? 'Learn more' : 'Close'}
         </Button>
 
-        <Button primary disabled>
+        <Button primary onClick={() => open('http://eepurl.com/cOEcNn')}>
           Pre-order
         </Button>
       </StepWrapper>
@@ -131,7 +131,7 @@ export default class Start extends React.Component {
         >
           {this.state.stepTwoClicked ? 'Learn more' : 'Close'}
         </Button>
-        <Button primary disabled>
+        <Button primary onClick={() => open('http://eepurl.com/cOEcNn')}>
           Download
         </Button>
       </StepWrapper>
