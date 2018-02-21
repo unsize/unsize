@@ -105,11 +105,11 @@ export default class Footer extends React.Component {
               </a>
             </P>
             </MiddleWrapper>
-            <MiddleWrapper>
-            <P small white noMargin>
-              Copyright 2018 unsize
-              </P>
-          </MiddleWrapper>
+          //   <MiddleWrapper>
+          //   <P small white noMargin>
+          //     Copyright 2018 unsize
+          //     </P>
+          // </MiddleWrapper>
           <RightWrapper>
             <a href="https://medium.com/unsize" target="_blank">
               <SocialIcon src="/static/images/medium.svg" />
