@@ -104,6 +104,8 @@ export default class Footer extends React.Component {
                 Scout
               </a>
             </P>
+            </MiddleWrapper>
+            <MiddleWrapper>
             <P small white noMargin>
               Copyright 2018 unsize
               </P>
