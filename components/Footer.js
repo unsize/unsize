@@ -1,14 +1,18 @@
 import React from 'react';
-import { Image, P } from 'style';
+import { Image, P} from 'style';
 import styled from 'styled-components';
-import { black, white, workSansFont, screenWidth } from 'style/constants';
+import { teal, green, black, white, workSansFont, screenWidth } from 'style/constants';
 
 const FooterBackground = styled.div`
   width: 100%;
   margin: 20px 0 0 0;
   height: min-content;
-  background-color: ${black};
-  padding: 10px 0;
+  background-color: ${green};
+  background-image: url("/static/images/lightning_scribble.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
+  padding: 60px 0 30px 0;
 `;
 
 const FooterWrapper = styled.footer`
@@ -23,41 +27,46 @@ const FooterWrapper = styled.footer`
 
   @media (max-width: ${screenWidth}) {
     justify-content: space-around;
-    padding: 0 15px;
+    padding: 25px 25px 25px 25px;
   }
 `;
 
 const ContactWrapper = styled.div`
-  background-color: ${black};
-  padding: 5px;
+  padding: 0px;
+  align-items: right;
 `;
 
 const Logo = Image.extend`
-  width: 60px;
-  height: 60px;
+  height: 40px;
+  width: auto;
   margin-right: 15px;
 `;
 
 const ContactInfo = styled.div`
-  color: #dadada;
+  color: ${black};
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-evenly;
+  align-items: right;
   font-family: ${workSansFont};
   a {
-    color: #dadada;
+    color: ${black};
+    align-items: right;
   }
 `;
 
 const SocialIcon = Image.extend`
   height: 30px;
-  margin: 15px;
+  margin: 25px 15px 25px 0px;
 `;
 
 const LeftWrapper = styled.div`
   display: flex;
   flex-direction: row;
+   a {
+    color: ${black};
+  }
 `;
 
 const MiddleWrapper = styled.div`
@@ -76,10 +85,17 @@ const RightWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: end;
-  align-items: center;
+  align-items: right;
   a {
     height: 60px;
   }
+`;
+
+const Divider = styled.div`
+  width: 100%;
+  border-style: hidden hidden solid hidden;
+  border-width: 1px;
+  border-color: #4ba392;
 `;
 
 export default class Footer extends React.Component {
@@ -88,38 +104,50 @@ export default class Footer extends React.Component {
       <FooterBackground>
         <FooterWrapper>
           <LeftWrapper>
-            <Logo src="/static/images/favicon_white.png" />
-            <ContactWrapper>
-              <ContactInfo>
-                <a href="mailto:katie@unsize.me?Subject=Hello!">
-                  katie@unsize.me
-                </a>
-              </ContactInfo>
-            </ContactWrapper>
+            <Logo src="/static/images/lockup.png" />
           </LeftWrapper>
-          <MiddleWrapper>
-            <P small white noMargin>
-              Made with 💛 by{' '}
-              <a href="https://neu.edu/scout" target="_blank">
-                Scout
-              </a>
-            </P>
-            </MiddleWrapper>
-          //   <MiddleWrapper>
-          //   <P small white noMargin>
-          //     Copyright 2018 unsize
-          //     </P>
-          // </MiddleWrapper>
-          <RightWrapper>
+        </FooterWrapper>
+        <FooterWrapper>
+        <LeftWrapper>
             <a href="https://medium.com/unsize" target="_blank">
               <SocialIcon src="/static/images/medium.svg" />
             </a>
             <a href="https://twitter.com/unsize_me" target="_blank">
-              <SocialIcon src="/static/images/twitter.png" />
+              <SocialIcon src="/static/images/twitter.svg" />
             </a>
             <a href="https://instagram.com/unsize.me" target="_blank">
-              <SocialIcon src="/static/images/instagram.png" />
+              <SocialIcon src="/static/images/instagram.svg" />
             </a>
+        </LeftWrapper>
+        <RightWrapper>
+        </RightWrapper>
+        <ContactWrapper>
+              <ContactInfo>
+                 Work with us: <a href="mailto:katie@unsize.me?Subject=Hello!">
+                  katie@unsize.me</a> Boston, MA
+              </ContactInfo>
+            </ContactWrapper>
+        </FooterWrapper>
+        <FooterWrapper>
+          <Divider>
+          </Divider>
+        </FooterWrapper>
+        <FooterWrapper>
+        <P> </P>
+        </FooterWrapper>
+        <FooterWrapper>
+          <LeftWrapper>
+            <P small black noMargin>
+              Made with 💛by{' '}
+              <a href="https://neu.edu/scout" target="_blank">
+                Scout
+              </a>
+            </P>
+          </LeftWrapper>
+          <RightWrapper>
+            <P small black noMargin>
+             © 2018 Unsize 
+            </P>
           </RightWrapper>
         </FooterWrapper>
       </FooterBackground>

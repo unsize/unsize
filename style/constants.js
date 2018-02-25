@@ -8,6 +8,7 @@ export const workSansFont = "'Work Sans', Helvetica, sans-serif";
 // COLORS //
 ////////////
 export const green = '#10DDB5';
+export const teal = '#00A0A8';
 export const blue = '#0B37F5';
 export const blue90 = 'rgba(11, 55, 245, 0.9)';
 export const yellow = '#FECF11';
