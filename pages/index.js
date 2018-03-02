@@ -13,7 +13,8 @@ export default () => {
       <WhyUnsize />
       <Start />
       {/* <BrandListing /> */}
-      <MailChimp />
     </Layout>
   );
 };
+
+
