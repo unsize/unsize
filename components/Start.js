@@ -30,6 +30,11 @@ const H1 = _H1.extend`
 const RowWrapper = _RowWrapper.extend`
   padding-left: 60px;
   padding-right: 60px;
+
+  @media (max-width: 480px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const StepWrapper = styled.div`
@@ -40,6 +45,7 @@ const StepWrapper = styled.div`
   }
   @media (max-width: 480px) {
     max-width: 100%;
+    min-height: 0px;
   }
 `;
 
@@ -51,6 +57,7 @@ const LastStepWrapper = styled.div`
   }
   @media (max-width: 480px) {
     max-width: 100%;
+    min-height: 0px;
   }
 `;
 

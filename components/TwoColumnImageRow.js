@@ -17,8 +17,10 @@ const StyledImage = Image.extend`
   @media (max-width: 480px) {
     height: 100%;
     position: relative;
-    padding: 20px;
-    width: 90%;
+    padding: 20px 0;
+    width: 100%;
+    min-height: auto;
+    max-width: fit-content;
   }
 `;
 
