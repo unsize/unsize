@@ -18,6 +18,7 @@ export default class UnsizeBase extends Document {
       <html>
         <Head>
           <title>My page</title>
+          <script src="https://gumroad.com/js/gumroad-embed.js"/>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-106965942-1"
@@ -31,6 +32,7 @@ export default class UnsizeBase extends Document {
             gtag('config', 'UA-106965942-1');`
             }}
           />
+
           {this.props.styleTags}
         </Head>
         <body style={{ margin: 0 }}>

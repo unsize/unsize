@@ -1,11 +1,8 @@
 import React from 'react';
 import { goTo } from 'route-lite';
 import styled from 'styled-components';
-import { Logo, H1, P, Button } from 'style';
+import { Logo, H2, P, Button } from 'style';
 import { elemSpacingXs, elemSpacingSm, elemSpacingMd } from 'style/constants';
-import NameEntry from './NameEntry';
-import FinishRetailers from './FinishRetailers';
-import Settings from '../Settings';
 
 const WelcomeContainer = styled.div`
   margin-left: calc(${elemSpacingXs} + ${elemSpacingMd});
@@ -16,7 +13,7 @@ const WelcomeContainer = styled.div`
     margin: 0 0 0 auto;
     transform: translate(-40px, 20px);
   }
-  h1 {
+  h2 {
     text-align: left;
     margin-top: 45px;
     margin-bottom: 0;
@@ -53,6 +50,7 @@ const CornerDecorations = styled.div`
     width: 100%;
     background-image: url('/static/images/welcome_header.png');
     background-position: center top;
+    background-size: cover;
   }
   &::after {
     right: 0;
@@ -62,24 +60,12 @@ const CornerDecorations = styled.div`
     background-image: url('/static/images/welcome_blue.png');
     background-position: right bottom;
   }
+  p {
+    text-align: left;
+  }
 `;
 
 export default class Welcome extends React.Component {
-  componentWillMount() {
-    // chrome.storage.sync.get(['hasOnboarded', 'name', 'sprinkle'], items => {
-    //   if (items['hasOnboarded'] && items['name'] && items['sprinkle']) {
-    //     goTo(Settings, {
-    //       name: items['name'],
-    //       sprinkle: items['sprinkle']
-    //     });
-    //   }
-    // });
-  }
-
-  handleUnsizeClick() {
-    goTo(NameEntry);
-  }
-
   render() {
     const finders = [
       'style',
@@ -91,11 +77,13 @@ export default class Welcome extends React.Component {
       <WelcomeContainer>
         <CornerDecorations />
         <Logo id="logo" />
-        <H1 align="center">Welcome to Unsize!</H1>
+        <H2 align="center">Welcome to Unsize!</H2>
         <P>
-          Let's find your {finders[Math.floor(Math.random() * finders.length)]}
+          {`Let's find your ${
+            finders[Math.floor(Math.random() * finders.length)]
+          }`}
         </P>
-        <Button primary onClick={this.handleUnsizeClick}>
+        <Button primary onClick={() => this.props.setScreen(2)}>
           Let's Go
         </Button>
       </WelcomeContainer>

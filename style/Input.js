@@ -68,6 +68,7 @@ export default class Input extends React.Component {
   }
 
   updateValue(event) {
+    if (this.props.updateValue) this.props.updateValue({name: event.target.id, value: event.target.value});
     this.setState({
       value: event.target.value
     });
