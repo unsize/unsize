@@ -81,13 +81,20 @@ class TwoColumnImageRow extends React.Component {
             <H1 align="left">{this.props.title}</H1>
             <H6>{this.props.subtitle}</H6>
             <P>{this.props.body}</P>
-            {this.props.ctaText && (
+            {this.props.ctaText && this.props.ctaHref ? (
               <Link href={this.props.ctaHref} passHref prefetch>
                 <CTA align="left" primary={!!this.props.primaryCta}>
                   {this.props.ctaText}
                 </CTA>
               </Link>
-            )}
+            )
+            :  this.props.ctaText && this.props.onClick ?
+            (<div onClick={this.props.onClick}>
+              <CTA align="left" primary={!!this.props.primaryCta}>
+                {this.props.ctaText}
+              </CTA>
+            </div>)
+            : null}
           </TextLayout>
         )}
         <StyledImage
