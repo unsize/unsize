@@ -156,7 +156,7 @@ export default class StorePopover extends React.Component {
             mobileHeight="100px"
             ctaText="Get Started"
           />
-          <h1>dd</h1>
+          <h1>ddddd1</h1>
           {open && (
             <div ref={this.setWrapperRef.bind(this)}>
               <PopoverContainer>{popoverScreens[screen]}</PopoverContainer>
