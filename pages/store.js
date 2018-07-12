@@ -12,6 +12,31 @@ import Window from '../extension/components/Window';
 import 'style/fontFaces';
 import 'style/fontSizes';
 
+const products = [
+  {
+    name: 'Product 1',
+    sizes: {
+      x_small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
+    }
+  },
+  {
+    name: 'Product 2',
+    sizes: {
+      x_small: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
+    }
+  }
+];
+
+const Products = styled.div`
+  display: flex;
+`;
+
 export default class WhyUnsize extends React.Component {
   constructor(props) {
     super(props);
@@ -33,8 +58,30 @@ export default class WhyUnsize extends React.Component {
     this.setState({ measures });
   }
 
+  calculateSize(measures) {
+    return 'small';
+  }
+
+  renderProducts(size) {
+    return products.map(product => {
+      const sizedProduct = product.sizes[size];
+      return (
+        <div>
+          <div
+            className="gumroad-product-embed"
+            data-gumroad-product-id={sizedProduct.id}
+          >
+            <a href={sizedProduct.link}>Loading...</a>
+          </div>
+        </div>
+      );
+    });
+  }
+
   render() {
     const { measures, name } = this.state;
+    const size = this.calculateSize(measures);
+
     return (
       <Layout>
         <StorePopover
@@ -46,9 +93,7 @@ export default class WhyUnsize extends React.Component {
         <p>{measures.neck} Neck</p>
         <p>{measures.chest} Chest</p>
         <p>{measures.sleeve} Sleeve</p>
-        <div className="gumroad-product-embed" data-gumroad-product-id="YzcxL">
-          <a href="https://gumroad.com/l/YzcxL">Loading...</a>
-        </div>
+        <Products>{this.renderProducts('x_small')}</Products>
       </Layout>
     );
   }
