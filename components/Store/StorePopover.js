@@ -100,6 +100,7 @@ export default class StorePopover extends React.Component {
 
   togglePopup() {
     const { open } = this.state;
+    console.log('here');
     this.setState({ open: !open });
   }
 
