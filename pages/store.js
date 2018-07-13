@@ -30,6 +30,15 @@ const products = [
       large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
       x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
     }
+  },
+  {
+    name: 'Product 3',
+    sizes: {
+      x_small: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
+      medium: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
+      large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
+      x_large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' }
+    }
   }
 ];
 
