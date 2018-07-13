@@ -77,9 +77,7 @@ export default class Nav extends React.Component {
             <Link href="/about" passHref prefetch>
               <StyledLink color={white}>About</StyledLink>
             </Link>
-            <Link href="/store" passHref prefetch>
-              <StyledLink color={white}>Store</StyledLink>
-            </Link>
+
             <Link href="/#start" passHref prefetch>
               <Button primary>Get started</Button>
             </Link>
