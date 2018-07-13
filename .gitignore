@@ -3,3 +3,5 @@ out
 .next
 extension/build
 .DS_Store
+
+components/Nav\.js
