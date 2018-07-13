@@ -76,8 +76,7 @@ export default class Nav extends React.Component {
           <RightNav>
             <Link href="/about" passHref prefetch>
               <StyledLink color={white}>About</StyledLink>
-            </Link>
-            
+            </Link>            
             <Link href="/#start" passHref prefetch>
               <Button primary>Get started</Button>
             </Link>
