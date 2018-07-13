@@ -84,8 +84,8 @@ export default class Start extends React.Component {
             <P>
               Meet our hardware! Ain't she a beaut? Aptly and affectionately
               called Tailor, our smart device can take your measurements
-              accurately (up to an 1/8th of an centimeter)! The device then
-              sends your measurements to our chrome extension via bluetooth so
+              accurately (up to an 1/8th of an centimeter) without showing size! The device then
+              sends your measurements to our webapp via bluetooth so
               you can get to shopping sooner!
             </P>
           </div>
@@ -113,18 +113,16 @@ export default class Start extends React.Component {
           <div>
             <H3>Step 2</H3>
             <H6>
-              Download our Chrome Extension and automatically sync your
-              measurements with Tailor.
+            Get shopping! Our webapp works with a number of sites so instead of worrying about size boxes you can focus on what makes you feel confident.
             </H6>
           </div>
         ) : (
           <div>
-            <H3>Chrome Extension</H3>
+            <H3>Webapp</H3>
             <P>
-              Our chrome extension (the brains of the operation) tackles
-              inconsistent and confusing sizing. With your measurements are
-              entered, it works with select sites to automatically choose the
-              best size for you. It’s with you for every step of the process to
+              Our webapp (the brains of the operation) tackles
+              inconsistent and confusing with sizing. When your measurements are
+              entered, it works with select sites to automatically show clothing in your personzlied size. It’s with you for every step of the process to
               ensure you’re confident in your purchase.
             </P>
           </div>
@@ -145,17 +143,17 @@ export default class Start extends React.Component {
     );
   };
 
-  renderLastStep = () => {
-    return (
-      <LastStepWrapper>
-        <H3>Step 3</H3>
-        <H6>
-          Get shopping! Our extension works with a number of sites to choose the
-          best size for you based on your measurements.
-        </H6>
-      </LastStepWrapper>
-    );
-  };
+  // renderLastStep = () => {
+  //   return (
+  //     <LastStepWrapper>
+  //       <H3>Step 3</H3>
+  //       <H6>
+  //         Get shopping! Our extension works with a number of sites to choose the
+  //         best size for you based on your measurements.
+  //       </H6>
+  //     </LastStepWrapper>
+  //   );
+  // };
   render() {
     return (
       <RowWrapper>
@@ -168,15 +166,15 @@ export default class Start extends React.Component {
         />
         <TwoColumnImageRow
           contentComponent={this.renderStepTwo}
-          imgUrl="/static/images/step_2.png"
+          imgUrl="/static/images/step_1.png"
           layout="imgRight"
           height="300px"
         />
         <TwoColumnImageRow
-          contentComponent={this.renderLastStep}
-          imgUrl="/static/images/step_1.png"
-          layout="imgRight"
-          height="300px"
+        //   contentComponent={this.renderLastStep}
+        // imgUrl="/static/images/step_1.png"
+        //   layout="imgRight"
+          height="0px"
         />
       </RowWrapper>
     );
