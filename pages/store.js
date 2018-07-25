@@ -9,6 +9,7 @@ import MailChimp from '../components/MailChimp';
 import Method from '../extension/screens/onboarding/Method';
 import Router from 'route-lite';
 import Window from '../extension/components/Window';
+import Link from 'next/link';
 import 'style/fontFaces';
 import 'style/fontSizes';
 
@@ -46,6 +47,17 @@ const Products = styled.div`
   display: flex;
 `;
 
+const Product = styled.div`
+  flex: 1;
+
+  margin: 10px 20px 10px 0px;
+  border: 1px solid black;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 export default class WhyUnsize extends React.Component {
   constructor(props) {
     super(props);
@@ -71,25 +83,23 @@ export default class WhyUnsize extends React.Component {
     return 'small';
   }
 
-  renderProducts(size) {
-    return products.map(product => {
-      const sizedProduct = product.sizes[size];
+
+  renderProducts() {
+    return products.map((product, key) => {
+      const {measures} = this.state;
+      const size = this.calculateSize(measures);
       return (
-        <div>
-          <div
-            className="gumroad-product-embed"
-            data-gumroad-product-id={sizedProduct.id}
-          >
-            <a href={sizedProduct.link}>Loading...</a>
-          </div>
-        </div>
+       <Product>
+           <Link href={{ pathname: '/product', query: { product: key, size: size, } }}>
+            <img src="/static/images/store/shirt1.png"/>
+          </Link>{' '}
+       </Product>
       );
     });
   }
 
   render() {
     const { measures, name } = this.state;
-    const size = this.calculateSize(measures);
 
     return (
       <Layout>
@@ -102,7 +112,7 @@ export default class WhyUnsize extends React.Component {
         <p>{measures.neck} Neck</p>
         <p>{measures.chest} Chest</p>
         <p>{measures.sleeve} Sleeve</p>
-        <Products>{this.renderProducts('x_small')}</Products>
+        <Products>{this.renderProducts.bind(this)()}</Products>
       </Layout>
     );
   }
