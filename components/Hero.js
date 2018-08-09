@@ -13,7 +13,7 @@ export default class WhyUnsize extends React.Component {
         <TwoColumnImageRow
           title="Welcome to your best fit ever."
           body={`Unsize eliminates the question of “will this fit me?” for online shoppers while making fashion more inclusive.`}
-          ctaHref="/#start"
+          ctaHref="http://eepurl.com/cOEcNn"
           ctaText="Get Started"
           primaryCta
           imgUrl="/static/images/hero.png"
