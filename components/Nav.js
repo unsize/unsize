@@ -78,7 +78,8 @@ export default class Nav extends React.Component {
               <StyledLink color={white}>About</StyledLink>
             </Link>            
             <Link href="/#start" passHref prefetch>
-              <Button primary>Get started</Button>
+              <Button primary onClick={() => open('http://eepurl.com/cOEcNn')}>
+      Get started</Button>
             </Link>
           </RightNav>
         </NavWrapper>
