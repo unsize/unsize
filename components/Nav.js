@@ -80,7 +80,7 @@ export default class Nav extends React.Component {
             
               <Button primary onClick={() => open('http://eepurl.com/cOEcNn')}>
       Get started</Button>
-            </Link>
+            
           </RightNav>
         </NavWrapper>
       </NavBackground>
