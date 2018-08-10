@@ -75,17 +75,16 @@ export default class Start extends React.Component {
             <H3>Step 1</H3>
             <H6>
               Figure out your measurements with the help of Tailor, our
-              bluetooth measuring device.
+              measuring experience.
             </H6>
           </div>
         ) : (
           <div>
             <H3>Meet Tailor</H3>
             <P>
-              Meet our hardware! Ain't she a beaut? Aptly and affectionately
-              called Tailor, our smart device can take your measurements
+             Tailor takes your measurements
               accurately (up to an 1/8th of an centimeter) without showing size! The device then
-              sends your measurements to our webapp via bluetooth so
+              sends your measurements to our webapp seamlessly so
               you can get to shopping sooner!
             </P>
           </div>
