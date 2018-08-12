@@ -32,6 +32,9 @@ const RowLayout = styled.section`
   flex-flow: row wrap;
   object-fit: contain;
   margin: 50px auto;
+  a {
+    text-decoration: none;
+  }
   h1 {
     margin-top: 0;
   }
@@ -81,20 +84,27 @@ class TwoColumnImageRow extends React.Component {
             <H1 align="left">{this.props.title}</H1>
             <H6>{this.props.subtitle}</H6>
             <P>{this.props.body}</P>
-            {this.props.ctaText && this.props.ctaHref ? (
+            {this.props.ctaText &&
+            this.props.ctaHref &&
+            !this.props.external ? (
               <Link href={this.props.ctaHref} passHref prefetch>
                 <CTA align="left" primary={!!this.props.primaryCta}>
                   {this.props.ctaText}
                 </CTA>
               </Link>
-            )
-            :  this.props.ctaText && this.props.onClick ?
-            (<div onClick={this.props.onClick}>
-              <CTA align="left" primary={!!this.props.primaryCta}>
-                {this.props.ctaText}
-              </CTA>
-            </div>)
-            : null}
+            ) : this.props.ctaText && this.props.onClick ? (
+              <div onClick={this.props.onClick}>
+                <CTA align="left" primary={!!this.props.primaryCta}>
+                  {this.props.ctaText}
+                </CTA>
+              </div>
+            ) : this.props.ctaText && this.props.external ? (
+              <a href={this.props.ctaHref}>
+                <CTA align="left" primary={!!this.props.primaryCta}>
+                  {this.props.ctaText}
+                </CTA>
+              </a>
+            ) : null}
           </TextLayout>
         )}
         <StyledImage

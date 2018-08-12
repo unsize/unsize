@@ -17,34 +17,35 @@ const products = [
   {
     name: 'Product 1',
     sizes: {
-      x_small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
       medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-      large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-      x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
     }
   },
   {
     name: 'Product 2',
     sizes: {
-      x_small: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
       medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-      large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-      x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
     }
   },
   {
     name: 'Product 3',
     sizes: {
-      x_small: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-      medium: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-      large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-      x_large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' }
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
     }
   }
 ];
 
 const Products = styled.div`
   display: flex;
+  margin: 100px 0px;
 `;
 
 const Product = styled.div`
@@ -63,6 +64,7 @@ export default class WhyUnsize extends React.Component {
     super(props);
     this.state = {
       name: '',
+      size: 'medium',
       measures: {
         neck: null,
         chest: null,
@@ -80,26 +82,28 @@ export default class WhyUnsize extends React.Component {
   }
 
   calculateSize(measures) {
-    return 'small';
+    return 'medium';
   }
-
-
+  onChange = e => {
+    console.log();
+    this.setState({ size: e.target.value });
+  };
   renderProducts() {
     return products.map((product, key) => {
-      const {measures} = this.state;
-      const size = this.calculateSize(measures);
+      const { measures, size } = this.state;
       return (
-       <Product>
-           <Link href={{ pathname: '/product', query: { product: key, size: size, } }}>
-            <img src="/static/images/store/shirt1.png"/>
-          </Link>{' '}
-       </Product>
+        <Product>
+          <a href={`http://localhost:3000/product?product=${key}&size=${size}`}>
+            <img src="/static/images/store/shirt2.png" />
+          </a>
+          <p>{`Product ${parseInt(key)}`}</p>
+        </Product>
       );
     });
   }
 
   render() {
-    const { measures, name } = this.state;
+    const { measures, name, size } = this.state;
 
     return (
       <Layout>
@@ -112,6 +116,12 @@ export default class WhyUnsize extends React.Component {
         <p>{measures.neck} Neck</p>
         <p>{measures.chest} Chest</p>
         <p>{measures.sleeve} Sleeve</p>
+        <select value={size} onChange={this.onChange}>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="xx_large">XX Large</option>
+          <option value="xxxx_large">XXXX Large</option>
+        </select>
         <Products>{this.renderProducts.bind(this)()}</Products>
       </Layout>
     );

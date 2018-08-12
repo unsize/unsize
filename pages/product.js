@@ -12,66 +12,71 @@ import Window from '../extension/components/Window';
 import 'style/fontFaces';
 import 'style/fontSizes';
 
-const products = {
-    "0": {
+const products = [
+  {
     name: 'Product 1',
     sizes: {
-        x_small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
-        small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
-        medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-        large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-        x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
-        }
-    },
-    "1": {
-        name: 'Product 2',
-        sizes: {
-          x_small: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-          small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
-          medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-          large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
-          x_large: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' }
-        }
-    },
-    "2": {
-        name: 'Product 3',
-        sizes: {
-        x_small: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-        small: { id: 'YzcxL', link: 'https://gumroad.com/l/YzcxL' },
-        medium: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-        large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' },
-        x_large: { id: 'fDfQX', link: 'https://gumroad.com/l/fDfQX' }
-        }
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
     }
-}
+  },
+  {
+    name: 'Product 2',
+    sizes: {
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
+    }
+  },
+  {
+    name: 'Product 3',
+    sizes: {
+      small: { id: 'NbIK', link: 'https://gumroad.com/l/NbIK' },
+      medium: { id: 'QFQXI', link: 'https://gumroad.com/l/QFQXI' },
+      xx_large: { id: 'BnPWi', link: 'https://gumroad.com/l/BnPWi' },
+      xxxx_large: { id: 'PcNyA', link: 'https://gumroad.com/l/PcNyA' }
+    }
+  }
+];
 
 const Products = styled.div`
   display: flex;
 `;
 
-
-
 export default class Product extends React.Component {
-componentDidMount() {
-    console.log('here')
-}
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      measures: {
+        neck: null,
+        chest: null,
+        sleeve: null
+      }
+    };
+  }
+
   render() {
-    const {size, product} = this.props.url.query;
-    console.log(products[product].sizes, product);
+    const { size, product } = this.props.url.query;
+
     const productObj = products[product].sizes[size];
-
-
     return (
-        <div>
-            <h2>{size}</h2>
-            <h2>{product}</h2>
-            {this.props.url.query &&
-            <div className="gumroad-product-embed"
-              data-gumroad-product-id={productObj.id}>
-                <a href={productObj.link}>Loading...</a>
-            </div>
-            }
-        </div>
+      <div>
+        <h2>{size}</h2>
+        <h2>Product {parseInt(product)}</h2>
+        <h3>{this.state.name}</h3>
+        {productObj.link && (
+          <div
+            className="gumroad-product-embed"
+            data-gumroad-product-id={productObj.id}
+          >
+            <a href={productObj.link}>Loading...</a>
+          </div>
+        )}
+      </div>
     );
   }
 }
