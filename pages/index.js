@@ -10,11 +10,9 @@ export default () => {
   return (
     <Layout>
       <Hero />
-      <WhyUnsize />
-      <Start />
+      {/*<WhyUnsize */}
+      {/* <Start */}
       {/* <BrandListing /> */}
     </Layout>
   );
 };
-
-

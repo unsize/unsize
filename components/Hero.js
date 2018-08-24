@@ -14,7 +14,7 @@ export default class WhyUnsize extends React.Component {
           title="Welcome to your best fit ever."
           body={`Unsize eliminates the question of “will this fit me?” for online shoppers while making fashion more inclusive.`}
           ctaHref="http://eepurl.com/cOEcNn"
-          ctaText="Get Started"
+          ctaText="Learn More"
           external
           primaryCta
           imgUrl="/static/images/hero.png"
