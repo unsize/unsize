@@ -146,7 +146,7 @@ export default class Footer extends React.Component {
           </LeftWrapper>
           <RightWrapper>
             <P small black noMargin>
-             © 2018 Unsize 
+             © 2019 Unsize 
             </P>
           </RightWrapper>
         </FooterWrapper>
